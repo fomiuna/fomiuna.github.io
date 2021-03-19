@@ -255,6 +255,51 @@ Variables must be defined exactly once but can be declared many times. To use th
       </tags>
   </entry>
   <entry>
+    <title>由某概率题引发的讨论</title>
+    <url>/2021/03/19/gacha_z/</url>
+    <content><![CDATA[<p>某日收到友人的一个问题, 如下题目 1 所示.</p>
+<a id="more"></a>
+<h2 id="题目-1">题目 1</h2>
+<div class="note info no-icon"><!-- #### No icon note -->
+<p>在阴阳师游戏中, 御魂有 6 个位置. 4 件不同位置的御魂可以获得套装效果.<br />
+假设在一个副本内, 每次掉落一个御魂, 掉落在 6 个位置中概率相同. (只考虑一套御魂)</p>
+<ol type="1">
+<li>要集齐一套 4 件套, 平均需要通关几次副本?</li>
+<li>如果要求 4 件套中不能有 2 号位, 平均需要通关几次副本?</li>
+<li>如果要求 4 件套中必须有一件是 2 号位, 平均需要通关几次副本?</li>
+</ol>
+</div>
+<p><strong><em>Sketch of analysis:</em></strong><br />
+1. 我们设随机变量 <span class="math inline">\(X\)</span> 表示集齐一套 4 件套需要的次数. 令 <span class="math inline">\(Y_k\)</span> 表示从刚好有第 <span class="math inline">\(k-1\)</span> 种位置到刚好有第 <span class="math inline">\(k\)</span> 种零件需要通关的次数, <span class="math inline">\(k=1,2,3,4\)</span>. 则显然 <span class="math inline">\(Y_k\)</span> 服从几何分布, 我们有 <span class="math inline">\(Y_k\sim\mathrm{Geo}(\frac{7-k}{6})\)</span>. 故由 <span class="math inline">\(Y_k\)</span> 的定义可知<br />
+<span class="math display">\[
+        \mathbb{E}[X]=\sum_{k=1}^4\mathbb{E}[Y_k]=\sum_{k=1}^4\frac{6}{7-k}=\frac{57}{10}
+    \]</span><br />
+2. 类似第 1 问, 此时只需要更改几何分布的参数 <span class="math inline">\(p\)</span> 即可, 我们有 <span class="math inline">\(Y_k\sim\mathrm{Geo}(\frac{6-k}{6})\)</span>, <span class="math inline">\(k=1,2,3,4\)</span>. 可计算出结果为 <span class="math inline">\(\frac{77}{10}\)</span>.<br />
+3. 对第 1 问中得到的任一套 4 件套, 2 号位在其中的概率为 <span class="math display">\[
+    \binom{5}{3}\Big/\binom{6}{4} = \frac{2}{3}
+\]</span> 当 2 号位不在 4 件套中时, 我们需要继续打副本直到得到 2 号位. 此时下一套出现 2 号位的概率占未出现位置的一半. 综上分析我们得到当要求 4 件套中必须有一件是 2 号位时平均需要通关 <span class="math display">\[
+    \frac{2}{3}\times\frac{57}{10}+\frac{1}{3}\times\bigg(\frac{57}{10}+\frac{1}{2}\Big(\frac{6}{2}+\frac{6}{2}+\frac{6}{1}\Big)\bigg)=\frac{77}{10}
+\]</span></p>
+<p>用 MMA 模拟结果如下. <div class="tabs" id="simulation-with-mma"><ul class="nav-tabs"><li class="tab active"><a href="#simulation-with-mma-1">Q1</a></li><li class="tab"><a href="#simulation-with-mma-2">Q2</a></li><li class="tab"><a href="#simulation-with-mma-3">Q3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="simulation-with-mma-1"><figure class="highlight mathematica"><table><tr><td class="code"><pre><span class="line">sol1[n_] := <span class="keyword">Module</span>[&#123;i = <span class="number">0</span>, count, list, tmp&#125;,</span><br><span class="line">   <span class="keyword">Do</span>[</span><br><span class="line">    count = <span class="number">0</span>; list = <span class="keyword">ConstantArray</span>[<span class="number">0</span>, <span class="number">6</span>];</span><br><span class="line">    <span class="keyword">While</span>[count &lt; <span class="number">4</span>,</span><br><span class="line">     tmp = <span class="keyword">RandomInteger</span>[&#123;<span class="number">1</span>, <span class="number">6</span>&#125;];</span><br><span class="line">     <span class="keyword">If</span>[list[[tmp]] == <span class="number">0</span>, list[[tmp]] = <span class="number">1</span>; count++];</span><br><span class="line">     i++],</span><br><span class="line">    &#123;loop, <span class="number">1</span>, n&#125;];</span><br><span class="line">   <span class="keyword">N</span>[i/n]];</span><br><span class="line"></span><br><span class="line">sol1[<span class="number">1000000</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight mathematica"><table><tr><td class="code"><pre><span class="line"><span class="number">5.70032</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="simulation-with-mma-2"><figure class="highlight mathematica"><table><tr><td class="code"><pre><span class="line">sol2[n_] := <span class="keyword">Module</span>[&#123;i = <span class="number">0</span>, count, list, tmp&#125;,</span><br><span class="line">   <span class="keyword">Do</span>[</span><br><span class="line">    count = <span class="number">0</span>; list = <span class="keyword">ConstantArray</span>[<span class="number">0</span>, <span class="number">6</span>];</span><br><span class="line">    <span class="keyword">While</span>[count &lt; <span class="number">4</span>,</span><br><span class="line">     tmp = <span class="keyword">RandomInteger</span>[&#123;<span class="number">1</span>, <span class="number">6</span>&#125;];</span><br><span class="line">     <span class="keyword">If</span>[tmp != <span class="number">2</span>, <span class="keyword">If</span>[list[[tmp]] == <span class="number">0</span>, list[[tmp]] = <span class="number">1</span>; count++]];</span><br><span class="line">     i++],</span><br><span class="line">    &#123;loop, <span class="number">1</span>, n&#125;];</span><br><span class="line">   <span class="keyword">N</span>[i/n]];</span><br><span class="line"></span><br><span class="line">sol2[<span class="number">1000000</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight mathematica"><table><tr><td class="code"><pre><span class="line"><span class="number">7.69819</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="simulation-with-mma-3"><figure class="highlight mathematica"><table><tr><td class="code"><pre><span class="line">sol3[n_] := <span class="keyword">Module</span>[&#123;i = <span class="number">0</span>, count, list, tmp&#125;,</span><br><span class="line">   <span class="keyword">Do</span>[</span><br><span class="line">    count = <span class="number">0</span>; list = <span class="keyword">ConstantArray</span>[<span class="number">0</span>, <span class="number">6</span>];</span><br><span class="line">    <span class="keyword">While</span>[count &lt; <span class="number">4</span> || list[[<span class="number">2</span>]] == <span class="number">0</span>,</span><br><span class="line">     tmp = <span class="keyword">RandomInteger</span>[&#123;<span class="number">1</span>, <span class="number">6</span>&#125;];</span><br><span class="line">     <span class="keyword">If</span>[list[[tmp]] == <span class="number">0</span>, list[[tmp]] = <span class="number">1</span>; count++];</span><br><span class="line">     i++],</span><br><span class="line">    &#123;loop, <span class="number">1</span>, n&#125;];</span><br><span class="line">   <span class="keyword">N</span>[i/n]];</span><br><span class="line"></span><br><span class="line">sol3[<span class="number">1000000</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight mathematica"><table><tr><td class="code"><pre><span class="line"><span class="number">7.70398</span></span><br></pre></td></tr></table></figure></div></div></div></p>
+<p>上面这个问题稍微推广就可得到氪金抽卡问题. 其实我很早就有写点抽卡中的概率问题的想法了, 这次友人给我的问题让我有了去写的动力. 我想先研究一个简单的问题.</p>
+<h2 id="问题-2">问题 2</h2>
+<div class="note info no-icon"><!-- #### No icon note -->
+<p>扭蛋池中有 <span class="math inline">\(n\)</span> 种扭蛋, 设每次 gacha 都等可能地得到其中一种扭蛋一个. 若某氪金大佬想要抽齐所有扭蛋 (即每种扭蛋都至少抽出一个), 以 <span class="math inline">\(X_n\)</span> 表示该大佬需要 gacha 的次数. 讨论 <span class="math inline">\(X_n\)</span> 的概率特征.</p>
+</div>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>maths</tag>
+        <tag>gacha</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>(ICML20) Streaming Submodular Maximization under a $k$-Set System</title>
     <url>/2020/12/01/icml20_streaming_kset_z/</url>
     <content><![CDATA[<p>号称第一个解决 streaming + non-monotone + <span class="math inline">\(k\)</span>-system constraint 问题的<a href="https://arxiv.org/abs/2002.03352">算法</a>出现了. 究竟是怎么一回事呢? 现在就让小编带大家一起来看看吧.</p>
@@ -516,51 +561,6 @@ p.s. 水陆两栖，同人本现在画得少了</p></li>
         <tag>study notes</tag>
         <tag>submodular maximization</tag>
         <tag>optimization</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>由某概率题引发的讨论</title>
-    <url>/2021/03/19/probability_gacha_z/</url>
-    <content><![CDATA[<p>某日收到友人的一个问题, 如下题目 1 所示.</p>
-<a id="more"></a>
-<h2 id="题目-1">题目 1</h2>
-<div class="note info no-icon"><!-- #### No icon note -->
-<p>在阴阳师游戏中, 御魂有 6 个位置. 4 件不同位置的御魂可以获得套装效果.<br />
-假设在一个副本内, 每次掉落一个御魂, 掉落在 6 个位置中概率相同. (只考虑一套御魂)</p>
-<ol type="1">
-<li>要集齐一套 4 件套, 平均需要通关几次副本?</li>
-<li>如果要求 4 件套中不能有 2 号位, 平均需要通关几次副本?</li>
-<li>如果要求 4 件套中必须有一件是 2 号位, 平均需要通关几次副本?</li>
-</ol>
-</div>
-<p><strong><em>Sketch of analysis:</em></strong><br />
-1. 我们设随机变量 <span class="math inline">\(X\)</span> 表示集齐一套 4 件套需要的次数. 令 <span class="math inline">\(Y_k\)</span> 表示从刚好有第 <span class="math inline">\(k-1\)</span> 种位置到刚好有第 <span class="math inline">\(k\)</span> 种零件需要通关的次数, <span class="math inline">\(k=1,2,3,4\)</span>. 则显然 <span class="math inline">\(Y_k\)</span> 服从几何分布, 我们有 <span class="math inline">\(Y_k\sim\mathrm{Geo}(\frac{7-k}{6})\)</span>. 故由 <span class="math inline">\(Y_k\)</span> 的定义可知<br />
-<span class="math display">\[
-        \mathbb{E}[X]=\sum_{k=1}^4\mathbb{E}[Y_k]=\sum_{k=1}^4\frac{6}{7-k}=\frac{57}{10}
-    \]</span><br />
-2. 类似第 1 问, 此时只需要更改几何分布的参数 <span class="math inline">\(p\)</span> 即可, 我们有 <span class="math inline">\(Y_k\sim\mathrm{Geo}(\frac{6-k}{6})\)</span>, <span class="math inline">\(k=1,2,3,4\)</span>. 可计算出结果为 <span class="math inline">\(\frac{77}{10}\)</span>.<br />
-3. 对第 1 问中得到的任一套 4 件套, 2 号位在其中的概率为 <span class="math display">\[
-    \binom{5}{3}\Big/\binom{6}{4} = \frac{2}{3}
-\]</span> 当 2 号位不在 4 件套中时, 我们需要继续打副本直到得到 2 号位. 此时下一套出现 2 号位的概率占未出现位置的一半. 综上分析我们得到当要求 4 件套中必须有一件是 2 号位时平均需要通关 <span class="math display">\[
-    \frac{2}{3}\times\frac{57}{10}+\frac{1}{3}\times\bigg(\frac{57}{10}+\frac{1}{2}\Big(\frac{6}{2}+\frac{6}{2}+\frac{6}{1}\Big)\bigg)=\frac{77}{10}
-\]</span></p>
-<p>用 MMA 模拟结果如下. <div class="tabs" id="simulation-with-mma"><ul class="nav-tabs"><li class="tab active"><a href="#simulation-with-mma-1">Q1</a></li><li class="tab"><a href="#simulation-with-mma-2">Q2</a></li><li class="tab"><a href="#simulation-with-mma-3">Q3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="simulation-with-mma-1"><figure class="highlight mathematica"><table><tr><td class="code"><pre><span class="line">sol1[n_] := <span class="keyword">Module</span>[&#123;i = <span class="number">0</span>, count, list, tmp&#125;,</span><br><span class="line">   <span class="keyword">Do</span>[</span><br><span class="line">    count = <span class="number">0</span>; list = <span class="keyword">ConstantArray</span>[<span class="number">0</span>, <span class="number">6</span>];</span><br><span class="line">    <span class="keyword">While</span>[count &lt; <span class="number">4</span>,</span><br><span class="line">     tmp = <span class="keyword">RandomInteger</span>[&#123;<span class="number">1</span>, <span class="number">6</span>&#125;];</span><br><span class="line">     <span class="keyword">If</span>[list[[tmp]] == <span class="number">0</span>, list[[tmp]] = <span class="number">1</span>; count++];</span><br><span class="line">     i++],</span><br><span class="line">    &#123;loop, <span class="number">1</span>, n&#125;];</span><br><span class="line">   <span class="keyword">N</span>[i/n]];</span><br><span class="line"></span><br><span class="line">sol1[<span class="number">1000000</span>]</span><br></pre></td></tr></table></figure>
-<figure class="highlight mathematica"><table><tr><td class="code"><pre><span class="line"><span class="number">5.70032</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="simulation-with-mma-2"><figure class="highlight mathematica"><table><tr><td class="code"><pre><span class="line">sol2[n_] := <span class="keyword">Module</span>[&#123;i = <span class="number">0</span>, count, list, tmp&#125;,</span><br><span class="line">   <span class="keyword">Do</span>[</span><br><span class="line">    count = <span class="number">0</span>; list = <span class="keyword">ConstantArray</span>[<span class="number">0</span>, <span class="number">6</span>];</span><br><span class="line">    <span class="keyword">While</span>[count &lt; <span class="number">4</span>,</span><br><span class="line">     tmp = <span class="keyword">RandomInteger</span>[&#123;<span class="number">1</span>, <span class="number">6</span>&#125;];</span><br><span class="line">     <span class="keyword">If</span>[tmp != <span class="number">2</span>, <span class="keyword">If</span>[list[[tmp]] == <span class="number">0</span>, list[[tmp]] = <span class="number">1</span>; count++]];</span><br><span class="line">     i++],</span><br><span class="line">    &#123;loop, <span class="number">1</span>, n&#125;];</span><br><span class="line">   <span class="keyword">N</span>[i/n]];</span><br><span class="line"></span><br><span class="line">sol2[<span class="number">1000000</span>]</span><br></pre></td></tr></table></figure>
-<figure class="highlight mathematica"><table><tr><td class="code"><pre><span class="line"><span class="number">7.69819</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="simulation-with-mma-3"><figure class="highlight mathematica"><table><tr><td class="code"><pre><span class="line">sol3[n_] := <span class="keyword">Module</span>[&#123;i = <span class="number">0</span>, count, list, tmp&#125;,</span><br><span class="line">   <span class="keyword">Do</span>[</span><br><span class="line">    count = <span class="number">0</span>; list = <span class="keyword">ConstantArray</span>[<span class="number">0</span>, <span class="number">6</span>];</span><br><span class="line">    <span class="keyword">While</span>[count &lt; <span class="number">4</span> || list[[<span class="number">2</span>]] == <span class="number">0</span>,</span><br><span class="line">     tmp = <span class="keyword">RandomInteger</span>[&#123;<span class="number">1</span>, <span class="number">6</span>&#125;];</span><br><span class="line">     <span class="keyword">If</span>[list[[tmp]] == <span class="number">0</span>, list[[tmp]] = <span class="number">1</span>; count++];</span><br><span class="line">     i++],</span><br><span class="line">    &#123;loop, <span class="number">1</span>, n&#125;];</span><br><span class="line">   <span class="keyword">N</span>[i/n]];</span><br><span class="line"></span><br><span class="line">sol3[<span class="number">1000000</span>]</span><br></pre></td></tr></table></figure>
-<figure class="highlight mathematica"><table><tr><td class="code"><pre><span class="line"><span class="number">7.70398</span></span><br></pre></td></tr></table></figure></div></div></div></p>
-<p>上面这个问题稍微推广就可得到氪金抽卡问题. 其实我很早就有写点抽卡中的概率问题的想法了, 这次友人给我的问题让我有了去写的动力. 我想先研究一个简单的问题.</p>
-<h2 id="问题-2">问题 2</h2>
-<div class="note info no-icon"><!-- #### No icon note -->
-<p>扭蛋池中有 <span class="math inline">\(n\)</span> 种扭蛋, 设每次 gacha 都等可能地得到其中一种扭蛋一个. 若某氪金大佬想要抽齐所有扭蛋 (即每种扭蛋都至少抽出一个), 以 <span class="math inline">\(X_n\)</span> 表示该大佬需要 gacha 的次数. 讨论 <span class="math inline">\(X_n\)</span> 的概率特征.</p>
-</div>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>maths</tag>
-        <tag>gacha</tag>
       </tags>
   </entry>
   <entry>
