@@ -257,9 +257,9 @@ Variables must be defined exactly once but can be declared many times. To use th
   <entry>
     <title>由某概率题引发的讨论</title>
     <url>/2021/03/19/gacha_z/</url>
-    <content><![CDATA[<p>某日收到友人的一个问题, 如下题目 1 所示.</p>
+    <content><![CDATA[<p>某日收到友人的一个问题, 如下问题 1 所示.</p>
 <a id="more"></a>
-<h2 id="题目-1">题目 1</h2>
+<h2 id="问题-1">问题 1</h2>
 <div class="note info no-icon"><!-- #### No icon note -->
 <p>在阴阳师游戏中, 御魂有 6 个位置. 4 件不同位置的御魂可以获得套装效果.<br />
 假设在一个副本内, 每次掉落一个御魂, 掉落在 6 个位置中概率相同. (只考虑一套御魂)</p>

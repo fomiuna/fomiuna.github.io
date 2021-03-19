@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-03-19T14:59:28.194Z</updated>
+  <updated>2021-03-19T15:03:45.602Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,10 +21,10 @@
     <link href="http://example.com/2021/03/19/gacha_z/"/>
     <id>http://example.com/2021/03/19/gacha_z/</id>
     <published>2021-03-19T11:00:00.000Z</published>
-    <updated>2021-03-19T14:59:28.194Z</updated>
+    <updated>2021-03-19T15:03:45.602Z</updated>
     
     
-    <summary type="html">&lt;p&gt;某日收到友人的一个问题, 如下题目 1 所示.&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;某日收到友人的一个问题, 如下问题 1 所示.&lt;/p&gt;</summary>
     
     
     
