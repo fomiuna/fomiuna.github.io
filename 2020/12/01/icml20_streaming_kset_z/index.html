@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/avatar_s-apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/avatar_s-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/avatar_s-16x16.png">
+  <link rel="mask-icon" href="/images/avatar_s-safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"8.0.2","exturl":false,"sidebar":{"position":"right","width":400,"display":"post","padding":30,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="号称第一个解决 streaming + non-monotone + \(k\)-system constraint 问题的算法出现了. 究竟是怎么一回事呢? 现在就让小编带大家一起来看看吧.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(ICML20) Streaming Submodular Maximization under a $k$-Set System">
+<meta property="og:url" content="http://example.com/2020/12/01/icml20_streaming_kset_z/index.html">
+<meta property="og:site_name" content="路人博客的写作方法">
+<meta property="og:description" content="号称第一个解决 streaming + non-monotone + \(k\)-system constraint 问题的算法出现了. 究竟是怎么一回事呢? 现在就让小编带大家一起来看看吧.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/20201203.png">
+<meta property="article:published_time" content="2020-11-30T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-12-05T09:30:29.979Z">
+<meta property="article:author" content="司马酸">
+<meta property="article:tag" content="submodular maximization">
+<meta property="article:tag" content="optimization">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/20201203.png">
+
+
+<link rel="canonical" href="http://example.com/2020/12/01/icml20_streaming_kset_z/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>(ICML20) Streaming Submodular Maximization under a $k$-Set System | 路人博客的写作方法</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="路人博客的写作方法" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">路人博客的写作方法</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">releasing your tsukkomi tamashii</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-framework"><span class="nav-number">1.</span> <span class="nav-text">A Framework</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#alg.-1-non-monotone-data-stream-algorithm"><span class="nav-number">1.1.</span> <span class="nav-text">(Alg. 1) Non-monotone Data Stream Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#proposition-1"><span class="nav-number">1.1.1.</span> <span class="nav-text">Proposition 1</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#algorithms"><span class="nav-number">2.</span> <span class="nav-text">Algorithms</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#alg.-2-streaming-algorithm-for-k-system"><span class="nav-number">2.1.</span> <span class="nav-text">(Alg. 2) Streaming Algorithm for \(k\)-system</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#proposition-2"><span class="nav-number">2.1.1.</span> <span class="nav-text">Proposition 2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#proposition-3"><span class="nav-number">2.1.2.</span> <span class="nav-text">Proposition 3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#proposition-4"><span class="nav-number">2.1.3.</span> <span class="nav-text">Proposition 4</span></a></li></ol></li></ol></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="司马酸"
+      src="/images/avatar_s.jpg">
+  <p class="site-author-name" itemprop="name">司马酸</p>
+  <div class="site-description" itemprop="description">加藤惠的老公</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/songmx223" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;songmx223" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:song_minx@163.com" title="E-Mail → mailto:song_minx@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/fomiuna" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;fomiuna" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      other links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://arxiv.com/" title="https:&#x2F;&#x2F;arxiv.com" rel="noopener" target="_blank">A 站</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://danbooru.donmai.us/" title="https:&#x2F;&#x2F;danbooru.donmai.us" rel="noopener" target="_blank">D 站</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://ieee.com/" title="https:&#x2F;&#x2F;ieee.com" rel="noopener" target="_blank">I 站</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://pixiv.com/" title="https:&#x2F;&#x2F;pixiv.com" rel="noopener" target="_blank">P 站</a>
+        </li>
+    </ul>
+  </div>
+
+        </section>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/01/icml20_streaming_kset_z/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar_s.jpg">
+      <meta itemprop="name" content="司马酸">
+      <meta itemprop="description" content="加藤惠的老公">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="路人博客的写作方法">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          (ICML20) Streaming Submodular Maximization under a $k$-Set System
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-12-01 00:00:00" itemprop="dateCreated datePublished" datetime="2020-12-01T00:00:00+08:00">2020-12-01</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-12-05 17:30:29" itemprop="dateModified" datetime="2020-12-05T17:30:29+08:00">2020-12-05</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>8.2k</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>号称第一个解决 streaming + non-monotone + <span class="math inline">\(k\)</span>-system constraint 问题的<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2002.03352">算法</a>出现了. 究竟是怎么一回事呢? 现在就让小编带大家一起来看看吧.</p>
+<a id="more"></a>
+<h2 id="a-framework">A Framework</h2>
+<p>文章提出了一个新的将<strong>适用于单调次模函数的流算法</strong>转变为<strong>适用于非单调次模函数的流算法</strong>的框架. 其实这种 converting 框架在 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1706.03583">AAAI2018 的一篇文章</a>中已经被提出过一次了, 不过在那篇文章中要求所用的流算法具有 <span class="math display">\[
+  f(S)\geq\alpha f(S\cup T)
+\]</span> 这样的性质 (<span class="math inline">\(S\)</span> 为算法输出, <span class="math inline">\(T\)</span> 为任一可行解, <span class="math inline">\(\alpha&gt;0\)</span> 为某个常数).</p>
+<p>本文中的框架对输入算法要求具有 <span class="math inline">\((\alpha,\gamma)\)</span>-approximation 的性质:</p>
+<div class="note default no-icon"><p><strong>Definition:</strong> Consider a data stream algorithm for maximizing a non-negative submodular function <span class="math inline">\(f:2^{\mathcal{N}}\to\mathbb{R}_{\geq0}\)</span> subject to a constraint <span class="math inline">\((\mathcal{N},\mathcal{I})\)</span>. We say that such an algorithm is an <span class="math inline">\((\alpha,\gamma)\)</span>-approximation algorithm, for some <span class="math inline">\(\alpha&gt;1\)</span> and <span class="math inline">\(\gamma\geq0\)</span>, if it returns two sets <span class="math inline">\(S\subseteq A\subseteq\mathcal{N}\)</span> such that <span class="math inline">\(S\in\mathcal{I}\)</span>, and for all <span class="math inline">\(T\in\mathcal{I}\)</span> we have <span class="math display">\[
+    \mathbb{E}[f(T\cup A)]\leq\alpha\mathbb{E}[f(S)]+\gamma
+\]</span></p>
+</div>
+<p>现在我们来看看这个 framework, 记 <span class="math inline">\(\text{StreamingAlg}\)</span> 为输入的流算法, <span class="math inline">\(\text{ConstrainedAlg}\)</span> 为同一问题的 offline 算法.</p>
+<div class="note info no-icon"><h3 id="alg.-1-non-monotone-data-stream-algorithm">(Alg. 1) Non-monotone Data Stream Algorithm</h3>
+<p><strong>Input:</strong> a positive integer <span class="math inline">\(r\)</span><br />
+<strong>Output:</strong> a set <span class="math inline">\(S\in\mathcal{I}\)</span><br />
+Initialize <span class="math inline">\(r\)</span> independent copies of <span class="math inline">\(\text{StreamingAlg}\)</span>: <span class="math inline">\(\text{StreamingAlg}^{(1)},\dots,\text{StreamingAlg}^{(r)}\)</span><br />
+<strong>while</strong> there are more elements in the stream <strong>do</strong><br />
+  Let <span class="math inline">\(D_0\)</span> be a singleton set containing the next element of the stream<br />
+  <strong>for</strong> <span class="math inline">\(i=1\)</span> to <span class="math inline">\(r\)</span> <strong>do</strong> <span class="math inline">\(D_i\leftarrow\text{StreamingAlg}^{(i)}(D_{i-1})\)</span><br />
+Let <span class="math inline">\(D_0\leftarrow\emptyset\)</span><br />
+<strong>for</strong> <span class="math inline">\(i=1\)</span> to <span class="math inline">\(r\)</span> <strong>do</strong><br />
+  <span class="math inline">\((S_i,A_i,D_i)\leftarrow\text{StreamingAlg}^{(i)}_{\mathbf{end}}(D_{i-1})\)</span><br />
+  <span class="math inline">\(S_i&#39;\leftarrow\text{ConstrainedAlg}(A_i)\)</span><br />
+<strong>return</strong> the set <span class="math inline">\(S\)</span> maximizing <span class="math inline">\(f\)</span> among <span class="math inline">\(\{S_i,S_i&#39;\}_{i=1}^r\)</span></p>
+</div>
+<p>算法的思想很简单, 首先对每个到来的元素 <span class="math inline">\(u\)</span>, 使用 <span class="math inline">\(r\)</span> 个独立相同的 <span class="math inline">\(\text{StreamingAlg}\)</span> 程序来依次进行处理: 第一个程序的输入为 <span class="math inline">\(\{u\}\)</span>, 之后每个程序以被上一个程序扔出内存的部分 (可能是因为 constraint 不满足, 或者是因为部分元素被置换出去) 为输入进行处理. 当 stream 整个 pass 结束后, 仍按次序输出这 <span class="math inline">\(r\)</span> 个子程序的结果. 由于 <span class="math inline">\(\text{StreamingAlg}\)</span> 是 <span class="math inline">\((\alpha,\gamma)\)</span>-approximation 算法, 我们将集合 <span class="math inline">\(S,A\)</span> 输出, 同时也对集合 <span class="math inline">\(A\)</span> 跑一次 offline 程序 <span class="math inline">\(\text{ConstrainedAlg}\)</span>. 在输出 <span class="math inline">\(S,A\)</span> 的同时, 我们也将所有在该子程序内存中但不在 <span class="math inline">\(A\)</span> 中的数据构成的集合 <span class="math inline">\(D\)</span> 输出, 作为下一个子程序的输入 (第一个子程序的输入为空集). 这个过程可以简单描述成如下图所示.</p>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><img src="/images/20201203.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><em>仿佛就是 streaming 版本的 <a target="_blank" rel="noopener" href="http://proceedings.mlr.press/v65/feldman17b/feldman17b.pdf">RepeatedGreedy</a> (实际上接下来的 Proposition 1 的推导完全类似 RepeatedGreedy 的近似比推导)</em></td>
+</tr>
+</tbody>
+</table>
+<p>对于这个框架, 我们有如下结论.</p>
+<div class="note primary no-icon"><h4 id="proposition-1">Proposition 1</h4>
+<p>Given an <span class="math inline">\((\alpha,\gamma)\)</span>-approximation data stream algorithm <span class="math inline">\(\text{StreamingAlg}\)</span> for maximizing a non-negative submodular function subject to some constraint and an offline <span class="math inline">\(\beta\)</span>-approximation algorithm <span class="math inline">\(\text{ConstrainedAlg}\)</span> for the same problem. There exists a data stream algorithm returning a feasible set <span class="math inline">\(S\)</span> that obeys <span class="math display">\[
+  \mathbb{E}[f(S)]\geq\frac{(r-1)f(O)-r\gamma}{r\alpha+r(r-1)\beta/2}
+\]</span> Furthermore,</p>
+<ul>
+<li>this algorithm is deterministic if <span class="math inline">\(\text{StreamingAlg}\)</span> and <span class="math inline">\(\text{ConstrainedAlg}\)</span> are both deterministic.</li>
+<li>the space complexity of this algorithm is upper bounded by <span class="math inline">\(O(rM_{\text{StreamingAlg}}+M_{\text{ConstrainedAlg}})\)</span>, where <span class="math inline">\(M_{\text{StreamingAlg}}\)</span> and <span class="math inline">\(M_{\text{ConstrainedAlg}}\)</span> represent the space complexities of thier matching algorithms under the assumption that the input for <span class="math inline">\(\text{StreamingAlg}\)</span> is a subset of the full input and the input for <span class="math inline">\(\text{ConstrainedAlg}\)</span> is the <span class="math inline">\(A\)</span> set produced by <span class="math inline">\(\text{StreamingAlg}\)</span> on some such subset.</li>
+</ul>
+</div>
+<h2 id="algorithms">Algorithms</h2>
+<p>下面介绍论文提出的解决 <span class="math inline">\(k\)</span>-system 约束的算法. 为了方便分析, 先给出一个预先知道 <span class="math inline">\(M=\max_{u\in\mathcal{N},\{u\}\in\mathcal{I}}f(\{u\})\)</span> 和最大独立集大小 <span class="math inline">\(\rho\)</span> 的版本.</p>
+<div class="note info no-icon"><h3 id="alg.-2-streaming-algorithm-for-k-system">(Alg. 2) Streaming Algorithm for <span class="math inline">\(k\)</span>-system</h3>
+<p><strong>Input:</strong> a threshold <span class="math inline">\(\tau\in[M,2M]\)</span>, the size <span class="math inline">\(\rho\)</span> of the largest independent set, and parameter <span class="math inline">\(k\)</span> of the constraint<br />
+<strong>Output:</strong> a solution <span class="math inline">\(T\in\mathcal{I}\)</span><br />
+Let <span class="math inline">\(\ell\leftarrow\lfloor\log_2(4\rho)\rfloor\)</span> and <span class="math inline">\(h\leftarrow\lceil\log_2(2k+1)\rceil\)</span><br />
+<strong>for</strong> <span class="math inline">\(i=0\)</span> to <span class="math inline">\(\ell\)</span> <strong>do</strong> Initialize <span class="math inline">\(E_i\leftarrow\emptyset\)</span><br />
+<strong>for</strong> every element <span class="math inline">\(u\)</span> arriving <strong>do</strong><br />
+  Let <span class="math inline">\(m(u)\leftarrow f(u|\cup_{i=0}^{\ell}E_i)\)</span><br />
+  <strong>if</strong> <span class="math inline">\(m(u)&gt;0\)</span> <strong>then</strong> Let <span class="math inline">\(i(u)\leftarrow\lfloor\log_2(\tau/m(u))\rfloor\)</span> <strong>else</strong> Let <span class="math inline">\(i(u)\leftarrow\infty\)</span><br />
+  <strong>if</strong> <span class="math inline">\(0\leq i(u)\leq\ell\)</span> and <span class="math inline">\(E_{i(u)}+u\in\mathcal{I}\)</span> <strong>then</strong> Update <span class="math inline">\(E_{i(u)}\leftarrow E_{i(u)}+u\)</span><br />
+<strong>for</strong> <span class="math inline">\(j=0\)</span> to <span class="math inline">\(h-1\)</span> <strong>do</strong><br />
+  Let <span class="math inline">\(i\leftarrow j\)</span> and <span class="math inline">\(T_j\leftarrow\emptyset\)</span><br />
+  <strong>while</strong> there is an element <span class="math inline">\(u\in E_i\)</span> such that <span class="math inline">\(T_j+u\in\mathcal{I}\)</span> <strong>do</strong> Update <span class="math inline">\(T_j\leftarrow T_j+u\)</span><br />
+  <span class="math inline">\(i\leftarrow i+h\)</span><br />
+<strong>return</strong> the set <span class="math inline">\(T\)</span> maximizing <span class="math inline">\(f\)</span> among <span class="math inline">\(T_0,T_1,\dots,T_{h-1}\)</span></p>
+</div>
+<p>下面我们将详细分析一下这个算法的性质. 首先我们可以看出 Alg. 2 仍采用了类似 sieve 的方法. 那么, 在 streaming 条件下使用 threshold 有什么困难? 对 knapsack, 同时超过 threshold 且超过 budget 的元素可以对 threshold 设置成和 budget 相关的一个量来 bound 住这部分元素的值. 但对 <span class="math inline">\(k\)</span>-system, 如果硬上 multi-solution + threshold, 超过 threshold 但因 independent set 约束不能加入集合的这部分元素无法像 knapsack 那样简单地处理. 算法对不同 threshold 构造了 <span class="math inline">\(\ell\)</span> 个集合, 然后最终的结果通过在这 <span class="math inline">\(\ell\)</span> 个集合中按一定规则进行挑选得到. 首先我们需要说明集合 <span class="math inline">\(E\)</span> 的性质是好的, 这由以下引理保证.</p>
+<div class="note default no-icon"><p><strong>Lemma 1:</strong> For every set <span class="math inline">\(S\in\mathcal{I}\)</span>, <span class="math display">\[
+  f(E|\emptyset)\geq\dfrac{f(S\cup E|\emptyset)-\tau/4}{2k+1}
+\]</span></p>
+</div>
+<p><strong><em>Proof Sketch of Lemma 1:</em></strong> 算法构造了 <span class="math inline">\(\ell+1\)</span> 个区间 <span class="math inline">\((2^{-(i+1)}\tau,2^{-i}\tau]\)</span> 和与之对应的集合 <span class="math inline">\(E_i\)</span>, <span class="math inline">\(i=0,1,\dots,\ell\)</span>. 每当 <span class="math inline">\(u\)</span> 到来时的 marginal gain 满足 <span class="math display">\[
+    m(u)=f(u|\text{Pre}(u,E))\in (2^{-(i+1)}\tau,2^{-i}\tau]
+\]</span> 时 (这里 <span class="math inline">\(E=\cup_{i=0}^{\ell}E_i\)</span>), 我们就将 <span class="math inline">\(u\)</span> 加入到 <span class="math inline">\(E_i\)</span> 中 (在满足 <span class="math inline">\(k\)</span>-system 条件约束下). 由 greedy 性质可知 <span class="math inline">\(E_i\)</span> 是 <span class="math inline">\(U_i=\{u\in\mathcal{N}:i(u)=i\}\)</span> 的一个 base, 再结合 <span class="math inline">\(U_i\)</span> 之间的不交性启发我们考虑 <span class="math inline">\(S\)</span> 在各 <span class="math inline">\(U_i\)</span> 中的部分: <span class="math inline">\(|S\cap U_i|\leq k|E_i|\)</span>, <span class="math inline">\(i=0,1,\dots,\ell\)</span>. 而对 <span class="math inline">\(i&lt;0\vee i&gt;\ell\)</span> 的部分, 我们就可以通过调整 <span class="math inline">\(\ell,\tau\)</span> 的值将其 bound 住.</p>
+<p>由于我们现在得到的 <span class="math inline">\(E\)</span> 并不一定是 independet set, 所以我们需要从 <span class="math inline">\(E\)</span> 中选出满足约束条件的集合的同时, 也要要求其和 <span class="math inline">\(E\)</span> 能建立起某种联系 (方便近似比的导出). 下面来看这个关键的引理.</p>
+<div class="note default no-icon"><p><strong>Lemma 2:</strong> For every integer <span class="math inline">\(0\leq j&lt;h\)</span> we have <span class="math display">\[
+    f(T_j|\emptyset)\geq\frac{1}{4k}\sum_{\substack{0\leq i\leq\ell\\ i\equiv j\pmod{h}}}\sum_{u\in E_i}m(u)
+\]</span></p>
+</div>
+<p><strong><em>Proof of Lemma 2:</em></strong> 由次模性 <span class="math display">\[
+  f(T_j|\emptyset)=\sum_{u\in T_j}f(u|\text{Pre}(u,T_j))\geq\sum_{u\in T_j}f(u|\text{Pre}(u,E))=\sum_{u\in T_j}m(u)\tag{1}
+\]</span> 我们记 <span class="math inline">\(T_j^i\)</span> 是从 <span class="math inline">\(E_j\)</span> 开始对 <span class="math inline">\(E_i\)</span> 做完 greedy 后得到的集合 (<span class="math inline">\(j\leq i\leq \ell, i\equiv j\pmod{h}\)</span>). 设 <span class="math inline">\(T_j^{j-h}=\emptyset\)</span>, 下面我们证明一个更强的结论 <span class="math display">\[
+    \sum_{u\in T_j^i}m(u)\geq\frac{1}{4k}\sum_{\substack{j\leq r\leq i\\ r\equiv j\pmod{h}}}\sum_{u\in E_r}m(u)+\frac{|T_j^i|\tau}{2^{i+2}k},\quad \forall i\in[-h,\ell],\ i\equiv j(\text{mod}\ h)
+\]</span> 我们对 <span class="math inline">\(i\)</span> 作归纳证明. 当 <span class="math inline">\(i&lt;0\)</span> 时, 显然不等式两边都为 0, 下面考虑 <span class="math inline">\(0\leq i\leq\ell\)</span> 的情况. 由于 <span class="math inline">\(T_j^{i}\)</span> 是 <span class="math inline">\(T_j^{i-h}\cup E_i\)</span> 的 base, 故 <span class="math inline">\(|E_i|\leq k|T_j^i|\)</span>, 再使用 <span class="math inline">\(i-h\)</span> 的归纳猜想, 我们有 <span class="math display">\[
+  \begin{aligned}
+    \sum_{u\in T_j^i}m(u)=&amp;\sum_{u\in T_j^i\backslash T_j^{i-h}}m(u)+\sum_{u\in T_j^{i-h}}m(u)\geq\Big(\frac{|E_i|}{k}-|T_j^{i-h}|\Big)\frac{\tau}{2^{i+1}}+\sum_{u\in T_j^{i-h}}m(u)\\
+    \geq&amp;\frac{1}{4k}\sum_{u\in E_i}m(u)+\frac{|E_i|\tau}{2^{i+2}k}-\frac{|T_j^{i-h}|\tau}{2^{i+1}} + \frac{1}{4k}\sum_{\substack{j\leq r\leq i-h\\ r\equiv j\pmod{h}}}\sum_{u\in E_r}m(u)+\frac{|T_j^{i-h}|\tau}{2^{i-h+2}k}\\
+    =&amp;\frac{1}{4k}\sum_{\substack{j\leq r\leq i\\ r\equiv j\pmod{h}}}\sum_{u\in E_r}m(u)+\frac{|E_i|\tau}{2^{i+2}k}+\frac{|T_j^{i-h}|\tau}{2^{i+2}k}(2^h-2k)\\
+    \geq&amp;\frac{1}{4k}\sum_{\substack{j\leq r\leq i\\ r\equiv j\pmod{h}}}\sum_{u\in E_r}m(u)+\frac{|E_i|\tau}{2^{i+2}k}+\frac{|T_j^{i-h}|\tau}{2^{i+2}k}\\
+    \geq&amp;\frac{1}{4k}\sum_{\substack{j\leq r\leq i\\ r\equiv j\pmod{h}}}\sum_{u\in E_r}m(u)+\frac{|T_j^i|\tau}{2^{i+2}k}
+  \end{aligned}
+\]</span> 故由归纳法知结论成立. 取 <span class="math inline">\(i=j+h\lfloor(\ell-j)/h\rfloor\)</span> 结合式 <span class="math inline">\((1)\)</span> 即知 Lemma 2 欲证式成立, 证毕.</p>
+<div class="note primary no-icon"><h4 id="proposition-2">Proposition 2</h4>
+<p>Alg. 2 stores <span class="math inline">\(O(\rho(\log\rho+\log k))\)</span> elements at every given time point. For a <span class="math inline">\(k\)</span>-system <span class="math inline">\((\mathcal{N},\mathcal{I})\)</span>, the algorithm returns a set <span class="math inline">\(T\)</span> such that <span class="math display">\[
+    f(T)\geq\frac{f(E\cup S)-\tau/4}{4kh(2k+1)}
+\]</span> for every set <span class="math inline">\(S\in\mathcal{I}\)</span>.</p>
+</div>
+<p><strong><em>Proof of Proposition 2:</em></strong> space complexity 是显然的. 另外可由 <span class="math display">\[
+    \begin{aligned}
+      f(T)\geq&amp;\frac{\sum_{j=0}^{h-1}f(T_j)}{h}\geq f(\emptyset)+\frac{1}{4kh}\sum_{j=0}^{h-1}\sum_{\substack{0\leq i\leq\ell\\ i\equiv j\pmod{h}}}\sum_{u\in E_i}m(u)\\
+      =&amp;f(\emptyset)+\frac{1}{4kh}\sum_{i=0}^{\ell}\sum_{u\in E_i}m(u)\geq f(\emptyset)+\frac{f(E|\emptyset)}{4kh}\geq\frac{f(E\cup S)-\tau/4}{4kh(2k+1)}
+    \end{aligned}
+\]</span> 得到.</p>
+<p>有了 Proposition 2 后我们就可以来分析对单调和非单调的目标函数的结果了. 当目标函数 <span class="math inline">\(f\)</span> 是单调的时候直接使用 Alg. 2 即可: 取 <span class="math inline">\(U=O\)</span>, 再由 <span class="math inline">\(\tau\leq2M\leq 2f(O)\)</span>, 得到 <span class="math display">\[
+    f(T)\geq\frac{f(O)-f(O)/2}{4kh(2k+1)}\Rightarrow f(O)\leq8kh(2k+1)f(T)
+\]</span> 而对于非单调的情形我们需要采用 Alg. 1 框架: 取 <span class="math inline">\(A=E\)</span> 根据定义可知 Alg. 2 是一个 <span class="math inline">\((4kh(2k+1),\tau/4)\)</span>-approximation 的 streaming 算法. 我们使用 Alg. 2 作为 Alg. 1 中的 <span class="math inline">\(\text{StreamingAlg}\)</span>, 使用 <a target="_blank" rel="noopener" href="http://proceedings.mlr.press/v65/feldman17b/feldman17b.pdf">RepeatedGreedy</a> (此时 <span class="math inline">\(\beta=k+O(\sqrt{k})\)</span>) 作为 Alg. 1 中的 <span class="math inline">\(\text{ConstrainedAlg}\)</span>, 取 <span class="math inline">\(r=4\)</span> 就有 <span class="math display">\[
+    f(T)\geq\frac{(4-1)f(O)-\tau}{4\alpha+6\beta}\geq\frac{3f(O)-2f(O)}{16kh(2k+1)+6(k+O(\sqrt{k}))}\Rightarrow f(O)\leq O(k^2\log k)f(T)
+\]</span> 所以综合以上两种情况我们就有如下关于近似比的结论.</p>
+<div class="note primary no-icon"><h4 id="proposition-3">Proposition 3</h4>
+<p>There is a streaming <span class="math inline">\(O(k^2\log k)\)</span>-approximation algorithm for the problem of maximizing a non-negative submodular function subject to a <span class="math inline">\(k\)</span>-system constraint.</p>
+</div>
+<p>对于更强的 <span class="math inline">\(k\)</span>-extendible 约束, 有稍好的结果 (证略).</p>
+<div class="note primary no-icon"><h4 id="proposition-4">Proposition 4</h4>
+<p>There is a streaming <span class="math inline">\(O(k\log k)\)</span>-approximation algorithm for the problem of maximizing a non-negative submodular function subject to a <span class="math inline">\(k\)</span>-extendible system constraint.</p>
+</div>
+<p>由于无法预先知道 <span class="math inline">\(M,\rho\)</span>, 文章采取了逐步减弱条件的方式来达到同样效果.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer"><!-- 文件位置：~/source/_data/post-body-end.swig -->
+
+<div>
+    <div>
+        
+        <div style="text-align:center;color: #ccc;font-size:14px;">-----------------------<span style="margin: 0 10px;">THANKS FOR YOUR READING</span>-----------------------</div>
+        
+    </div>
+</div>
+          <div class="post-tags">
+              <a href="/tags/submodular-maximization/" rel="tag"># submodular maximization</a>
+              <a href="/tags/optimization/" rel="tag"># optimization</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/12/14/bokutachi_comment_s/" rel="prev" title="学不来老师 if 线完结感想">
+                  <i class="fa fa-chevron-left"></i> 学不来老师 if 线完结感想
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/11/16/icml20_noisy_MkSC_z/" rel="next" title="(ICML20) Streaming Algorithms for M$k$SC under Noise">
+                  (ICML20) Streaming Algorithms for M$k$SC under Noise <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">司马酸</span>
+</div>
+<div class="busuanzi-count">
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  const url = element.dataset.target;
+  const pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  const pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  const fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <meta name="referrer" content="no-referrer-when-downgrade">
+
+
+
+
+
+
+
+  
+
+  
+      <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = '//cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

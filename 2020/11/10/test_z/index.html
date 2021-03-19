@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/avatar_s-apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/avatar_s-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/avatar_s-16x16.png">
+  <link rel="mask-icon" href="/images/avatar_s-safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"8.0.2","exturl":false,"sidebar":{"position":"right","width":400,"display":"post","padding":30,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="本来想写个测试文档作为第一篇博文来着，突然觉得记录一下搭建这个网站的过程也不错，名字还是叫 test 吧。具体搭建过程基本参考这个知乎专栏，不过这篇文章写得并不全，有些细节丢失了之后导致某些地方有点卡手。我首先会把搭建时遇到的一些问题和解决方法列举一下（Part 1），之后应该会陆陆续续整点新功能，所以到时候就接着在这里补充一些遇到的新问题（Part 2）。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Test">
+<meta property="og:url" content="http://example.com/2020/11/10/test_z/index.html">
+<meta property="og:site_name" content="路人博客的写作方法">
+<meta property="og:description" content="本来想写个测试文档作为第一篇博文来着，突然觉得记录一下搭建这个网站的过程也不错，名字还是叫 test 吧。具体搭建过程基本参考这个知乎专栏，不过这篇文章写得并不全，有些细节丢失了之后导致某些地方有点卡手。我首先会把搭建时遇到的一些问题和解决方法列举一下（Part 1），之后应该会陆陆续续整点新功能，所以到时候就接着在这里补充一些遇到的新问题（Part 2）。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/rushia.jpg">
+<meta property="article:published_time" content="2020-11-10T06:43:25.000Z">
+<meta property="article:modified_time" content="2020-12-17T03:09:33.030Z">
+<meta property="article:author" content="司马酸">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="next">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/rushia.jpg">
+
+
+<link rel="canonical" href="http://example.com/2020/11/10/test_z/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Test | 路人博客的写作方法</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="路人博客的写作方法" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">路人博客的写作方法</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">releasing your tsukkomi tamashii</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#part-1"><span class="nav-number">1.</span> <span class="nav-text">Part 1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE-ssh-%E4%BB%A5%E5%85%8D%E5%AF%86%E9%83%A8%E7%BD%B2"><span class="nav-number">1.1.</span> <span class="nav-text">设置 ssh 以免密部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93"><span class="nav-number">1.2.</span> <span class="nav-text">关于数学公式渲染</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%9A%E6%96%87%E9%85%8D%E5%9B%BE"><span class="nav-number">1.3.</span> <span class="nav-text">博文配图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#part-2"><span class="nav-number">2.</span> <span class="nav-text">Part 2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%99%E6%96%87%E7%AB%A0%E5%8A%A0%E9%98%B4%E5%BD%B1%E8%BE%B9%E6%A1%86"><span class="nav-number">2.1.</span> <span class="nav-text">给文章加阴影边框</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE%E5%8F%8A-block-%E9%80%8F%E6%98%8E%E5%8C%96%E5%A4%84%E7%90%86"><span class="nav-number">2.2.</span> <span class="nav-text">博客背景图片设置及 block 透明化处理</span></a></li></ol></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="司马酸"
+      src="/images/avatar_s.jpg">
+  <p class="site-author-name" itemprop="name">司马酸</p>
+  <div class="site-description" itemprop="description">加藤惠的老公</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/songmx223" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;songmx223" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:song_minx@163.com" title="E-Mail → mailto:song_minx@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/fomiuna" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;fomiuna" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      other links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://arxiv.com/" title="https:&#x2F;&#x2F;arxiv.com" rel="noopener" target="_blank">A 站</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://danbooru.donmai.us/" title="https:&#x2F;&#x2F;danbooru.donmai.us" rel="noopener" target="_blank">D 站</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://ieee.com/" title="https:&#x2F;&#x2F;ieee.com" rel="noopener" target="_blank">I 站</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://pixiv.com/" title="https:&#x2F;&#x2F;pixiv.com" rel="noopener" target="_blank">P 站</a>
+        </li>
+    </ul>
+  </div>
+
+        </section>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/10/test_z/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar_s.jpg">
+      <meta itemprop="name" content="司马酸">
+      <meta itemprop="description" content="加藤惠的老公">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="路人博客的写作方法">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Test
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-11-10 14:43:25" itemprop="dateCreated datePublished" datetime="2020-11-10T14:43:25+08:00">2020-11-10</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-12-17 11:09:33" itemprop="dateModified" datetime="2020-12-17T11:09:33+08:00">2020-12-17</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%9D%82%E8%B0%88/" itemprop="url" rel="index"><span itemprop="name">杂谈</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%9D%82%E8%B0%88/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.6k</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>本来想写个测试文档作为第一篇博文来着，突然觉得记录一下搭建这个网站的过程也不错，名字还是叫 test 吧。具体搭建过程基本参考这个<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26625249">知乎专栏</a>，不过这篇文章写得并不全，有些细节丢失了之后导致某些地方有点卡手。我首先会把搭建时遇到的一些问题和解决方法列举一下（Part 1），之后应该会陆陆续续整点新功能，所以到时候就接着在这里补充一些遇到的新问题（Part 2）。</p>
+<a id="more"></a>
+<h2 id="part-1">Part 1</h2>
+<h3 id="设置-ssh-以免密部署">设置 ssh 以免密部署</h3>
+<p>在使用 <code>ssh-keygen</code> 生成密钥并于 github 上 add ssh key 后，先在 <code>~/.ssh</code> 里测试一下配置是否成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>然后得到了成功提示如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi fomiuna! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+<p>其实按照原文章搞的话必不可能成功，因为 <code>ssh-agent</code> 并没有启动。所以需要</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">eval</span> `ssh-agent -s`</span><br><span class="line">ssh-add</span><br></pre></td></tr></table></figure>
+<p>之后才可。接下来在博客根目录下的配置文件 <code>_config.yml</code> 中修改 deploy 属性如下</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:fomiuna/fomiuna.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<p>若按原文直接在 repo 写 <code>https</code> 好像不太行，还是要输入密码。</p>
+<h3 id="关于数学公式渲染">关于数学公式渲染</h3>
+<p>我相信咱们还是会写点学习上的东西，不会一直在博客上吹逼吧，不会吧不会吧？<br />
+咳咳，话题回来。本来我参考了这篇<a target="_blank" rel="noopener" href="https://runninggump.github.io/2018/12/05/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3%E5%9C%A8hexo%E4%B8%AD%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E7%9A%84%E9%97%AE%E9%A2%98/">博文</a>来配置 mathjax 渲染的，但是按这篇文章把 marked 引擎换成 kramed 后还是没卵用。然后我去 next 主题下的配置文件中瞅了一眼 mathjax 属性，发现注释中已经告诉我去官网看 <a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/third-party-services/math-equations">instruction</a> 了，于是按提示装了 pandoc 之后问题就得到了解决。</p>
+<p>现在拿分部积分公式试一下效果： <span class="math display">\[
+    \int_{\Omega}u\ \mathrm{div}(\mathbf{V})\mathrm{d}x = \int_{\partial\Omega}u\mathbf{V}\cdot \mathbf{n}\mathrm{d}S-\int_{\Omega}\mathrm{grad}(u)\cdot\mathbf{V}\mathrm{d}x
+\]</span></p>
+<p>（不错，我很满意）</p>
+<h3 id="博文配图">博文配图</h3>
+<p>参考一下<a target="_blank" rel="noopener" href="https://yanyinhong.github.io/2017/05/02/How-to-insert-image-in-hexo-post/">这个</a>，咱们可能还是考虑一下外链比较好。</p>
+<p>我先搞个本地的图试试看： <img src="/images/rushia.jpg" /></p>
+<hr />
+<p>其实第一次搞实在遇到了很多问题，跑去搜索并用了网上各种解决方案的之后，成功把网站搞崩了（怎么都加载不出来主题）并且不知道怎么纠正。后来还是老老实实读<a target="_blank" rel="noopener" href="https://theme-next.js.org/muse/">官方文档</a>照着重新再做，基本就没再遇到什么问题了（所以小白还是不要先去整大佬们花里胡哨那一套）。</p>
+<p><em>那么到此，一血（指第一篇博文）我就拿下了。</em></p>
+<h2 id="part-2">Part 2</h2>
+<h3 id="给文章加阴影边框">给文章加阴影边框</h3>
+<p>在网上找了不少 adding shadow effect 的文章，都是需要在 <code>css\_custom\custom.styl</code> 文件中改 <code>.post</code> 属性。但因版本更新问题，在我使用的 NexT（ver 8.0.2）里已取消了此路径下的这个文件夹和样式表。<a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/advanced-settings/custom-files.html?highlight=custom">新的 Custom File Support</a> 告诉我们：可以在主题 config 文件中取消注释 <code>custom_file_path</code> 里面你想作个性化调整的属性，然后在博客根目录下的 <code>source\_data</code> 文件夹中进行相应文件（没有就新建）的自定义调整。</p>
+<p>比如我们想要实现的这个功能是在 <code>style</code> 属性中，在主题 config 文件中开启 <code>custom_file_path</code> 的 <code>style</code> 选项后，再到 <code>source\_data\styles.styl</code> 中添加</p>
+<figure class="highlight styl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.post-block</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: black;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">25px</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0.9</span>;</span><br><span class="line">    <span class="attribute">border-radius</span> : <span class="number">12px</span>; <span class="comment">// 圆角，爱了</span></span><br><span class="line">    -webkit-<span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">8px</span> rgba(<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>, <span class="number">1.0</span>);</span><br><span class="line">    -moz-<span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">8px</span> rgba(<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>, <span class="number">1.0</span>);</span><br><span class="line">    <span class="comment">// box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);</span></span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">25px</span>; <span class="comment">// 左右边距</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>p.s. 在我查官方文档前，先是在 <code>css\_common\components\post</code> 文件夹里逗留时找到了 <code>post.styl</code> 里的 <code>.post-block</code> 属性，然后试着把其他文章里给出的填写例子加进去</p>
+<figure class="highlight styl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line"><span class="keyword">if</span> (hexo-config(<span class="string">&#x27;motion.transition.post_block&#x27;</span>)) &#123;</span><br><span class="line">  <span class="selector-class">.post-block</span> &#123;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">60px</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">60px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">25px</span>;</span><br><span class="line">    -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5);</span><br><span class="line">    -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.pagination</span>, <span class="selector-class">.comments</span> &#123;</span><br><span class="line">    <span class="attribute">visibility</span>: hidden;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>不出所料也是起作用的。</p>
+<h3 id="博客背景图片设置及-block-透明化处理">博客背景图片设置及 block 透明化处理</h3>
+<p>仍在自定义的 <code>styles.styl</code> 里进行调整。需要注意的是对页面头所在的 <code>.header-inner</code> 样式里不能直接调整透明度 <code>opacity</code>，因为 <code>header-inner</code> 包含 <code>header.swig</code> 中的所有内容，若使用 <code>opacity</code> 进行配置，子结点会出很多问题（例如会影响到搜索框的透明度）。所以我们使用 <code>rgba</code> 来进行调整</p>
+<figure class="highlight styl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.header-inner</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: rgba(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.85</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>现在待解决的问题是如何在保持 post block 的透明化前提下对其中插入的图片做非透明化处理（透明化图片和背景会相互干扰，看上去很不舒服）。</p>
+<p><font size=5><em>To be continued.</em></font></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer"><!-- 文件位置：~/source/_data/post-body-end.swig -->
+
+<div>
+    <div>
+        
+        <div style="text-align:center;color: #ccc;font-size:14px;">-----------------------<span style="margin: 0 10px;">THANKS FOR YOUR READING</span>-----------------------</div>
+        
+    </div>
+</div>
+          <div class="post-tags">
+              <a href="/tags/hexo/" rel="tag"># hexo</a>
+              <a href="/tags/next/" rel="tag"># next</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/11/10/illustrator_recommendation_s/" rel="prev" title="同人 h 本画师收集">
+                  <i class="fa fa-chevron-left"></i> 同人 h 本画师收集
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">司马酸</span>
+</div>
+<div class="busuanzi-count">
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  const url = element.dataset.target;
+  const pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  const pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  const fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <meta name="referrer" content="no-referrer-when-downgrade">
+
+
+
+
+
+
+
+  
+
+  
+      <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = '//cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
