@@ -257,7 +257,7 @@ Variables must be defined exactly once but can be declared many times. To use th
   <entry>
     <title>由某概率题引发的讨论</title>
     <url>/2021/03/19/gacha_z/</url>
-    <content><![CDATA[<p>某日收到友人的一个问题, 如下问题 1 所示.</p>
+    <content><![CDATA[<p>某日收到友人的一个问题, 如下<strong>问题 1</strong> 所示.</p>
 <a id="more"></a>
 <h2 id="问题-1">问题 1</h2>
 <div class="note info no-icon"><!-- #### No icon note -->
@@ -290,9 +290,11 @@ Variables must be defined exactly once but can be declared many times. To use th
 <p>扭蛋池中有 <span class="math inline">\(n\)</span> 种扭蛋, 设每次 gacha 都等可能地得到其中一种扭蛋一个. 若某氪金大佬想要抽齐所有扭蛋 (即每种扭蛋都至少抽出一个), 以 <span class="math inline">\(X_n\)</span> 表示该大佬需要 gacha 的次数. 讨论 <span class="math inline">\(X_n\)</span> 的概率特征.</p>
 </div>
 <p><strong><em>Sketch of analysis:</em></strong><br />
-利用题目 1 中的方法, 把 <span class="math inline">\(X_n\)</span> 拆成 <span class="math inline">\(n\)</span> 个随机变量和 <span class="math inline">\(X_n=\sum_{k=1}^nY_k\)</span> , 其中 <span class="math inline">\(Y_k\sim\mathrm{Geo}(\frac{n-k+1}{n})\)</span> 表示从刚好有第 <span class="math inline">\(k-1\)</span> 种扭蛋到刚好有第 <span class="math inline">\(k\)</span> 种扭蛋需要抽取的次数. 容易计算其期望 <span class="math inline">\(\mathbb{E}[X_n]=nH_n\)</span>, 其中 <span class="math inline">\(H_n=\sum_{i=1}^ni^{-1}\)</span> 是第 <span class="math inline">\(n\)</span> 个调和数. 利用 <span class="math inline">\(Y_k\)</span> 之间的独立性也容易计算出方差为: <span class="math display">\[
-      D[X_n]=\sum_{k=1}^nD[Y_k] = n^2\sum_{k=1}^nk^{-2}
-  \]</span> 设 <span class="math inline">\(Z_n=\frac{X_n-nH_n}{n}\)</span> , 计算 <span class="math inline">\(Z_n\)</span> 的特征函数如下 <span class="math display">\[ 
+利用<strong>问题 1</strong> 中的方法, 把 <span class="math inline">\(X_n\)</span> 拆成 <span class="math inline">\(n\)</span> 个随机变量和 <span class="math inline">\(X_n=\sum_{k=1}^nY_k\)</span> , 其中 <span class="math inline">\(Y_k\sim\mathrm{Geo}(\frac{n-k+1}{n})\)</span> 表示从刚好有第 <span class="math inline">\(k-1\)</span> 种扭蛋到刚好有第 <span class="math inline">\(k\)</span> 种扭蛋需要抽取的次数. 容易计算其期望 <span class="math inline">\(\mathbb{E}[X_n]=nH_n\)</span>, 其中 <span class="math inline">\(H_n=\sum_{i=1}^ni^{-1}\)</span> 是第 <span class="math inline">\(n\)</span> 个调和数. 利用 <span class="math inline">\(Y_k\)</span> 之间的独立性也容易计算出方差为: <span class="math display">\[
+      D[X_n]=\sum_{k=1}^nD[Y_k] = n^2\sum_{k=1}^nk^{-2}\overset{\text{(Basel&#39;s equality)}}{&lt;}\frac{\pi^2}{6}n^2
+  \]</span> 另外, 由调和数的性质易得 <span class="math display">\[
+    nH_n=n\log n+\gamma n+\frac12+\mathcal{O}(n^{-1})\ \Rightarrow\ \frac{X_n}{n\log n}\overset{p}{\rightarrow}1
+  \]</span> 那么, <span class="math inline">\(X_n\)</span> 除掉高阶项后的渐进性是怎样的呢? 即我们想要研究 <span class="math inline">\(\lim_{n\to\infty}\frac{X_n-n\log n}{n}\)</span> 的性质. 现设 <span class="math inline">\(Z_n=\frac{X_n-nH_n}{n}\)</span>, 计算 <span class="math inline">\(Z_n\)</span> 的特征函数如下 <span class="math display">\[ 
     \begin{aligned}
     \varphi_{Z_n}(t)=&amp;\mathbb{E}[\mathrm{e}^{itZ_n}]=\mathrm{e}^{-itH_n}\mathbb{E}[\mathrm{e}^{i\frac{t}{n}X_n}]=\mathrm{e}^{-itH_n}\prod_{k=1}^n\Big(1+\frac{n}{n-k+1}\big(\mathrm{e}^{-\frac{it}{n}}-1\big)\Big)^{-1}\\ =&amp;\bigg(\prod_{k=1}^n\mathrm{e}^{\frac{it}{k}}\Big(1+\frac{n}{k}\big(\mathrm{e}^{-\frac{it}{n}}-1\big)\Big)\bigg)^{-1}
     \end{aligned}
@@ -304,16 +306,23 @@ Variables must be defined exactly once but can be declared many times. To use th
     F_V(x)=\lim_{n\to\infty}\mathbb{P}(Z_n+\gamma\leq x)=\lim_{n\to\infty}\mathbb{P}\bigg(\frac{X_n-n(H_n-\gamma)}{n}\leq x\bigg)=\lim_{n\to\infty}\mathbb{P}\Big(\frac{X_n-n\ln n}{n}\leq x\Big)
   \]</span> 其中 <span class="math inline">\(V\)</span> 应满足 <span class="math display">\[
     \int_{\mathbb{R}}\mathrm{e}^{itv}\mathrm{d}F_V(v)=\Gamma(1-it)
-  \]</span> 这里 <span class="math inline">\(F_V\)</span> 表示 <span class="math inline">\(V\)</span> 的 CDF.</p>
+  \]</span> 这里 <span class="math inline">\(F_V\)</span> 表示 <span class="math inline">\(V\)</span> 的 CDF. 如上分析指出 <span class="math inline">\(\frac{X_n-n\log n}{n}\overset{d}{\rightarrow}V\)</span>.</p>
 <details class="note default no-icon"><summary><p><strong>RMK</strong></p>
 </summary>
-<p>由问题 1 的解答过程首先是联想到抽满的情况: 因为在计算期望的过程中算到抽满为止将得到调和数, 它可能具有某些好的性质. 所以也就有了问题 2 中的讨论. 在此问题基础上更进一步地, 我们还可以研究</p>
+<p>由<strong>问题 1</strong> 的解答过程首先是联想到抽满的情况: 因为在计算期望的过程中算到抽满为止将得到调和数, 它可能具有某些好的性质. 所以也就有了<strong>问题 2</strong> 中的讨论. 在此问题基础上更进一步地, 我们还可以研究</p>
 <ul>
-<li><span class="math inline">\(n\)</span> 个扭蛋出现概率不同, 即第 <span class="math inline">\(i\)</span> 种扭蛋出现概率为 <span class="math inline">\(p_i\in(0,1)\)</span>, 满足 <span class="math inline">\(\sum_{i=1}^np_i=1\)</span>. 此时的 <span class="math inline">\(X_n\)</span> 还有比较好的性质吗?</li>
+<li><span class="math inline">\(n\)</span> 种扭蛋出现概率不同, 即第 <span class="math inline">\(i\)</span> 种扭蛋出现概率为 <span class="math inline">\(p_i\in(0,1)\)</span>, 满足 <span class="math inline">\(\sum_{i=1}^np_i=1\)</span>. 此时的 <span class="math inline">\(X_n\)</span> 还有比较好的性质吗?</li>
 <li>此氪金大佬想要抽齐 <span class="math inline">\(m\)</span> 套来分别送给 <span class="math inline">\(m\)</span> 个好兄弟 (即每种扭蛋至少抽出 <span class="math inline">\(m\)</span> 个), 此时他需要进行 gacha 的次数 <span class="math inline">\(X_n^{(m)}\)</span> 又是怎样的呢?</li>
 </ul>
 
 </details>
+<p>实际中的抽卡其实是具有强针对性的, 故存在许多干扰项 (毕竟不会有人想从一个池子里捞出所有人). 现在让我们回到<strong>问题 1</strong> 并再次由此出发讨论一般性的问题.</p>
+<h2 id="问题-3">问题 3</h2>
+<div class="note info no-icon"><!-- #### No icon note -->
+<p>在一氪金抽卡游戏的某次活动出了 <span class="math inline">\(n\)</span> 张新卡, 并且在随活动配套的卡池中 up 了该 <span class="math inline">\(n\)</span> 张新卡. 设该 <span class="math inline">\(n\)</span> 张卡中有 <span class="math inline">\(m\)</span> 种稀有度的卡, 第 <span class="math inline">\(i\)</span> 种稀有度的卡有 <span class="math inline">\(n_i\)</span> 张, 每张出货概率相同为 <span class="math inline">\(p_i\)</span>. 故有 <span class="math display">\[
+    \sum_{i=1}^{m}n_i = n,\quad 0&lt;p_1&lt;\cdots&lt;p_m&lt;1,\ \sum_{i=1}^{m} p_i = p\in(0,1)
+  \]</span></p>
+</div>
 ]]></content>
       <categories>
         <category>杂谈</category>
