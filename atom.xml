@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-03-20T14:14:01.444Z</updated>
+  <updated>2021-03-31T13:32:08.298Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2021/03/19/gacha_z/"/>
     <id>http://example.com/2021/03/19/gacha_z/</id>
     <published>2021-03-19T11:00:00.000Z</published>
-    <updated>2021-03-20T14:14:01.444Z</updated>
+    <updated>2021-03-31T13:32:08.298Z</updated>
     
     
     <summary type="html">&lt;p&gt;某日收到友人的一个问题, 如下&lt;strong&gt;问题 1&lt;/strong&gt; 所示.&lt;/p&gt;</summary>
@@ -58,11 +58,11 @@
     <category term="算法" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="study notes" scheme="http://example.com/tags/study-notes/"/>
-    
     <category term="submodular maximization" scheme="http://example.com/tags/submodular-maximization/"/>
     
     <category term="optimization" scheme="http://example.com/tags/optimization/"/>
+    
+    <category term="study notes" scheme="http://example.com/tags/study-notes/"/>
     
   </entry>
   
@@ -118,7 +118,7 @@
     <link href="http://example.com/2021/01/06/saekano_memorial2_comment_r1.0_s/"/>
     <id>http://example.com/2021/01/06/saekano_memorial2_comment_r1.0_s/</id>
     <published>2021-01-06T08:00:00.000Z</published>
-    <updated>2021-01-18T02:36:46.238Z</updated>
+    <updated>2021-03-21T08:08:02.181Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;序章&quot;&gt;序章&lt;/h2&gt;
@@ -140,7 +140,7 @@
     <link href="http://example.com/2020/12/18/cplus2_noteI_z/"/>
     <id>http://example.com/2020/12/18/cplus2_noteI_z/</id>
     <published>2020-12-17T16:00:00.000Z</published>
-    <updated>2021-03-19T10:54:23.893Z</updated>
+    <updated>2021-03-31T10:40:05.885Z</updated>
     
     
     <summary type="html">&lt;p&gt;Personalized notes taken while reading &lt;a href=&quot;https://www.informit.com/store/c-plus-plus-primer-9780321714114&quot;&gt;Cplus2 Primer Ed5&lt;/a&gt; (C++11 standard) Part I: The Basics.&lt;br /&gt;
@@ -154,9 +154,9 @@ Long-term updating required.&lt;/p&gt;</summary>
     <category term="语言" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/%E8%AF%AD%E8%A8%80/"/>
     
     
-    <category term="c++" scheme="http://example.com/tags/c/"/>
-    
     <category term="study notes" scheme="http://example.com/tags/study-notes/"/>
+    
+    <category term="c++" scheme="http://example.com/tags/c/"/>
     
   </entry>
   
@@ -283,7 +283,7 @@ Long-term updating required.&lt;/p&gt;</summary>
     <link href="http://example.com/2020/11/10/test_z/"/>
     <id>http://example.com/2020/11/10/test_z/</id>
     <published>2020-11-10T06:43:25.000Z</published>
-    <updated>2020-12-17T03:09:33.030Z</updated>
+    <updated>2021-03-30T04:49:25.090Z</updated>
     
     
     <summary type="html">&lt;p&gt;本来想写个测试文档作为第一篇博文来着，突然觉得记录一下搭建这个网站的过程也不错，名字还是叫 test 吧。具体搭建过程基本参考这个&lt;a href=&quot;https://zhuanlan.zhihu.com/p/26625249&quot;&gt;知乎专栏&lt;/a&gt;，不过这篇文章写得并不全，有些细节丢失了之后导致某些地方有点卡手。我首先会把搭建时遇到的一些问题和解决方法列举一下（Part 1），之后应该会陆陆续续整点新功能，所以到时候就接着在这里补充一些遇到的新问题（Part 2）。&lt;/p&gt;</summary>
