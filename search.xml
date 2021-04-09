@@ -813,7 +813,7 @@ Variables must be defined exactly once but can be declared many times. To use th
 <li><p>Friend declarations may appear only inside a class definition. Friends are not members of the class and are not affected by the access control of the section in which they are declared.</p></li>
 <li><p>Unlike ordinary members, members that define types must appear before they are used.</p></li>
 <li><p>It sometimes (but not very often) happens that a class has a data member that we want to be able to modify, even inside a <code>const</code> member function. We indicate such members by including the <code>mutable</code> keyword in their declaration.</p></li>
-<li><p>When we provide an in-class initializer, we must do so following an <code>=</code> sign or inside braces. (See (this post)[https://stackoverflow.com/questions/24836526/why-c11-in-class-initializer-cannot-use-parentheses].)</p></li>
+<li><p>When we provide an in-class initializer, we must do so following an <code>=</code> sign or inside braces. (See <a href="https://stackoverflow.com/questions/24836526/why-c11-in-class-initializer-cannot-use-parentheses">this post</a>.)</p></li>
 <li><p>A class can also make another class its friend or it can declare specific member functions of another (previously defined) class as friends. It is important to understand that friendship is not transitive.</p></li>
 <li><p>A class must declare as a friend each function in a set of overloaded functions that it wishes to make a friend.</p></li>
 <li><p>Class definitions are processed in two phases:</p>
