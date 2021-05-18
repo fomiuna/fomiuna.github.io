@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-04-01T01:47:33.078Z</updated>
+  <updated>2021-05-18T02:16:14.923Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>夜路</title>
+    <link href="http://example.com/2021/05/17/yorumiti_poem_s/"/>
+    <id>http://example.com/2021/05/17/yorumiti_poem_s/</id>
+    <published>2021-05-17T14:00:00.000Z</published>
+    <updated>2021-05-18T02:16:14.923Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;夜路&quot;&gt;夜路&lt;/h1&gt;
+&lt;p&gt;夜是幽暗的，&lt;/p&gt;
+&lt;p&gt;它自始自终是那样，&lt;/p&gt;
+&lt;p&gt;令人迷茫而不明方向；&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="杂谈" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="生活" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="poem" scheme="http://example.com/tags/poem/"/>
+    
+  </entry>
   
   <entry>
     <title>由某概率题引发的讨论</title>
