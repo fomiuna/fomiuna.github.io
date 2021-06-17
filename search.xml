@@ -330,7 +330,7 @@
 </div>
 <p><strong><em>Sketch:</em></strong><br />
 即解 <span class="math display">\[
-      f(x)=\frac{x^a}{a^x}=1\quad\Rightarrow\quad\frac{\ln x}{x}=\frac{\ln a}{a}=f(a)
+      \frac{x^a}{a^x}=1\quad\Rightarrow\quad f(x)=\frac{\ln x}{x}=\frac{\ln a}{a}=f(a)
   \]</span> 注意到 <span class="math inline">\(\frac{\ln x}{x}\)</span> 在 <span class="math inline">\((0,\mathrm e)\)</span> 增, 在 <span class="math inline">\((\mathrm e,\infty)\)</span> 减. 故若想要方程有两解, 则需 <span class="math inline">\(f(a)&lt;\mathrm e^{-1}\)</span>. 注意到 <span class="math inline">\(f(0-)=-\infty,f(+\infty)=+0\)</span>, 由单调性, 我们还需要 <span class="math inline">\(f(a)&gt;0\)</span>. 故所求 <span class="math inline">\(a\)</span> 的取值范围为 <span class="math display">\[
       f^{-1}\Big((0,\mathrm e^{-1})\Big) = (1,\mathrm e)\cup(\mathrm e,+\infty)
   \]</span> <br/></p>
