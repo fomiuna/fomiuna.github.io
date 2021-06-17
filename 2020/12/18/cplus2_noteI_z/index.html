@@ -32,7 +32,7 @@
 <meta property="og:description" content="Personalized notes taken while reading Cplus2 Primer Ed5 (C++11 standard) Part I: The Basics. Since the standard has changed now, I will use &quot;NCC&quot; to reprensent &quot;not the case currently&quot;. Anyway, good">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-12-17T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-04-01T07:24:54.591Z">
+<meta property="article:modified_time" content="2021-05-20T08:14:31.157Z">
 <meta property="article:author" content="司马酸">
 <meta property="article:tag" content="study notes">
 <meta property="article:tag" content="c++">
@@ -231,7 +231,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -352,7 +352,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-04-01 15:24:54" itemprop="dateModified" datetime="2021-04-01T15:24:54+08:00">2021-04-01</time>
+        <time title="修改时间：2021-05-20 16:14:31" itemprop="dateModified" datetime="2021-05-20T16:14:31+08:00">2021-05-20</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -400,6 +400,7 @@ Long-term updating required.</p>
 <a id="more"></a>
 <h1 id="chapter-1">Chapter 1</h1>
 <ul>
+<li><p>On most systems, the value returned from main is a status indicator. A return value of <code>0</code> indicates suceess. A nonzero return has a meaning that is defined by the system. Ordinarily a nonzero return indicates what kind of error occurred.</p></li>
 <li><p>The value returned from <code>main</code> is accessed in a system-dependent manner. On both UNIX and Windows systems, after executing the program, you must issue an appropriate <code>echo</code> command.<br />
 On UNIX systems, we obtain the status by writing <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ echo $?</span><br></pre></td></tr></table></figure> To see the status on a Windows system, we write <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ echo %ERRORLEVEL%</span><br></pre></td></tr></table></figure></p></li>
 <li><p>The manipulator <code>endl</code> has the effect of ending the current line and flushing the buffer associated with that device. Flushing buffer ensures that all the output the program has generated so far is actually written to the output stream, rather than sitting in memory waiting to be written.<br />

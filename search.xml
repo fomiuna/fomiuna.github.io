@@ -171,6 +171,50 @@
       </tags>
   </entry>
   <entry>
+    <title>2021 高考数学问题</title>
+    <url>/2021/06/17/gaokao2021_z/</url>
+    <content><![CDATA[<p>(这篇是水博客用的, 不过总感觉好像之前也干过类似的事.)</p>
+<a id="more"></a>
+<div class="note info no-icon"><!-- #### No icon note -->
+<p><strong>(全国甲卷理科)</strong> 已知 <span class="math inline">\(a&gt;0\)</span> 且 <span class="math inline">\(a\neq1\)</span>, 函数 <span class="math inline">\(f(x)=\frac{x^a}{a^x},\ x&gt;0\)</span>.</p>
+<ol type="1">
+<li>当 <span class="math inline">\(a=2\)</span> 时, 求 <span class="math inline">\(f(x)\)</span> 的单调区间;</li>
+<li>若曲线 <span class="math inline">\(y=f(x)\)</span> 与直线 <span class="math inline">\(y=1\)</span> 有且仅有两个交点, 求 <span class="math inline">\(a\)</span> 的取值范围.</li>
+</ol>
+</div>
+<p><strong><em>Sketch:</em></strong><br />
+即解 <span class="math display">\[
+      f(x)=\frac{x^a}{a^x}=1\quad\Rightarrow\quad\frac{\ln x}{x}=\frac{\ln a}{a}=f(a)
+  \]</span> 注意到 <span class="math inline">\(\frac{\ln x}{x}\)</span> 在 <span class="math inline">\((0,\mathrm e)\)</span> 增, 在 <span class="math inline">\((\mathrm e,\infty)\)</span> 减. 故若想要方程有两解, 则需 <span class="math inline">\(f(a)&lt;\mathrm e^{-1}\)</span>. 注意到 <span class="math inline">\(f(0-)=-\infty,f(+\infty)=+0\)</span>, 由单调性, 我们还需要 <span class="math inline">\(f(a)&gt;0\)</span>. 故所求 <span class="math inline">\(a\)</span> 的取值范围为 <span class="math display">\[
+      f^{-1}\Big((0,\mathrm e^{-1})\Big) = (1,\mathrm e)\cup(\mathrm e,+\infty)
+  \]</span> <br/></p>
+<div class="note info no-icon"><!-- #### No icon note -->
+<p><strong>(全国新高考Ⅰ卷)</strong> 已知函数 <span class="math inline">\(f(x)=x(1-\ln x)\)</span>.</p>
+<ol type="1">
+<li>讨论 <span class="math inline">\(f(x)\)</span> 的单调性;</li>
+<li>设 <span class="math inline">\(a,b\)</span> 为两个不相等的正数, 且 <span class="math inline">\(b\ln a-a\ln b=a-b\)</span>. 证明: <span class="math inline">\(2&lt;\frac1a+\frac1b&lt;\mathrm e\)</span>.</li>
+</ol>
+</div>
+<p><strong><em>Sketch:</em></strong><br />
+稍作整理可知 <span class="math inline">\(a,b\)</span> 满足 <span class="math inline">\(f(a^{-1})=f(b^{-1})\)</span>. 由于 <span class="math inline">\(f(x)\)</span> 在 <span class="math inline">\((0,1)\)</span> 上增, 在 <span class="math inline">\((1,\mathrm e)\)</span> 上减, 且在 <span class="math inline">\((0,\mathrm e)\)</span> 上为正, 在 <span class="math inline">\((\mathrm e,\infty)\)</span> 为负. 故条件可变为 <span class="math display">\[
+      0&lt;x_1&lt;1&lt;x_2&lt;\mathrm e,\quad\text{s.t.}\quad f(x_1)=f(x_2)
+  \]</span> 我们对 <span class="math inline">\(d=1-x_1\in(0,1)\)</span> 考虑 <span class="math display">\[
+    f(1+d)-f(1-d)=\int_{1-d}^{1+d}f&#39;(t)\mathrm dt=\int_0^d\Big(f&#39;(1-t)+f&#39;(1+t)\Big)\mathrm dt
+  \]</span> 注意到 <span class="math inline">\(f&#39;(1-t)+f&#39;(1+t)=-\ln(1-t^2)&gt;0,\ \forall t\in(0,d)\)</span>, 故 <span class="math inline">\(f(1+d)&gt;f(1-d)\)</span>, 结合 <span class="math inline">\(f(x_2)=f(1-d)\)</span> 与 <span class="math inline">\(f\)</span> 在 <span class="math inline">\((1,\mathrm e)\)</span> 递减可得 <span class="math display">\[
+      x_2&gt;1+d=2-x_1\quad\Rightarrow\quad x_1+x_2&gt;2
+  \]</span> 另一方面, 注意到 <span class="math inline">\(x+y=\mathrm e\)</span> 在 <span class="math inline">\((\mathrm e,0)\)</span> 处与 <span class="math inline">\(y=f(x)\)</span> 相切且 <span class="math inline">\(f\)</span> 为凹, 故我们有 <span class="math display">\[
+      x_2&lt;\mathrm e-f(x_1)\quad\Rightarrow\quad x_1+x_2&lt;\mathrm e+x_1\ln x_1&lt;\mathrm e
+  \]</span> 综合上述两方面即得证.</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>maths</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>由某概率题引发的讨论</title>
     <url>/2021/03/19/gacha_z/</url>
     <content><![CDATA[<p>某日收到友人的一个问题, 如下<strong>问题 1</strong> 所示.</p>
@@ -560,27 +604,6 @@ p.s. 水陆两栖，同人本现在画得少了</p></li>
       </tags>
   </entry>
   <entry>
-    <title>pdf test</title>
-    <url>/2021/03/12/pdftest_z/</url>
-    <content><![CDATA[<center>
-<strong>Here is a pdf file.</strong>
-</center>
-<a id="more"></a>
-<p><br></p>
-<p><div class="pdfobject-container" data-target="/notes.pdf" data-height="1000px"></div> <!-- <object data="/files/notes.pdf" type="application/pdf" width="100%" height="877px"> --></p>
-<p><br></p>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>submodular maximization</tag>
-        <tag>optimization</tag>
-        <tag>study notes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>重温“路人女主”至10卷的一些感受</title>
     <url>/2020/11/10/saekano_comment_s/</url>
     <content><![CDATA[<h3 id="序">序</h3>
@@ -615,6 +638,27 @@ p.s. 水陆两栖，同人本现在画得少了</p></li>
       </categories>
       <tags>
         <tag>lightnovel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pdf test</title>
+    <url>/2021/03/12/pdftest_z/</url>
+    <content><![CDATA[<center>
+<strong>Here is a pdf file.</strong>
+</center>
+<a id="more"></a>
+<p><br></p>
+<p><div class="pdfobject-container" data-target="/notes.pdf" data-height="1000px"></div> <!-- <object data="/files/notes.pdf" type="application/pdf" width="100%" height="877px"> --></p>
+<p><br></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>submodular maximization</tag>
+        <tag>optimization</tag>
+        <tag>study notes</tag>
       </tags>
   </entry>
   <entry>
@@ -788,6 +832,7 @@ Long-term updating required.</p>
 <a id="more"></a>
 <h1 id="chapter-1">Chapter 1</h1>
 <ul>
+<li><p>On most systems, the value returned from main is a status indicator. A return value of <code>0</code> indicates suceess. A nonzero return has a meaning that is defined by the system. Ordinarily a nonzero return indicates what kind of error occurred.</p></li>
 <li><p>The value returned from <code>main</code> is accessed in a system-dependent manner. On both UNIX and Windows systems, after executing the program, you must issue an appropriate <code>echo</code> command.<br />
 On UNIX systems, we obtain the status by writing <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ echo $?</span><br></pre></td></tr></table></figure> To see the status on a Windows system, we write <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ echo %ERRORLEVEL%</span><br></pre></td></tr></table></figure></p></li>
 <li><p>The manipulator <code>endl</code> has the effect of ending the current line and flushing the buffer associated with that device. Flushing buffer ensures that all the output the program has generated so far is actually written to the output stream, rather than sitting in memory waiting to be written.<br />

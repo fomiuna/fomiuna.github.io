@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-05-18T02:43:34.170Z</updated>
+  <updated>2021-06-17T12:05:57.908Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2021 高考数学问题</title>
+    <link href="http://example.com/2021/06/17/gaokao2021_z/"/>
+    <id>http://example.com/2021/06/17/gaokao2021_z/</id>
+    <published>2021-06-17T11:00:00.000Z</published>
+    <updated>2021-06-17T12:05:57.908Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;(这篇是水博客用的, 不过总感觉好像之前也干过类似的事.)&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="杂谈" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="生活" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="maths" scheme="http://example.com/tags/maths/"/>
+    
+  </entry>
   
   <entry>
     <title>夜路</title>
@@ -164,7 +185,7 @@
     <link href="http://example.com/2020/12/18/cplus2_noteI_z/"/>
     <id>http://example.com/2020/12/18/cplus2_noteI_z/</id>
     <published>2020-12-17T16:00:00.000Z</published>
-    <updated>2021-04-01T07:24:54.591Z</updated>
+    <updated>2021-05-20T08:14:31.157Z</updated>
     
     
     <summary type="html">&lt;p&gt;Personalized notes taken while reading &lt;a href=&quot;https://www.informit.com/store/c-plus-plus-primer-9780321714114&quot;&gt;Cplus2 Primer Ed5&lt;/a&gt; (C++11 standard) Part I: The Basics.&lt;br /&gt;
