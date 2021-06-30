@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-06-17T12:21:57.324Z</updated>
+  <updated>2021-06-30T08:23:17.706Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Some solutions to FML Ed2</title>
+    <link href="http://example.com/2021/06/30/FML_sol_z/"/>
+    <id>http://example.com/2021/06/30/FML_sol_z/</id>
+    <published>2021-06-29T16:00:00.000Z</published>
+    <updated>2021-06-30T08:23:17.706Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;  最近闲下来时在翻 Mohri 的 &lt;a href=&quot;https://cs.nyu.edu/~mohri/mlbook/&quot;&gt;Foundations of Machine Learning&lt;/a&gt;(Second Edition). 网上能找到的题解太少了, 自己就边看边做了一些, 大概以后还会继续更(?&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="算法" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="ML" scheme="http://example.com/tags/ML/"/>
+    
+    <category term="study notes" scheme="http://example.com/tags/study-notes/"/>
+    
+  </entry>
   
   <entry>
     <title>2021 高考数学问题</title>
@@ -103,11 +126,11 @@
     <category term="算法" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95/"/>
     
     
+    <category term="study notes" scheme="http://example.com/tags/study-notes/"/>
+    
     <category term="submodular maximization" scheme="http://example.com/tags/submodular-maximization/"/>
     
     <category term="optimization" scheme="http://example.com/tags/optimization/"/>
-    
-    <category term="study notes" scheme="http://example.com/tags/study-notes/"/>
     
   </entry>
   
@@ -303,7 +326,7 @@ Long-term updating required.&lt;/p&gt;</summary>
     <link href="http://example.com/2020/11/10/illustrator_recommendation_s/"/>
     <id>http://example.com/2020/11/10/illustrator_recommendation_s/</id>
     <published>2020-11-10T07:50:13.000Z</published>
-    <updated>2020-12-14T10:18:47.966Z</updated>
+    <updated>2021-06-30T04:30:33.720Z</updated>
     
     
     <summary type="html">&lt;p&gt;懂的都懂。&lt;/p&gt;</summary>
