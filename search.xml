@@ -871,9 +871,18 @@ p.s. 水陆两栖，同人本现在画得少了</p></li>
 Since the standard has changed now, I will use "<strong>NCC</strong>" to reprensent "not the case currently". Anyway, good programming convention matters.<br />
 Long-term updating required.</p>
 <a id="more"></a>
-<h1 id="chapter-1">Chapter 1</h1>
+<h1 id="preface">Preface</h1>
+<p>Modern C++ can be thought of as comprising three parts:</p>
+<ol type="1">
+<li>The low-level language, much of which is inherited from C</li>
+<li>More advanced language features that allow us to define our own types and to organize large-scale programs and systems</li>
+<li>The standard library, which uses these advanced features to provide useful data structures and algorithms</li>
+</ol>
+<h1 id="chapter-1.-getting-started">Chapter 1. Getting Started</h1>
 <ul>
+<li><p>The operating system runs a C++ program by calling <code>main</code>.</p></li>
 <li><p>On most systems, the value returned from main is a status indicator. A return value of <code>0</code> indicates suceess. A nonzero return has a meaning that is defined by the system. Ordinarily a nonzero return indicates what kind of error occurred.</p></li>
+<li><p>A type defines both the contents of a data element and the operations that are possible on those data.</p></li>
 <li><p>The value returned from <code>main</code> is accessed in a system-dependent manner. On both UNIX and Windows systems, after executing the program, you must issue an appropriate <code>echo</code> command.<br />
 On UNIX systems, we obtain the status by writing <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ echo $?</span><br></pre></td></tr></table></figure> To see the status on a Windows system, we write <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ echo %ERRORLEVEL%</span><br></pre></td></tr></table></figure></p></li>
 <li><p>The manipulator <code>endl</code> has the effect of ending the current line and flushing the buffer associated with that device. Flushing buffer ensures that all the output the program has generated so far is actually written to the output stream, rather than sitting in memory waiting to be written.<br />
@@ -883,7 +892,7 @@ On UNIX systems, we obtain the status by writing <figure class="highlight plain"
 <em>An <code>istream</code> becomes invalid when we hit end-of-file (e.g. ctrl+z on Win or ctrl+d on UNIX) or encounter an invalid input, such as reading a value that is not an integer.</em></p></li>
 <li><p>Most operating systems support file redirection (to avoid tediously repeated typing), which lets us associate a named file with the standard input and the standard output: <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ exefile &lt;infile &gt;outfile</span><br></pre></td></tr></table></figure> This command will read input from a file named <code>infile</code> and write its output to a file named <code>outfile</code> in the current directory.</p></li>
 </ul>
-<h1 id="chapter-2">Chapter 2</h1>
+<h1 id="chapter-2.-variables-and-basic-types">Chapter 2. Variables and Basic Types</h1>
 <ul>
 <li><p>Which of the two character representations <code>signed char</code> and <code>unsigned char</code> is equivalent to <code>char</code> depends on the compiler. So computations using <code>char</code> are especially problematic because <code>char</code> is <code>signed</code> on some machines and <code>unsigned</code> on others. If you need a tiny integer, explicitly specify either <code>signed char</code> or <code>unsigned char</code>.</p></li>
 <li><p>If we assign an out-of-range value to an object of unsigned type, the result is the remainder of the value modulo the number of values the target type can hold. If we assign an out-of-range value to an object of signed type, the result is undefined. Expressions that mix signed and unsigned values can yield suprising results when the signed value is negative since signed values are automatically converted to unsigned.</p></li>
