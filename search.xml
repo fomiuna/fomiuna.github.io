@@ -211,6 +211,35 @@
       </tags>
   </entry>
   <entry>
+    <title>Cplus2 Primer Ed5 Reading Notes 2</title>
+    <url>/2021/07/02/cplus2_noteI2_z/</url>
+    <content><![CDATA[<p>Personalized notes taken while reading <a href="https://www.informit.com/store/c-plus-plus-primer-9780321714114">Cplus2 Primer Ed5</a> (C++11 standard) Part III: Tools for Class Authors.</p>
+<a id="more"></a>
+<h1 id="chapter-13.-copy-control">Chapter 13. Copy Control</h1>
+<ul>
+<li><p>Unlike the synthesized default constructor, a copy constructor is synthesized even if we define other constructors.</p></li>
+<li><p>When we use direct initialization, we are asking the compiler to use ordinary function matching to select the constructor that best matches the arguments we provide. When we use copy initilization, we are asking the compiler to copy the right-hand operand into the object being created, converting that operand if necessary.</p></li>
+<li><p>Copy initialization happens not only when we define variables using an <code>=</code>, but also when we</p>
+<ol type="1">
+<li>Pass an object as an argument to a parameter of nonreference type</li>
+<li>Return an object from a function that has a nonreference return type</li>
+<li>Brace initialize the elements in an array or the members of an aggregate class</li>
+</ol></li>
+</ul>
+<h1 id="chapter-14.-overloaded-operations-and-conversions">Chapter 14. Overloaded Operations and Conversions</h1>
+<h1 id="chapter-15.-object-oriented-programming">Chapter 15. Object-Oriented Programming</h1>
+<h1 id="chapter-16.-templates-and-generic-programming">Chapter 16. Templates and Generic Programming</h1>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>语言</category>
+      </categories>
+      <tags>
+        <tag>study notes</tag>
+        <tag>c++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>由某概率题引发的讨论</title>
     <url>/2021/03/19/gacha_z/</url>
     <content><![CDATA[<p>某日收到友人的一个问题, 如下<strong>问题 1</strong> 所示.</p>
@@ -865,9 +894,9 @@ p.s. 水陆两栖，同人本现在画得少了</p></li>
       </tags>
   </entry>
   <entry>
-    <title>Cplus2 Primer Ed5 Reading Notes (I)</title>
+    <title>Cplus2 Primer Ed5 Reading Notes 1</title>
     <url>/2020/12/18/cplus2_noteI_z/</url>
-    <content><![CDATA[<p>Personalized notes taken while reading <a href="https://www.informit.com/store/c-plus-plus-primer-9780321714114">Cplus2 Primer Ed5</a> (C++11 standard) Part I: The Basics.<br />
+    <content><![CDATA[<p>Personalized notes taken while reading <a href="https://www.informit.com/store/c-plus-plus-primer-9780321714114">Cplus2 Primer Ed5</a> (C++11 standard) Part I: The Basics and Part II: The C++ Library.<br />
 Since the standard has changed now, I will use "<strong>NCC</strong>" to reprensent "not the case currently". Anyway, good programming convention matters.<br />
 Long-term updating required.</p>
 <a id="more"></a>
@@ -886,7 +915,7 @@ Long-term updating required.</p>
 <li><p>The value returned from <code>main</code> is accessed in a system-dependent manner. On both UNIX and Windows systems, after executing the program, you must issue an appropriate <code>echo</code> command.<br />
 On UNIX systems, we obtain the status by writing <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ echo $?</span><br></pre></td></tr></table></figure> To see the status on a Windows system, we write <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ echo %ERRORLEVEL%</span><br></pre></td></tr></table></figure></p></li>
 <li><p>The output operator <code>&lt;&lt;</code> takes two operands: the left-hand operand must be an <code>ostream</code> object; the right-hand operand is a vaule to print. The result of the output operator is its left-hand operand. The input operator <code>&gt;&gt;</code> behaves analogously to the output operator.</p></li>
-<li><p>The manipulator <code>endl</code> has the effect of ending the current line and flushing the buffer associated with that device. Flushing buffer ensures that all the output the program has generated so far is actually written to the output stream, rather than sitting in memory waiting to be written.<br />
+<li><p>The manipulator <code>endl</code> has the effect of ending the current line and flushing the buffer associated with that device. Flushing buffer ensures that all the output the program has generated so far is actually written to the output stream, rather than sitting in memory waiting to be written. By default, reading <code>cin</code> flushes <code>cout</code>; <code>cout</code> is also flushed when the program ends normally; writes to <code>cerr</code> are not buffered, usually used for error messages or other output that is not part of the normal logic of the program.<br />
 <em>Programmers often add print statements during debugging. Such statements should always flush the stream. Otherwise, if the program crashes, output my be left in the buffer, leading to incorrect inferences about where the program crashed.</em></p></li>
 <li><p>When a comment pair does span multiple lines (surely, the best way is to use single-line comments cause comment pairs do not nest), it is often a good idea to indicate visually that the inner lines are part of a multiple comment (e.g. begin each line with an asterisk).</p></li>
 <li><p>The best way to comment a block of code is to insert single-line comments at the beginning of each line in the section we want to ignore since that code might contain nested comment pairs but comment pairs do not nest.</p></li>
@@ -897,11 +926,16 @@ On UNIX systems, we obtain the status by writing <figure class="highlight plain"
 </ul>
 <h1 id="chapter-2.-variables-and-basic-types">Chapter 2. Variables and Basic Types</h1>
 <ul>
-<li><p>Which of the two character representations <code>signed char</code> and <code>unsigned char</code> is equivalent to <code>char</code> depends on the compiler. So computations using <code>char</code> are especially problematic because <code>char</code> is <code>signed</code> on some machines and <code>unsigned</code> on others. If you need a tiny integer, explicitly specify either <code>signed char</code> or <code>unsigned char</code>.</p></li>
-<li><p>If we assign an out-of-range value to an object of unsigned type, the result is the remainder of the value modulo the number of values the target type can hold. If we assign an out-of-range value to an object of signed type, the result is undefined. Expressions that mix signed and unsigned values can yield suprising results when the signed value is negative since signed values are automatically converted to unsigned.</p></li>
+<li><p>C++ is a statically typed language; type checking is done at compile time.</p></li>
+<li><p>To give meaning to memory at a given address, we must know the type of the value stored there. The type determines how many bits are used and how to interpret those bits.</p></li>
+<li><p>Which of the two character representations <code>signed char</code> and <code>unsigned char</code> is equivalent to <code>char</code> depends on the compiler. So computations using <code>char</code> are especially problematic because <code>char</code> is <code>signed</code> on some machines and <code>unsigned</code> on others. If you need a tiny integer, explicitly specify either <code>signed char</code> or <code>unsigned char</code>.<br />
+<em>Do not use plain <code>char</code> or <code>bool</code> in arithmetic expressions. Use them only to hold characters or truth values.</em></p></li>
+<li><p>If we assign an out-of-range value to an object of unsigned type, the result is the remainder of the value modulo the number of values the target type can hold. If we assign an out-of-range value to an object of signed type, the result is undefined. Expressions that mix signed and unsigned values can yield suprising results when the signed value is negative since signed values are automatically converted to unsigned in an arithmetic expression.</p></li>
 <li><p>Programs usually should avoid implementation-defined behavior. Such programs are said to be nonportable. When program is moved to another machine, code that relied on implementation-defined behavior may fail.<br />
 <em>Tracking down these sorts of problems in previously working programs is, mildly put, unpleasant.</em></p></li>
-<li><p>Two string literals that appear adjacent to one another and that are seperated only by spaces, tabs or newlines are concatenated into a single literal.</p></li>
+<li><p>The type of a string literal is array of constant <code>char</code>s. The compiler appends a null character (<code>'\0'</code>) to every string literal. Thus, the actual size of a string literal is one more that its apparent size.</p></li>
+<li><p>Two string literals that appear adjacent to one another and that are seperated only by spaces, tabs or newlines are concatenated into a single literal.<br />
+<em>We use this form of literal when we need to write a literal that would otherwise be too large to fit comfortably on a single line.</em></p></li>
 <li><p>Initialization is not assignment. Initialization happens when a variable is given a value when it is created. Assignment obliterates an object's current value and replaces that value with a new one.</p></li>
 <li><p>When used with variables of built-in type, the list initialization has one important property: The compiler will not let us initialize variables of built-in type if the initializer might lead to the loss of information: <figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="keyword">long</span> <span class="keyword">double</span> ld = <span class="number">3.1415926536</span>;</span><br><span class="line"><span class="keyword">int</span> a&#123;ld&#125;, b = &#123;ld&#125;; <span class="comment">// error: narrowing conversion required</span></span><br><span class="line">int c(ld), d = ld; // ok: but value will be truncated</span><br></pre></td></tr></table></figure></p></li>
 <li><p>The value of an object of built-in type that is not explicitly initialized depends on where it is defined. Variables defined outside any function body are initialized to zero. With one exception, variables of built-in type defined inside a function are uninitialized. The value of an uninitialized variable of built-in type is undefined. (<strong>NCC</strong>)</p></li>
@@ -920,7 +954,7 @@ Variables must be defined exactly once but can be declared many times. To use th
 <li><p><code>auto</code> ordinarily ignores top-level <code>const</code>s. As usual in initializations, low-level <code>const</code>s, such as when an initializer is a pointer to <code>const</code>, are kept. If we want the deduced type to have top-level <code>const</code>, we must say so explicitly. <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> ci = <span class="number">42</span>;</span><br><span class="line"><span class="keyword">auto</span> a = ci; <span class="comment">// a is an int</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">auto</span> b = ci; <span class="comment">// b has type const int</span></span><br><span class="line"><span class="keyword">auto</span> &amp;c = ci; <span class="comment">// c is a const int&amp;</span></span><br><span class="line"><span class="keyword">auto</span> &amp;d = <span class="number">42</span>; <span class="comment">// error: cannot bind a plain reference to a literal</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">auto</span> &amp;e = <span class="number">42</span>; <span class="comment">// ok</span></span><br></pre></td></tr></table></figure> From above we can see that when we ask for a reference to an <code>auto</code>-deduced type, top-level <code>const</code>s in the initializer are not ignored.</p></li>
 <li><p>When the expression to which we apply <code>decltype</code> is a variable, <code>decltype</code> returns the type of that variable, including top-level <code>const</code> and references. And <code>decltype</code> returns a reference type for expressions that yield objects that can stand on the left-hand side of the assignment. <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> ci = <span class="number">0</span>, &amp;cj = ci;</span><br><span class="line"><span class="keyword">decltype</span>(ci) a = <span class="number">0</span>; <span class="comment">// a has type const int</span></span><br><span class="line"><span class="keyword">decltype</span>(cj) b; <span class="comment">// error: b is a reference and must be initialized</span></span><br><span class="line"><span class="keyword">int</span> i = <span class="number">42</span>, *p = &amp;i, &amp;r = i;</span><br><span class="line"><span class="keyword">decltype</span>(r + <span class="number">0</span>) c; <span class="comment">// ok: addition yields an int; c is an (uninitialized) int</span></span><br><span class="line"><span class="keyword">decltype</span>(*p) d; <span class="comment">// error: d is int&amp; and must be initialized</span></span><br></pre></td></tr></table></figure> If we use <code>decltype(r)</code>, we will get a reference type. Another important difference between <code>decltype</code> and <code>auto</code> is that the deduction done by <code>decltype</code> depends on the form of its given expression. <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">decltype</span>((i)) e; <span class="comment">// error: e is int&amp;</span></span><br><span class="line"><span class="keyword">decltype</span>(i) f; <span class="comment">// ok: f is an int</span></span><br></pre></td></tr></table></figure></p></li>
 </ul>
-<h1 id="chapter-3">Chapter 3</h1>
+<h1 id="chapter-3.-strings-vectors-and-arrays">Chapter 3. Strings, Vectors, and Arrays</h1>
 <ul>
 <li><p>Headers should not include <code>using</code> declarations. Use the C++ versions of C library headers.</p></li>
 <li><p>String literals are not standard library <code>string</code>s. E.g. when we mix <code>string</code>s and string or character literals, at least one operand to each <code>+</code> operator must be of <code>string</code> type.</p></li>
@@ -932,16 +966,16 @@ Variables must be defined exactly once but can be declared many times. To use th
 <li><p>Subtracting two iterators yields the number that when added to the right-hand iterator yields the left-hand iterator. The iterators must denote elements in, or one past the end of, the same container.<br />
 <em>The result type is a signed integral type named <code>difference_type</code>.</em></p></li>
 </ul>
-<h1 id="chapter-4">Chapter 4</h1>
+<h1 id="chapter-4.-expressions">Chapter 4. Expressions</h1>
 <ul>
 <li><p>Roughly speaking, when we use an object as an rvalue, we use the object's value (its contents). When we use an object as an lvalue, we use the object's identity (its location in memory). We can use an lvalue when an rvalue is requried, but we cannot use an rvalue when an lvalue (i.e., a location) is required (with one exception that will be covered later).</p></li>
 <li><p><code>sizeof</code> does not evaluate its operand, so dereferencing an invalid pointer as the operand to <code>sizeof</code> is safe because the pointer is not actually used.</p></li>
 </ul>
-<h1 id="chapter-5">Chapter 5</h1>
+<h1 id="chapter-5.-statements">Chapter 5. Statements</h1>
 <ul>
 <li>Throwing an exception terminates the current function and transfers control to a handler that will know how to handle this error. When a <code>catch</code> is selected to handle an exception, the associated block is executed.</li>
 </ul>
-<h1 id="chapter-6">Chapter 6</h1>
+<h1 id="chapter-6.-functions">Chapter 6. Functions</h1>
 <ul>
 <li><p>Using reference parameters could avoid copying objects of large class types or large containers. (Moreover, some class type cannot be copied.) Reference parameters that are not changed inside a function should be references to <code>const</code>.</p></li>
 <li><p>When you use the arguments in <code>argv</code>, remember that the optional arguments begin in <code>argv[1]</code>, <code>arg[0]</code> contains the program's name (or empty string), not user input.</p></li>
@@ -952,7 +986,7 @@ Variables must be defined exactly once but can be declared many times. To use th
 <li><p>Names used as default arguments are resolved in the scope of the function declaration.</p></li>
 <li><p>The <code>inline</code> mechanism is meant to optimize small, straight-line functions that are called frequnetly. The specification is only a request to the compiler. The compiler may choose to ignore this request.</p></li>
 </ul>
-<h1 id="chapter-7">Chapter 7</h1>
+<h1 id="chapter-7.-classes">Chapter 7. Classes</h1>
 <ul>
 <li><p>Member functions access the object on which they were called through an extra, implicit parameter named <code>this</code>. When we call a member function, <code>this</code> is initialized with the address of the object on which the function was invoked. Any direct use of a member of the class is assumed to be an implicit reference through <code>this</code>. (<code>this</code> is a <code>const</code> pointer.)</p></li>
 <li><p>Although <code>this</code> is implicit, it follows the normal initialization rules, which means that (by default) we cannot bind <code>this</code> to a <code>const</code> object. This means that we cannot call an ordinary member function on a <code>const</code> object. A <code>const</code> following the parameter list (i.e., <code>const</code> member function) indicates that <code>this</code> is a pointer to <code>const</code>. <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Sales_data</span> &#123;</span></span><br><span class="line">  <span class="function"><span class="built_in">std</span>::<span class="built_in">string</span> <span class="title">isbn</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> bookNo; &#125;</span><br><span class="line">  <span class="function">Sales_data&amp; <span class="title">combine</span><span class="params">(<span class="keyword">const</span> Sales_data&amp;)</span></span>;</span><br><span class="line">  <span class="function"><span class="keyword">double</span> <span class="title">avg_price</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">string</span> bookNo;</span><br><span class="line">  <span class="keyword">unsigned</span> units_sold = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">double</span> revenue = <span class="number">0.0</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Sales_data total;</span><br><span class="line">total.isbn();</span><br><span class="line">Sales_data::isbn(&amp;total);</span><br><span class="line"><span class="function"><span class="built_in">std</span>::<span class="built_in">string</span> <span class="title">Sales_data::isbn</span><span class="params">(<span class="keyword">const</span> Sales_data *<span class="keyword">const</span> <span class="keyword">this</span>)</span> </span>&#123; <span class="keyword">return</span> <span class="keyword">this</span>-&gt;bookNo; &#125;</span><br></pre></td></tr></table></figure></p></li>
@@ -971,6 +1005,11 @@ Variables must be defined exactly once but can be declared many times. To use th
 </ul>
 <p>Member function definitions are processed after the compiler processes all of the declarations in the class.</p></li>
 </ul>
+<h1 id="chapter-8.-the-io-library">Chapter 8. The IO Library</h1>
+<h1 id="chapter-9.-sequential-containers">Chapter 9. Sequential Containers</h1>
+<h1 id="chapter-10.-generic-algorithms">Chapter 10. Generic Algorithms</h1>
+<h1 id="chapter-11.-associative-containers">Chapter 11. Associative Containers</h1>
+<h1 id="chapter-12.-dynamic-memory">Chapter 12. Dynamic Memory</h1>
 ]]></content>
       <categories>
         <category>学习</category>
