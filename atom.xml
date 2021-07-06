@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-02T13:01:10.503Z</updated>
+  <updated>2021-07-06T10:56:49.848Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>愚夜观随笔诗一则</title>
+    <link href="http://example.com/2021/07/06/cpc100_poem_s/"/>
+    <id>http://example.com/2021/07/06/cpc100_poem_s/</id>
+    <published>2021-07-05T16:00:00.000Z</published>
+    <updated>2021-07-06T10:56:49.848Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;建党百年杂糅毛公作小题&quot;&gt;《建党百年杂糅毛公作小题》&lt;/h3&gt;
+&lt;p&gt;苍茫大地任浮沉&lt;a href=&quot;#fn1&quot; class=&quot;footnote-ref&quot; id=&quot;fnref1&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;，人间正道&lt;a href=&quot;#fn2&quot; class=&quot;footnote-ref&quot; id=&quot;fnref2&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;铸今朝&lt;a href=&quot;#fn3&quot; class=&quot;footnote-ref&quot; id=&quot;fnref3&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;沧桑已是百年路，而今迈步&lt;a href=&quot;#fn4&quot; class=&quot;footnote-ref&quot; id=&quot;fnref4&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;续风流。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="杂谈" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="生活" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="poem" scheme="http://example.com/tags/poem/"/>
+    
+  </entry>
   
   <entry>
     <title>Cplus2 Primer Ed5 Reading Notes 2</title>
