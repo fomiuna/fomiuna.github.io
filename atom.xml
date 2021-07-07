@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-06T10:56:49.848Z</updated>
+  <updated>2021-07-06T13:00:32.239Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2021/07/06/cpc100_poem_s/"/>
     <id>http://example.com/2021/07/06/cpc100_poem_s/</id>
     <published>2021-07-05T16:00:00.000Z</published>
-    <updated>2021-07-06T10:56:49.848Z</updated>
+    <updated>2021-07-06T13:00:32.239Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;建党百年杂糅毛公作小题&quot;&gt;《建党百年杂糅毛公作小题》&lt;/h3&gt;
@@ -254,7 +254,7 @@
     <link href="http://example.com/2020/12/18/cplus2_noteI_z/"/>
     <id>http://example.com/2020/12/18/cplus2_noteI_z/</id>
     <published>2020-12-17T16:00:00.000Z</published>
-    <updated>2021-07-06T09:24:58.717Z</updated>
+    <updated>2021-07-07T09:12:39.995Z</updated>
     
     
     <summary type="html">&lt;p&gt;Personalized notes taken while reading &lt;a href=&quot;https://www.informit.com/store/c-plus-plus-primer-9780321714114&quot;&gt;Cplus2 Primer Ed5&lt;/a&gt; (C++11 standard) Part I: The Basics and Part II: The C++ Library.&lt;br /&gt;
