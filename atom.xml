@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-06T13:00:32.239Z</updated>
+  <updated>2021-07-20T08:38:23.385Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Look Back and Step Forward</title>
+    <link href="http://example.com/2021/07/20/LB_com_z/"/>
+    <id>http://example.com/2021/07/20/LB_com_z/</id>
+    <published>2021-07-19T17:30:00.000Z</published>
+    <updated>2021-07-20T08:38:23.385Z</updated>
+    
+    
+    <summary type="html">&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style=&quot;width: 100%&quot; /&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr class=&quot;header&quot;&gt;
+&lt;th style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/lb_fanart.png&quot; width=&quot;50%&quot;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&lt;em&gt;来自推特 愛須冷蔵（あいすれいぞう）&lt;span class=&quot;citation&quot; data-cites=&quot;icereizou&quot;&gt;@icereizou&lt;/span&gt; 老师的 fanart，几乎是和作品同步上线。据其称是自己也帮忙参与了这部短篇的部分工作。&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</summary>
+    
+    
+    
+    <category term="杂谈" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="acg" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/acg/"/>
+    
+    
+    <category term="manga" scheme="http://example.com/tags/manga/"/>
+    
+  </entry>
   
   <entry>
     <title>愚夜观随笔诗一则</title>
@@ -44,7 +79,7 @@
     <link href="http://example.com/2021/07/02/cplus2_noteI2_z/"/>
     <id>http://example.com/2021/07/02/cplus2_noteI2_z/</id>
     <published>2021-07-01T16:00:00.000Z</published>
-    <updated>2021-07-02T13:01:10.503Z</updated>
+    <updated>2021-07-17T13:51:35.853Z</updated>
     
     
     <summary type="html">&lt;p&gt;Personalized notes taken while reading &lt;a href=&quot;https://www.informit.com/store/c-plus-plus-primer-9780321714114&quot;&gt;Cplus2 Primer Ed5&lt;/a&gt; (C++11 standard) Part III: Tools for Class Authors.&lt;/p&gt;</summary>
@@ -254,7 +289,7 @@
     <link href="http://example.com/2020/12/18/cplus2_noteI_z/"/>
     <id>http://example.com/2020/12/18/cplus2_noteI_z/</id>
     <published>2020-12-17T16:00:00.000Z</published>
-    <updated>2021-07-07T09:12:39.995Z</updated>
+    <updated>2021-07-20T01:51:14.359Z</updated>
     
     
     <summary type="html">&lt;p&gt;Personalized notes taken while reading &lt;a href=&quot;https://www.informit.com/store/c-plus-plus-primer-9780321714114&quot;&gt;Cplus2 Primer Ed5&lt;/a&gt; (C++11 standard) Part I: The Basics and Part II: The C++ Library.&lt;br /&gt;

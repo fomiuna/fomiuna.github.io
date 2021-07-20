@@ -32,7 +32,7 @@
 <meta property="og:description" content="Personalized notes taken while reading Cplus2 Primer Ed5 (C++11 standard) Part I: The Basics and Part II: The C++ Library. Since the standard has changed now, I will use &quot;NCC&quot; to reprensent &quot;not the">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-12-17T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-07-07T09:12:39.995Z">
+<meta property="article:modified_time" content="2021-07-20T01:51:14.359Z">
 <meta property="article:author" content="司马酸">
 <meta property="article:tag" content="study notes">
 <meta property="article:tag" content="c++">
@@ -231,7 +231,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -352,7 +352,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-07-07 17:12:39" itemprop="dateModified" datetime="2021-07-07T17:12:39+08:00">2021-07-07</time>
+        <time title="修改时间：2021-07-20 09:51:14" itemprop="dateModified" datetime="2021-07-20T09:51:14+08:00">2021-07-20</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -383,7 +383,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>17k</span>
+      <span>18k</span>
     </span>
 </div>
 
@@ -460,14 +460,18 @@ Variables must be defined exactly once but can be declared many times. To use th
 <h1 id="chapter-3.-strings-vectors-and-arrays">Chapter 3. Strings, Vectors, and Arrays</h1>
 <ul>
 <li><p>Code inside headers ordinarily should not use <code>using</code> declarations. The reason is that the contents of a header are copied into the including program's text. If a header has a <code>using</code> declaration, then every program that includes that header gets that same <code>using</code> declaration. As a result, a program that didn't intend to use the specified library name might encounter unexpected name conflicts. Use the C++ versions of C library headers.</p></li>
-<li><p>String literals are not standard library <code>string</code>s. E.g. when we mix <code>string</code>s and string or character literals, at least one operand to each <code>+</code> operator must be of <code>string</code> type.</p></li>
+<li><p>Like the input operator, <code>getline</code> returns its <code>istream</code> argument. The newline that causes <code>getline</code> to return is discarded; the newline is not stored in the <code>string</code>.</p></li>
+<li><p>String literals are not standard library <code>string</code>s. The <code>string</code> library lets us convert both character literals and character string literals to <code>string</code>s. E.g. when we mix <code>string</code>s and string or character literals, at least one operand to each <code>+</code> operator must be of <code>string</code> type.</p></li>
+<li><p>When we use curly braces, we're saying that, if possible, we want to list initialize the object. That is, if there is a way to use the values inside the curly braces as a list of element initializers, the class will do so. Only if it is not possible to list initialize the object will the other ways to initialize the object be considered.</p></li>
 <li><p>Since <code>vector</code>s grow efficiently, it is often unnecessary—and can result in poorer performance—to define a <code>vector</code> of a specific size.<br />
 <em>The exception to this rule is if all the elements actually need the same value. If differing element values are needed, it is usually more efficient to define an empty <code>vector</code> and add elements as the values we need become known at run time.</em></p></li>
 <li><p>The body of a range <code>for</code> must not change the size of the sequence over which it is iterating. (<strong>NCC</strong>)</p></li>
-<li><p>If container is empty, <code>begin</code> returns the same iterator as the one returned by <code>end</code>.</p></li>
-<li><p>It is important to realize that loops that use iterators should not add elements to the container to which the iterators refer.</p></li>
-<li><p>Subtracting two iterators yields the number that when added to the right-hand iterator yields the left-hand iterator. The iterators must denote elements in, or one past the end of, the same container.<br />
-<em>The result type is a signed integral type named <code>difference_type</code>.</em></p></li>
+<li><p>A valid iterator either denotes an element or denotes a position one past the last element in a container. All other iterator values are invalid. If container is empty, <code>begin</code> returns the same iterator as the one returned by <code>end</code>-they are both off-the-end iterators.</p></li>
+<li><p>Any operation, such as <code>push_back</code>, that changes the size of a <code>vector</code> potentially invalidates all iterators into that <code>vector</code>. It is important to realize that loops that use iterators should not add elements to the container to which the iterators refer.</p></li>
+<li><p>Iterators are equal if they denote the same element or if they are both off-the-end iterators for the same container. Otherwise, they are unequal. Subtracting two iterators yields the number that when added to the right-hand iterator yields the left-hand iterator. The iterators must denote elements in, or one past the end of, the same container.<br />
+<em>In subtracting the result type is a signed integral type named <code>difference_type</code>.</em></p></li>
+<li><p>In most expressions, when we use an object of array type, we are really using a pointer to the first element in that array.</p></li>
+<li><p>Unlike subscripts for <code>vector</code> and <code>string</code>, the index of the built-in subscript operator is not an <code>unsigned</code> type.</p></li>
 </ul>
 <h1 id="chapter-4.-expressions">Chapter 4. Expressions</h1>
 <ul>
