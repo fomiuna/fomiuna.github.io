@@ -639,6 +639,78 @@ Let <span class="math inline">\(\ell\leftarrow\lfloor\log_2(4\rho)\rfloor\)</spa
       </tags>
   </entry>
   <entry>
+    <title>2021 数学考试问题</title>
+    <url>/2021/06/17/mathsexam2021_z/</url>
+    <content><![CDATA[<p>(这篇是水博客用的, 不过总感觉好像之前也干过类似的事.)</p>
+<a id="more"></a>
+<p>现在高考全国卷好像分四套了: 甲卷、乙卷、一卷、二卷，感觉总体上有题目一年出得比一年差的趋势.</p>
+<div class="note info no-icon"><!-- #### No icon note -->
+<p><strong>(高考全国甲卷)</strong> 已知 <span class="math inline">\(a&gt;0\)</span> 且 <span class="math inline">\(a\neq1\)</span>, 函数 <span class="math inline">\(f(x)=\frac{x^a}{a^x},\ x&gt;0\)</span>.</p>
+<ol type="1">
+<li>当 <span class="math inline">\(a=2\)</span> 时, 求 <span class="math inline">\(f(x)\)</span> 的单调区间;</li>
+<li>若曲线 <span class="math inline">\(y=f(x)\)</span> 与直线 <span class="math inline">\(y=1\)</span> 有且仅有两个交点, 求 <span class="math inline">\(a\)</span> 的取值范围.</li>
+</ol>
+</div>
+<p><strong><em>Sketch:</em></strong><br />
+即解 <span class="math display">\[
+      \frac{x^a}{a^x}=1\quad\Rightarrow\quad f(x)=\frac{\ln x}{x}=\frac{\ln a}{a}=f(a)
+  \]</span> 注意到 <span class="math inline">\(\frac{\ln x}{x}\)</span> 在 <span class="math inline">\((0,\mathrm e)\)</span> 增, 在 <span class="math inline">\((\mathrm e,\infty)\)</span> 减. 故若想要方程有两解, 则需 <span class="math inline">\(f(a)&lt;\mathrm e^{-1}\)</span>. 注意到 <span class="math inline">\(f(0-)=-\infty,f(+\infty)=+0\)</span>, 由单调性, 我们还需要 <span class="math inline">\(f(a)&gt;0\)</span>. 故所求 <span class="math inline">\(a\)</span> 的取值范围为 <span class="math display">\[
+      f^{-1}\Big((0,\mathrm e^{-1})\Big) = (1,\mathrm e)\cup(\mathrm e,+\infty)
+  \]</span> <br/></p>
+<div class="note info no-icon"><!-- #### No icon note -->
+<p><strong>(高考全国一卷)</strong> 已知函数 <span class="math inline">\(f(x)=x(1-\ln x)\)</span>.</p>
+<ol type="1">
+<li>讨论 <span class="math inline">\(f(x)\)</span> 的单调性;</li>
+<li>设 <span class="math inline">\(a,b\)</span> 为两个不相等的正数, 且 <span class="math inline">\(b\ln a-a\ln b=a-b\)</span>. 证明: <span class="math inline">\(2&lt;\frac1a+\frac1b&lt;\mathrm e\)</span>.</li>
+</ol>
+</div>
+<p><strong><em>Sketch:</em></strong><br />
+稍作整理可知 <span class="math inline">\(a,b\)</span> 满足 <span class="math inline">\(f(a^{-1})=f(b^{-1})\)</span>. 由于 <span class="math inline">\(f(x)\)</span> 在 <span class="math inline">\((0,1)\)</span> 上增, 在 <span class="math inline">\((1,\mathrm e)\)</span> 上减, 且在 <span class="math inline">\((0,\mathrm e)\)</span> 上为正, 在 <span class="math inline">\((\mathrm e,\infty)\)</span> 为负. 故条件可变为 <span class="math display">\[
+      0&lt;x_1&lt;1&lt;x_2&lt;\mathrm e,\quad\text{s.t.}\quad f(x_1)=f(x_2)
+  \]</span> 我们对 <span class="math inline">\(d=1-x_1\in(0,1)\)</span> 考虑 <span class="math display">\[
+    f(1+d)-f(1-d)=\int_{1-d}^{1+d}f&#39;(t)\mathrm dt=\int_0^d\Big(f&#39;(1-t)+f&#39;(1+t)\Big)\mathrm dt
+  \]</span> 注意到 <span class="math inline">\(f&#39;(1-t)+f&#39;(1+t)=-\ln(1-t^2)&gt;0,\ \forall t\in(0,d)\)</span>, 故 <span class="math inline">\(f(1+d)&gt;f(1-d)\)</span>, 结合 <span class="math inline">\(f(x_2)=f(1-d)\)</span> 与 <span class="math inline">\(f\)</span> 在 <span class="math inline">\((1,\mathrm e)\)</span> 递减可得 <span class="math display">\[
+      x_2&gt;1+d=2-x_1\quad\Rightarrow\quad x_1+x_2&gt;2
+  \]</span> 另一方面, 注意到 <span class="math inline">\(x+y=\mathrm e\)</span> 在 <span class="math inline">\((\mathrm e,0)\)</span> 处与 <span class="math inline">\(y=f(x)\)</span> 相切且 <span class="math inline">\(f\)</span> 为凹, 故我们有 <span class="math display">\[
+      x_2&lt;\mathrm e-f(x_1)\quad\Rightarrow\quad x_1+x_2&lt;\mathrm e+x_1\ln x_1&lt;\mathrm e
+  \]</span> 综合上述两方面即得证. <br/><br/></p>
+<div class="note info no-icon"><!-- #### No icon note -->
+<p><strong>(考研数一)</strong> 设 <span class="math inline">\(D\subset\mathbb R^2\)</span> 是有界单连通闭区域, 积分 <span class="math display">\[
+    I(D) = \iint_D(4-x^2-y^2)\mathrm dx\mathrm dy
+\]</span> 取得最大值的积分区域记为 <span class="math inline">\(D_1\)</span>.</p>
+<ol type="1">
+<li>求 <span class="math inline">\(I(D_1)\)</span> 的值;</li>
+<li>计算 <span class="math display">\[
+     \oint_{\partial D_1^+}\frac{(x\mathrm e^{x^2+4y^2}+y)\mathrm dx+(4y\mathrm e^{x^2+4y^2}-x)\mathrm dy}{x^2+4y^2}
+  \]</span></li>
+</ol>
+</div>
+<p><strong><em>Sketch:</em></strong><br />
+显然 <span class="math inline">\(D\)</span> 为 <span class="math inline">\(D_1=\{(x,y)\in\mathbb R^2\mid x^2+y^2\leq4\}\)</span> 时积分取得最大值. 记第 2 问中所求积分为 <span class="math inline">\(J\)</span>, 利用 Green 公式 <span class="math display">\[
+\begin{aligned}
+  J&amp;=\oint_{\partial D_1^+}\frac{(x\mathrm e^{4+3y^2}+y)\mathrm dx+(4y\mathrm e^{4+3y^2}-x)\mathrm dy}{4+3y^2}\\
+  &amp;=\iint_{D_1}\frac{-1}{(4+3y^2)^2}\bigg(8+(18xy+18xy^3)\mathrm e^{4+3y^2}\bigg)\mathrm dx\mathrm dy\\
+  &amp;=-8\iint_{D_1}\frac{\mathrm dx\mathrm dy}{(4+3y^2)^2}\\
+  &amp;=-32\int_0^{\pi/2}\!\!\!\!\int_0^2\frac{r}{(4+3r^2\sin^2\theta)^2}\mathrm dr\mathrm d\theta:=-32J&#39;
+\end{aligned}
+\]</span> 其中第三个等号的成立是对固定 <span class="math inline">\(y\)</span>, 被积为 <span class="math inline">\(x\)</span> 的奇函数; 第四个等号为极坐标代换. 下面我们来求 <span class="math inline">\(J&#39;\)</span>, 对分母作代换 <span class="math inline">\(s=4+3r^2\sin^2\theta\)</span>, 则 <span class="math display">\[
+\begin{aligned}
+  J&#39;&amp;=\int_{0}^{\pi/2}\frac{\mathrm d\theta}{6\sin^2\theta}\int_{4}^{4+12\sin^2\theta}\frac{\mathrm ds}{s^2}\\
+  &amp;=\frac{1}{8}\int_{0}^{\pi/2}\frac{1}{1+3\sin^2\theta}\mathrm d\theta\quad\text{代换: }t=\tan\theta\\
+  &amp;=\frac18\int_{0}^{\infty}\frac{1}{1+4t^2}\mathrm dt\\
+  &amp;=\frac{1}{16}\tan^{-1}(2t)\bigg|_{0}^{\infty}=\frac{\pi}{32}
+\end{aligned}
+\]</span> 故所求结果为 <span class="math inline">\(J=-32J&#39;=-\pi\)</span>.</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>maths</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>同人 h 本画师收集</title>
     <url>/2020/11/10/illustrator_recommendation_s/</url>
     <content><![CDATA[<p>懂的都懂。</p>
@@ -752,78 +824,6 @@ p.s. 水陆两栖，同人本现在画得少了</p></li>
       </tags>
   </entry>
   <entry>
-    <title>2021 数学考试问题</title>
-    <url>/2021/06/17/mathsexam2021_z/</url>
-    <content><![CDATA[<p>(这篇是水博客用的, 不过总感觉好像之前也干过类似的事.)</p>
-<a id="more"></a>
-<p>现在高考全国卷好像分四套了: 甲卷、乙卷、一卷、二卷，感觉总体上有题目一年出得比一年差的趋势.</p>
-<div class="note info no-icon"><!-- #### No icon note -->
-<p><strong>(高考全国甲卷)</strong> 已知 <span class="math inline">\(a&gt;0\)</span> 且 <span class="math inline">\(a\neq1\)</span>, 函数 <span class="math inline">\(f(x)=\frac{x^a}{a^x},\ x&gt;0\)</span>.</p>
-<ol type="1">
-<li>当 <span class="math inline">\(a=2\)</span> 时, 求 <span class="math inline">\(f(x)\)</span> 的单调区间;</li>
-<li>若曲线 <span class="math inline">\(y=f(x)\)</span> 与直线 <span class="math inline">\(y=1\)</span> 有且仅有两个交点, 求 <span class="math inline">\(a\)</span> 的取值范围.</li>
-</ol>
-</div>
-<p><strong><em>Sketch:</em></strong><br />
-即解 <span class="math display">\[
-      \frac{x^a}{a^x}=1\quad\Rightarrow\quad f(x)=\frac{\ln x}{x}=\frac{\ln a}{a}=f(a)
-  \]</span> 注意到 <span class="math inline">\(\frac{\ln x}{x}\)</span> 在 <span class="math inline">\((0,\mathrm e)\)</span> 增, 在 <span class="math inline">\((\mathrm e,\infty)\)</span> 减. 故若想要方程有两解, 则需 <span class="math inline">\(f(a)&lt;\mathrm e^{-1}\)</span>. 注意到 <span class="math inline">\(f(0-)=-\infty,f(+\infty)=+0\)</span>, 由单调性, 我们还需要 <span class="math inline">\(f(a)&gt;0\)</span>. 故所求 <span class="math inline">\(a\)</span> 的取值范围为 <span class="math display">\[
-      f^{-1}\Big((0,\mathrm e^{-1})\Big) = (1,\mathrm e)\cup(\mathrm e,+\infty)
-  \]</span> <br/></p>
-<div class="note info no-icon"><!-- #### No icon note -->
-<p><strong>(高考全国一卷)</strong> 已知函数 <span class="math inline">\(f(x)=x(1-\ln x)\)</span>.</p>
-<ol type="1">
-<li>讨论 <span class="math inline">\(f(x)\)</span> 的单调性;</li>
-<li>设 <span class="math inline">\(a,b\)</span> 为两个不相等的正数, 且 <span class="math inline">\(b\ln a-a\ln b=a-b\)</span>. 证明: <span class="math inline">\(2&lt;\frac1a+\frac1b&lt;\mathrm e\)</span>.</li>
-</ol>
-</div>
-<p><strong><em>Sketch:</em></strong><br />
-稍作整理可知 <span class="math inline">\(a,b\)</span> 满足 <span class="math inline">\(f(a^{-1})=f(b^{-1})\)</span>. 由于 <span class="math inline">\(f(x)\)</span> 在 <span class="math inline">\((0,1)\)</span> 上增, 在 <span class="math inline">\((1,\mathrm e)\)</span> 上减, 且在 <span class="math inline">\((0,\mathrm e)\)</span> 上为正, 在 <span class="math inline">\((\mathrm e,\infty)\)</span> 为负. 故条件可变为 <span class="math display">\[
-      0&lt;x_1&lt;1&lt;x_2&lt;\mathrm e,\quad\text{s.t.}\quad f(x_1)=f(x_2)
-  \]</span> 我们对 <span class="math inline">\(d=1-x_1\in(0,1)\)</span> 考虑 <span class="math display">\[
-    f(1+d)-f(1-d)=\int_{1-d}^{1+d}f&#39;(t)\mathrm dt=\int_0^d\Big(f&#39;(1-t)+f&#39;(1+t)\Big)\mathrm dt
-  \]</span> 注意到 <span class="math inline">\(f&#39;(1-t)+f&#39;(1+t)=-\ln(1-t^2)&gt;0,\ \forall t\in(0,d)\)</span>, 故 <span class="math inline">\(f(1+d)&gt;f(1-d)\)</span>, 结合 <span class="math inline">\(f(x_2)=f(1-d)\)</span> 与 <span class="math inline">\(f\)</span> 在 <span class="math inline">\((1,\mathrm e)\)</span> 递减可得 <span class="math display">\[
-      x_2&gt;1+d=2-x_1\quad\Rightarrow\quad x_1+x_2&gt;2
-  \]</span> 另一方面, 注意到 <span class="math inline">\(x+y=\mathrm e\)</span> 在 <span class="math inline">\((\mathrm e,0)\)</span> 处与 <span class="math inline">\(y=f(x)\)</span> 相切且 <span class="math inline">\(f\)</span> 为凹, 故我们有 <span class="math display">\[
-      x_2&lt;\mathrm e-f(x_1)\quad\Rightarrow\quad x_1+x_2&lt;\mathrm e+x_1\ln x_1&lt;\mathrm e
-  \]</span> 综合上述两方面即得证. <br/><br/></p>
-<div class="note info no-icon"><!-- #### No icon note -->
-<p><strong>(考研数一)</strong> 设 <span class="math inline">\(D\subset\mathbb R^2\)</span> 是有界单连通闭区域, 积分 <span class="math display">\[
-    I(D) = \iint_D(4-x^2-y^2)\mathrm dx\mathrm dy
-\]</span> 取得最大值的积分区域记为 <span class="math inline">\(D_1\)</span>.</p>
-<ol type="1">
-<li>求 <span class="math inline">\(I(D_1)\)</span> 的值;</li>
-<li>计算 <span class="math display">\[
-     \oint_{\partial D_1^+}\frac{(x\mathrm e^{x^2+4y^2}+y)\mathrm dx+(4y\mathrm e^{x^2+4y^2}-x)\mathrm dy}{x^2+4y^2}
-  \]</span></li>
-</ol>
-</div>
-<p><strong><em>Sketch:</em></strong><br />
-显然 <span class="math inline">\(D\)</span> 为 <span class="math inline">\(D_1=\{(x,y)\in\mathbb R^2\mid x^2+y^2\leq4\}\)</span> 时积分取得最大值. 记第 2 问中所求积分为 <span class="math inline">\(J\)</span>, 利用 Green 公式 <span class="math display">\[
-\begin{aligned}
-  J&amp;=\oint_{\partial D_1^+}\frac{(x\mathrm e^{4+3y^2}+y)\mathrm dx+(4y\mathrm e^{4+3y^2}-x)\mathrm dy}{4+3y^2}\\
-  &amp;=\iint_{D_1}\frac{-1}{(4+3y^2)^2}\bigg(8+(18xy+18xy^3)\mathrm e^{4+3y^2}\bigg)\mathrm dx\mathrm dy\\
-  &amp;=-8\iint_{D_1}\frac{\mathrm dx\mathrm dy}{(4+3y^2)^2}\\
-  &amp;=-32\int_0^{\pi/2}\!\!\!\!\int_0^2\frac{r}{(4+3r^2\sin^2\theta)^2}\mathrm dr\mathrm d\theta:=-32J&#39;
-\end{aligned}
-\]</span> 其中第三个等号的成立是对固定 <span class="math inline">\(y\)</span>, 被积为 <span class="math inline">\(x\)</span> 的奇函数; 第四个等号为极坐标代换. 下面我们来求 <span class="math inline">\(J&#39;\)</span>, 对分母作代换 <span class="math inline">\(s=4+3r^2\sin^2\theta\)</span>, 则 <span class="math display">\[
-\begin{aligned}
-  J&#39;&amp;=\int_{0}^{\pi/2}\frac{\mathrm d\theta}{6\sin^2\theta}\int_{4}^{4+12\sin^2\theta}\frac{\mathrm ds}{s^2}\\
-  &amp;=\frac{1}{8}\int_{0}^{\pi/2}\frac{1}{1+3\sin^2\theta}\mathrm d\theta\quad\text{代换: }t=\tan\theta\\
-  &amp;=\frac18\int_{0}^{\infty}\frac{1}{1+4t^2}\mathrm dt\\
-  &amp;=\frac{1}{16}\tan^{-1}(2t)\bigg|_{0}^{\infty}=\frac{\pi}{32}
-\end{aligned}
-\]</span> 故所求结果为 <span class="math inline">\(J=-32J&#39;=-\pi\)</span>.</p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>maths</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>pdf test</title>
     <url>/2021/03/12/pdftest_z/</url>
     <content><![CDATA[<center>
@@ -850,13 +850,13 @@ p.s. 水陆两栖，同人本现在画得少了</p></li>
     <content><![CDATA[<p>（自用，记录）</p>
 <a id="more"></a>
 <div class="note info no-icon"><!-- #### No icon note -->
-<p><strong>芋头+藕炖排骨：</strong></p>
+<p><strong>芋头、藕炖排骨：</strong></p>
 <ol type="1">
 <li>排骨早早泡水，用时清洗。藕去皮、清洗、切块，用盐浸渍；</li>
 <li>准备一锅清水，加入生姜片、花椒、料酒少许，将清洗好的排骨加入后点火加热（焯水）。在焯水的同时准备另一锅（砂锅）清水放入生姜和花椒，加热；</li>
 <li>排骨焯水完成捞出，将锅清空加热后倒入少许清油，待油热后（小烟）将排骨倒入翻炒至表面变黄（几十秒即可），关火捞出排骨；</li>
-<li>将藕渗出的水倒掉，当砂锅中的水开后，将藕和排骨放入砂锅；</li>
-<li>藕和排骨需要炖煮 90~120min，在结束前 30~40min 时将洗好的芋头加入，起锅前 5min 左右加盐调味；</li>
+<li>清洗用盐浸渍的藕，当砂锅中的水开后，将藕和排骨放入砂锅；</li>
+<li>藕和排骨需要炖煮 90~120min，在结束前 30~40min 时将洗好的芋头加入，起锅前 10min 左右加盐调味；</li>
 <li>出锅开恰。</li>
 </ol>
 <p><strong><em>RMK：</em></strong></p>
@@ -865,6 +865,8 @@ p.s. 水陆两栖，同人本现在画得少了</p></li>
 <li>肉类焯水是冷水入锅，否则破坏口感。焯水时大火冲开后翻动排骨使其受热均匀，最终排骨要完全变色才起锅</li>
 <li>在炖前用油过一遍排骨是让排骨的最终口感更香。在油煸时由于排骨中含水，可将火调小后再加入排骨，等水汽蒸发后再将火开大</li>
 <li>同样，为了使排骨更快煮软，可以在加入排骨到砂锅后再加入一点醋，用大火冲开后再加入藕。如果想要有葱香味儿，可以在这个时候取几段葱捆在一起投入锅中</li>
+<li>芋头易氧化变色，所以我们在要用的时候才处理它。如果提前去皮，最好浸泡在水中</li>
+<li>龙骨肉嫩但少，适合炖汤。又想恰肉又想喝汤的话可以选用肋排</li>
 </ul>
 </div>
 ]]></content>
