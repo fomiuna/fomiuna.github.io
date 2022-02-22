@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/avatar_s-apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/avatar_s-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/avatar_s-16x16.png">
+  <link rel="mask-icon" href="/images/avatar_s-safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"8.0.2","exturl":false,"sidebar":{"position":"right","width":400,"display":"post","padding":30,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="经过悠长的摸鱼期终于还是感受到了情况的紧迫, 继否决了一票 idea 之后我将再次冲锋, 打算基于一个全新的想法来完成自己的 paper, 希望这次人没事. 本文将怀着忐忑不安的心情介绍一下 ICML 2020 的一篇 paper, 这篇文章将使用一种快速的并行算法, 在 \(\mathcal{O}(\log(n)\log^2(\log k))\) 的自适应轮数以及 \(\mathcal{O}(n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(ICML20) The FAST Algorithm for Submodular Maximization">
+<meta property="og:url" content="http://example.com/2021/12/07/icml20_Fast_z/index.html">
+<meta property="og:site_name" content="路人博客的写作方法">
+<meta property="og:description" content="经过悠长的摸鱼期终于还是感受到了情况的紧迫, 继否决了一票 idea 之后我将再次冲锋, 打算基于一个全新的想法来完成自己的 paper, 希望这次人没事. 本文将怀着忐忑不安的心情介绍一下 ICML 2020 的一篇 paper, 这篇文章将使用一种快速的并行算法, 在 \(\mathcal{O}(\log(n)\log^2(\log k))\) 的自适应轮数以及 \(\mathcal{O}(n">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-12-06T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-28T12:49:35.000Z">
+<meta property="article:author" content="司马酸">
+<meta property="article:tag" content="submodular maximization">
+<meta property="article:tag" content="optimization">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2021/12/07/icml20_Fast_z/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>(ICML20) The FAST Algorithm for Submodular Maximization | 路人博客的写作方法</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="路人博客的写作方法" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">路人博客的写作方法</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">releasing your tsukkomi tamashii</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#preliminaries"><span class="nav-number">1.</span> <span class="nav-text">Preliminaries</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#algorithms"><span class="nav-number">2.</span> <span class="nav-text">Algorithms</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#alg.-1-adaptive-sequencing-with-known-fo"><span class="nav-number">2.1.</span> <span class="nav-text">(Alg. 1) Adaptive-Sequencing with known \(f(O)\)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#lemma-1"><span class="nav-number">2.1.1.</span> <span class="nav-text">Lemma 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lemma-2"><span class="nav-number">2.1.2.</span> <span class="nav-text">Lemma 2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#theorem-1"><span class="nav-number">2.1.3.</span> <span class="nav-text">Theorem 1</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#alg.-2-fast-full-the-full-algorithm"><span class="nav-number">2.2.</span> <span class="nav-text">(Alg. 2) Fast-Full: the full algorithm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#alg.-3-fast-the-fast-adaptive-sequencing-technique-algorithm"><span class="nav-number">2.3.</span> <span class="nav-text">(Alg. 3) FAST: the Fast Adaptive Sequencing Technique algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#theorem-2"><span class="nav-number">2.3.1.</span> <span class="nav-text">Theorem 2</span></a></li></ol></li></ol></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="司马酸"
+      src="/images/avatar_s.jpg">
+  <p class="site-author-name" itemprop="name">司马酸</p>
+  <div class="site-description" itemprop="description">加藤惠的老公</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/songmx223" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;songmx223" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:song_minx@163.com" title="E-Mail → mailto:song_minx@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/fomiuna" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;fomiuna" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      other links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://arxiv.com/" title="https:&#x2F;&#x2F;arxiv.com" rel="noopener" target="_blank">A 站</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://danbooru.donmai.us/" title="https:&#x2F;&#x2F;danbooru.donmai.us" rel="noopener" target="_blank">D 站</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://ieee.com/" title="https:&#x2F;&#x2F;ieee.com" rel="noopener" target="_blank">I 站</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://pixiv.com/" title="https:&#x2F;&#x2F;pixiv.com" rel="noopener" target="_blank">P 站</a>
+        </li>
+    </ul>
+  </div>
+
+        </section>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/07/icml20_Fast_z/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar_s.jpg">
+      <meta itemprop="name" content="司马酸">
+      <meta itemprop="description" content="加藤惠的老公">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="路人博客的写作方法">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          (ICML20) The FAST Algorithm for Submodular Maximization
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-12-07 00:00:00" itemprop="dateCreated datePublished" datetime="2021-12-07T00:00:00+08:00">2021-12-07</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-12-28 20:49:35" itemprop="dateModified" datetime="2021-12-28T20:49:35+08:00">2021-12-28</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>6.1k</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>经过悠长的摸鱼期终于还是感受到了情况的紧迫, 继否决了一票 idea 之后我将再次冲锋, 打算基于一个全新的想法来完成自己的 paper, 希望这次人没事. 本文将怀着忐忑不安的心情介绍一下 ICML 2020 的<a target="_blank" rel="noopener" href="https://proceedings.mlr.press/v119/breuer20a.html">一篇 paper</a>, 这篇文章将使用一种快速的并行算法, 在 <span class="math inline">\(\mathcal{O}(\log(n)\log^2(\log k))\)</span> 的自适应轮数以及 <span class="math inline">\(\mathcal{O}(n\log\log k)\)</span> 的 query 数内重新给出单调次模函数的 <span class="math inline">\(k\)</span> 基数约束这一经典问题的 <span class="math inline">\(1-1/\mathrm e\)</span> 近似解.</p>
+<a id="more"></a>
+<h2 id="preliminaries">Preliminaries</h2>
+<p>我们使用 adaptivity 来衡量并行时间复杂度, 即有多项式数量的 query 被并行处理的轮数. 例如简单贪心算法的 adaptivity 是 <span class="math inline">\(\mathcal O(k)\)</span>, 最差为 <span class="math inline">\(\mathcal O(n)\)</span>. 最近出现的 adaptive sampling 框架对该问题可在 <span class="math inline">\(\mathcal O(\log n)\)</span> 轮数下给出常数近似比, 并且也已经有人将该思想从最初的 <span class="math inline">\(1/3\)</span> 近似比 improve 到 <span class="math inline">\(1-1/\mathrm e\)</span> 的最佳近似比. 但作者指出目前的算法存在 &quot;the logarithmic parallel runtime of algorithms in this genre carries extremely large constants and polynomial dependencies on precision and confidence parameters that are hidden in their asymptotic analysis&quot; 这样的问题, 例如若想以 <span class="math inline">\(95\%\)</span> 的置信度取得 <span class="math inline">\(1-1/\mathrm e-0.1\)</span> 的近似比时每轮需要采样的集合数就达到了 <span class="math inline">\(10^6\sim10^8\)</span> 量级.</p>
+<p>本文所作的贡献就在于保证渐近近似比一定的情况下, 使得算法在非渐近最差情形下 query 复杂度和运行轮数 (实际运行时间) 能维持在一个较低的水平, 为此使用到了 adaptive sequencing 和 multiple optimization 的技术.</p>
+<h2 id="algorithms">Algorithms</h2>
+<p>我们首先从一个简单版本的算法开始.</p>
+<div class="note info no-icon"><h3 id="alg.-1-adaptive-sequencing-with-known-fo">(Alg. 1) Adaptive-Sequencing with known <span class="math inline">\(f(O)\)</span></h3>
+<p>input <span class="math inline">\(f,k,\epsilon\)</span><br />
+initiate <span class="math inline">\(S=\emptyset\)</span><br />
+<strong>while</strong> <span class="math inline">\(|S|&lt;k\)</span> and number of iterations <span class="math inline">\(&lt;\epsilon^{-1}\)</span> <strong>do</strong><br />
+  <span class="math inline">\(X\gets N\)</span>, <span class="math inline">\(t\gets(1-\epsilon)(f(O)-f(S))/k\)</span><br />
+  <strong>while</strong> <span class="math inline">\(X\neq\emptyset\)</span> and <span class="math inline">\(|S|&lt;k\)</span> <strong>do</strong><br />
+    <span class="math inline">\(a_1,\dots,a_k\gets\text{SEQ}(X,k)\)</span><br />
+    <span class="math inline">\(i^*\gets\min\{i\in[k]:|X_i|\leq(1-\epsilon)|X|\}\)</span><br />
+        with <span class="math inline">\(X_i\gets\{a\in X:f(a\mid S\cup\{a_1,\dots,a_{i-1}\})\geq t\}\)</span><br />
+    <span class="math inline">\(S\gets S\cup\{a_1,\dots,a_{i^*-1}\}\)</span><br />
+    <span class="math inline">\(X\gets X_{i^*}\)</span><br />
+<strong>return</strong> <span class="math inline">\(S\)</span></p>
+</div>
+<p>这里 <span class="math inline">\(\text{SEQ}(X,k)\)</span> 是从集合 <span class="math inline">\(X\)</span> 中等概率随机取样的一个 <span class="math inline">\(k\)</span> 元素排列. 可以看出有关系 <span class="math inline">\(X_k\subset X_{k-1}\subset\cdots\subset X_1\)</span>, 我们取 <span class="math inline">\(i^*\)</span> 使得 <span class="math inline">\(|X_{i^*}|\leq(1-\epsilon)|X|&lt;X_{i^*-1}\)</span>, 然后将 <span class="math inline">\(a_1,\dots,a_{i^*-1}\)</span> 加入到 <span class="math inline">\(S\)</span> 中并且将 <span class="math inline">\(X\)</span> 的占至少 <span class="math inline">\(\epsilon\)</span> 部分的 marginal gain 小于门槛值 <span class="math inline">\(t\)</span> 的元素删去.</p>
+<p>算法 Alg. 1 包括内外两个循环, 对于一个外循环, 由 <span class="math inline">\(|X|=0\)</span> 为终止条件知内循环次数 <span class="math inline">\(i\)</span> 满足 <span class="math inline">\((1-\epsilon)^in\geq1\)</span>, 故内循环轮数不超过 <span class="math inline">\(\epsilon^{-1}\log n\)</span>, 总的 <strong>adaptivity 复杂度</strong>为 <span class="math inline">\(\mathcal O(\epsilon^{-2}\log n)\)</span>. 对每个内循环, 我们至多要计算 <span class="math inline">\(k|X|\)</span> 次 marginal gain, 故 <strong>query 复杂度</strong>为 <span class="math inline">\(\mathcal O\Big(\epsilon^{-1}\sum_{i=1}^{\epsilon^{-1}\log n}k(1-\epsilon)^in\Big)=\mathcal O(\epsilon^{-2}nk)\)</span>.</p>
+<p>下面分析近似比.</p>
+<div class="note primary no-icon"><h4 id="lemma-1">Lemma 1</h4>
+<p>Let <span class="math inline">\(S_i\)</span> be the current solution <span class="math inline">\(S\)</span> at the start of iteration <span class="math inline">\(i\)</span> of the outer-loop of Alg. 1. For any <span class="math inline">\(i\)</span>, if <span class="math inline">\(|S_{i+1}|&lt;k\)</span>, then <span class="math inline">\(f(S_{i+1}\mid S_i)\geq\epsilon(f(O)-f(S_i))\)</span>.</p>
+</div>
+<p><strong><em>Proof of Lemma 1:</em></strong> 由 <span class="math inline">\(|S_{i+1}|&lt;k\)</span> 可知在第 <span class="math inline">\(i\)</span> 轮外循环结束时 <span class="math inline">\(X=\emptyset\)</span>. 这表明对任一 <span class="math inline">\(e\in N\backslash S_{i+1}\)</span>, <span class="math inline">\(e\)</span> 都在第 <span class="math inline">\(i\)</span> 轮外循环的某一内循环中因对某时刻 solution 集合 <span class="math inline">\(S\)</span> 的 marginal gain 小于门槛值而被舍弃, 这里 <span class="math inline">\(S_i\subset S\subset S_{i+1}\)</span>. 故由次模性得 <span class="math display">\[
+  f(O)-f(S_{i+1})\leq\sum_{e\in O\backslash S_{i+1}}f(e\mid S_{i+1})\leq\sum_{e\in O\backslash S_{i+1}}\frac{(1-\epsilon)(f(O)-f(S_i))}{k}\leq(1-\epsilon)(f(O)-f(S_i))
+\]</span> 整理后即得 Lemma 1 结论.</p>
+<div class="note primary no-icon"><h4 id="lemma-2">Lemma 2</h4>
+<p>At any iteration of the inner-loop of Alg. 1, for all <span class="math inline">\(i&lt;i^*\)</span>, we have <span class="math display">\[
+    \mathbb E_{a_i}[f(a_i\mid S\cup\{a_1,\dots,a_{i-1}\})]\geq(1-\epsilon)^2(f(O)-f(S))/k
+  \]</span></p>
+</div>
+<p><strong><em>Proof of Lemma 2:</em></strong> 由于 <span class="math inline">\(a_i\)</span> 是从 <span class="math inline">\(X\)</span> 中等概率选取的元素, 且对 <span class="math inline">\(i&lt;i^*\)</span> 都有 <span class="math inline">\(|X_i|\geq(1-\epsilon)|X|\)</span>, 故 <span class="math display">\[
+  \mathbb E_{a_i}[f(a_i\mid S\cup\{a_1,\dots,a_{i-1}\})]\geq\mathrm{Pr}_{a_i}[f(a_i\mid S\cup\{a_1,\dots,a_{i-1}\})\geq t]\cdot t\geq(1-\epsilon)^2(f(O)-f(S))/k
+\]</span></p>
+<div class="note primary no-icon"><h4 id="theorem-1">Theorem 1</h4>
+<p>Alg. 1 is an algorithm with at most <span class="math inline">\(\epsilon^{-2}\log n\)</span> adaptive rounds and <span class="math inline">\(\epsilon^{-2}nk\)</span> queries that achieves a <span class="math inline">\(1-1/\mathrm e-\frac{3}{2}\epsilon\)</span> approximation in expectation.</p>
+</div>
+<p><strong><em>Proof of Theorem 1:</em></strong> 分情况讨论.</p>
+<ul>
+<li>若算法不因违反 <span class="math inline">\(|S|&lt;k\)</span> 结束, 即 <span class="math inline">\(\epsilon^{-1}\)</span> 次外循环全部完成了. 设 <span class="math inline">\(S_1,\dots,S_{\epsilon^{-1}}\)</span> 依次为这 <span class="math inline">\(\epsilon^{-1}\)</span> 次外循环中每次循环下的 solution 集合 <span class="math inline">\(S\)</span>. 由 Lemma 1 知每次循环使得目标函数值增加至少 <span class="math inline">\(t\)</span>, 即 <span class="math display">\[
+  f(S_i)\geq f(S_{i-1})+\epsilon(f(O)-f(S_{i-1}))
+\]</span> 递推易得 <span class="math inline">\(f(S_i)\geq\Big(1-(1-\epsilon)^i\Big)f(O)\)</span>. 再由 <span class="math inline">\(1-x\leq\mathrm e^{-x}\)</span> 就得 <span class="math inline">\(f(S_{\epsilon^{-1}})\geq(1-\mathrm e^{-1})f(O)\)</span>.</li>
+<li>若算法因 <span class="math inline">\(|S|\geq k\)</span> 退出, 我们设 <span class="math inline">\(S_i\)</span> 代表 <span class="math inline">\(S\)</span> 中按序加入的前 <span class="math inline">\(i\)</span> 个元素所构成的集合, 不妨 <span class="math inline">\(S_{i}=S_{i-1}\cup\{a_i\}\)</span>. 则利用 Lemma 2 中结论 <span class="math display">\[
+  \begin{aligned}
+    \mathbb E_{a_i}[f(a_i\mid S_{i-1})]=&amp;\mathbb E_{a_i}[f(a_i\mid S&#39;\cup\{e_1,\dots,e_{j}\})]\\
+    \geq&amp;(1-\epsilon)^2\frac{f(O)-f(S&#39;)}{k}\\
+    \Rightarrow \mathbb E[f(S_{i}\mid S_{i-1})]\geq&amp;(1-\epsilon)^2\frac{f(O)-f(S_{i-1})}{k}
+  \end{aligned}
+\]</span> 这里 <span class="math inline">\(S&#39;\)</span> 是该轮 <span class="math inline">\(S\)</span> 的初始值. 故类似地 <span class="math display">\[
+  \begin{aligned}
+    f(S_k)\geq&amp;\bigg(1-\Big(1-\frac{(1-\epsilon)^2}{k}\Big)^k\bigg)f(O)\geq\Big(1-\mathrm e^{-(1-\epsilon)^2}\Big)f(O)\\
+    \geq&amp;\Big(1-\mathrm e^{-(1-2\epsilon)}\Big)f(O)\geq(1-\mathrm e^{-1}(1-4\epsilon))f(O)\geq\Big(1-\mathrm e^{-1}-\frac32\epsilon\Big)f(O)
+  \end{aligned}
+\]</span></li>
+</ul>
+<p>现在我们可以考虑完整版的算法了. 该算法将不再假设 <span class="math inline">\(f(O)\)</span> 已知, 且由于二分搜索和采样方法的引入降低了 query 复杂度.</p>
+<div class="note info no-icon"><h3 id="alg.-2-fast-full-the-full-algorithm">(Alg. 2) Fast-Full: the full algorithm</h3>
+<p>input <span class="math inline">\(f,k,\epsilon\)</span><br />
+<span class="math inline">\(V\gets\text{GEOMETRIC}\Big(\max_{a\in N}f(a),\max_{|S|\leq k}\sum_{a\in S}f(a),1-\epsilon\Big)\)</span><br />
+<span class="math inline">\(v^*\gets\text{BISEARCH}\Big(V,\max\{v\in V:f(S_v)\geq(1-\mathrm e^{-1})v\}\Big)\)</span> where <span class="math inline">\(S_v\gets\text{FAST}(v)\)</span><br />
+<strong>return</strong> <span class="math inline">\(S_{v^*}\)</span></p>
+<h3 id="alg.-3-fast-the-fast-adaptive-sequencing-technique-algorithm">(Alg. 3) FAST: the Fast Adaptive Sequencing Technique algorithm</h3>
+<p>input <span class="math inline">\(f,k,v,\epsilon\)</span><br />
+initiate <span class="math inline">\(S=\emptyset\)</span><br />
+<strong>while</strong> <span class="math inline">\(|S|&lt;k\)</span> and number of iterations <span class="math inline">\(&lt;\epsilon^{-1}\)</span> <strong>do</strong><br />
+  <span class="math inline">\(X\gets N\)</span>, <span class="math inline">\(t\gets(1-\epsilon)(v-f(S))/k\)</span><br />
+  <strong>while</strong> <span class="math inline">\(X\neq\emptyset\)</span> and <span class="math inline">\(|S|&lt;k\)</span> <strong>do</strong><br />
+    <span class="math inline">\(a_1,\dots,a_{|X|}\gets\text{SEQ}(X,|X|)\)</span>, <span class="math inline">\(A_i\gets a_1,\dots,a_i\)</span><br />
+    <span class="math inline">\(S\gets S\cup\{a_i:f(a_i\mid S\cup A_{i-1})\geq t\}\)</span><br />
+    <span class="math inline">\(X_0\gets\{a\in X:f(a\mid S)\geq t\}\)</span><br />
+    <strong>if</strong> <span class="math inline">\(|X_0|\leq(1-\epsilon)|X|\)</span> <strong>then</strong> <span class="math inline">\(X\gets X_0\)</span> and continue to next iteration<br />
+    <span class="math inline">\(R\gets\text{SAMPLE}(X,m)\)</span>, <span class="math inline">\(I\gets\text{GEOMETRIC}(1,k-|S|,1-\epsilon)\)</span><br />
+    <span class="math inline">\(i^*\gets\text{BISEARCH}(I,\max\{i\in I:|\{a\in R:f(a\mid S\cup A_{i-1})\geq t\}|\geq(1-2\epsilon)|R|\})\)</span><br />
+    <span class="math inline">\(S\gets S\cup A_{i^*}\)</span><br />
+<strong>return</strong> <span class="math inline">\(S\)</span></p>
+</div>
+<p>可以看到主算法 Alg. 2 用了常用的 sieve 手段解决 <span class="math inline">\(f(O)\)</span> 未知的问题. <span class="math inline">\(\text{GEOMETRIC}(a,b,q), (a&lt;b,0&lt;q&lt;1)\)</span> 生成一个从 <span class="math inline">\(a\)</span> 到 <span class="math inline">\(b\)</span> 的公比为 <span class="math inline">\(q^{-1}\)</span> 的等比数列 (筛子), 然后我们在这个有序数组中二分查找满足 <span class="math inline">\(1-e^{-1}\)</span> 近似要求的最大 <span class="math inline">\(v\)</span> 即可 (<span class="math inline">\(v\)</span> 即是我们对 <span class="math inline">\(f(O)\)</span> 的近似).</p>
+<p>Alg. 3 稍显复杂, 但原理与 Alg. 1 类似. 首先生成 <span class="math inline">\(X\)</span> 的一个均匀分布随机排列 <span class="math inline">\(\text{SEQ}(X,|X|)\)</span>, 然后将对 <span class="math inline">\(S\cup A_{i-1}\)</span> marginal gain 大于门槛值 <span class="math inline">\(t\)</span> 的 <span class="math inline">\(a_i\)</span> 加入到 <span class="math inline">\(S\)</span> 中. 接下来我们确定 <span class="math inline">\(i^*\)</span> 是使得 <span class="math inline">\(X\)</span> 中对于 <span class="math inline">\(S\cup A_{i^*-1}\)</span> 的 marginal gain 大于门槛值的元素足够多 (比例不小于 <span class="math inline">\(1-2\epsilon\)</span>) 的最大标号. 这里为了效率起见, 我们不再对 <span class="math inline">\(X\)</span> 中每个元素进行检验, 而是提前取样一个从 <span class="math inline">\(X\)</span> 中均匀概率选取 <span class="math inline">\(m\)</span> 个元素构成的集合 <span class="math inline">\(\text{SAMPLE}(X,m)\)</span>.</p>
+<div class="note primary no-icon"><h4 id="theorem-2">Theorem 2</h4>
+<p>Assume <span class="math inline">\(k\geq\frac{2\log(2\delta^{-1}\ell)}{\epsilon^2(1-5\epsilon)}\)</span> and <span class="math inline">\(\epsilon\in(0,0.1)\)</span>, where <span class="math inline">\(\ell=\log(\frac{\log k}{\epsilon})\)</span>. Then <span class="math inline">\(\text{FAST}\)</span> with <span class="math inline">\(m=\frac{2+\epsilon}{\epsilon^2(1-3\epsilon)}\log\big(\frac{4\ell\log n}{\delta\epsilon^2}\big)\)</span> has at most <span class="math inline">\(\epsilon^{-2}\ell^2\log n\)</span> adaptive rounds, <span class="math inline">\(2\epsilon^{-2}\ell n+\epsilon^{-2}\ell^2m\log n\)</span> queries, and achieves a <span class="math inline">\(1-\mathrm e^{-1}-4\epsilon\)</span> approximation w.p. <span class="math inline">\(1-\delta\)</span>.</p>
+</div>
+<details class="note default no-icon"><summary><p><strong>RMK 1</strong></p>
+</summary>
+<p>TBD</p>
+
+</details>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer"><!-- 文件位置：~/source/_data/post-body-end.swig -->
+
+<div>
+    <div>
+        
+        <div style="text-align:center;color: #ccc;font-size:14px;">-----------------------<span style="margin: 0 10px;">THANKS FOR YOUR READING</span>-----------------------</div>
+        
+    </div>
+</div>
+          <div class="post-tags">
+              <a href="/tags/submodular-maximization/" rel="tag"># submodular maximization</a>
+              <a href="/tags/optimization/" rel="tag"># optimization</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/02/22/gsxb_poem_s/" rel="prev" title="愚夜观随笔诗其二">
+                  <i class="fa fa-chevron-left"></i> 愚夜观随笔诗其二
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/08/18/ryourinichijou/" rel="next" title="料理日常">
+                  料理日常 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">司马酸</span>
+</div>
+<div class="busuanzi-count">
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  const url = element.dataset.target;
+  const pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  const pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  const fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <meta name="referrer" content="no-referrer-when-downgrade">
+
+
+
+
+
+
+
+  
+
+  
+      <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = '//cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

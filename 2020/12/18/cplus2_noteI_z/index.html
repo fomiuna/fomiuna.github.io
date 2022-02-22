@@ -32,7 +32,7 @@
 <meta property="og:description" content="Personalized notes taken while reading Cplus2 Primer Ed5 (C++11 standard) Part I: The Basics and Part II: The C++ Library. Since the standard has changed now, I will use &quot;NCC&quot; to reprensent">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-12-17T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-07-22T03:52:12.629Z">
+<meta property="article:modified_time" content="2021-09-30T06:50:38.000Z">
 <meta property="article:author" content="司马酸">
 <meta property="article:tag" content="study notes">
 <meta property="article:tag" content="c++">
@@ -231,7 +231,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-count">21</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -352,7 +352,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-07-22 11:52:12" itemprop="dateModified" datetime="2021-07-22T11:52:12+08:00">2021-07-22</time>
+        <time title="修改时间：2021-09-30 14:50:38" itemprop="dateModified" datetime="2021-09-30T14:50:38+08:00">2021-09-30</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -383,7 +383,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>18k</span>
+      <span>19k</span>
     </span>
 </div>
 
@@ -498,11 +498,14 @@ Variables must be defined exactly once but can be declared many times. To use th
 <ul>
 <li><p>Member functions access the object on which they were called through an extra, implicit parameter named <code>this</code>. When we call a member function, <code>this</code> is initialized with the address of the object on which the function was invoked. Any direct use of a member of the class is assumed to be an implicit reference through <code>this</code>. (<code>this</code> is a <code>const</code> pointer.)</p></li>
 <li><p>Although <code>this</code> is implicit, it follows the normal initialization rules, which means that (by default) we cannot bind <code>this</code> to a <code>const</code> object. This means that we cannot call an ordinary member function on a <code>const</code> object. A <code>const</code> following the parameter list (i.e., <code>const</code> member function) indicates that <code>this</code> is a pointer to <code>const</code>. <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Sales_data</span> &#123;</span></span><br><span class="line">  <span class="function"><span class="built_in">std</span>::<span class="built_in">string</span> <span class="title">isbn</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> bookNo; &#125;</span><br><span class="line">  <span class="function">Sales_data&amp; <span class="title">combine</span><span class="params">(<span class="keyword">const</span> Sales_data&amp;)</span></span>;</span><br><span class="line">  <span class="function"><span class="keyword">double</span> <span class="title">avg_price</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">string</span> bookNo;</span><br><span class="line">  <span class="keyword">unsigned</span> units_sold = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">double</span> revenue = <span class="number">0.0</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Sales_data total;</span><br><span class="line">total.isbn();</span><br><span class="line">Sales_data::isbn(&amp;total);</span><br><span class="line"><span class="function"><span class="built_in">std</span>::<span class="built_in">string</span> <span class="title">Sales_data::isbn</span><span class="params">(<span class="keyword">const</span> Sales_data *<span class="keyword">const</span> <span class="keyword">this</span>)</span> </span>&#123; <span class="keyword">return</span> <span class="keyword">this</span>-&gt;bookNo; &#125;</span><br></pre></td></tr></table></figure></p></li>
+<li><p>Unlike other member functions, constructors may not be declared as <code>const</code>. When we create a <code>const</code> object of a class type, the object does not assume its &quot;<code>const</code>ness&quot; until after the constructor completes the object's initialization.</p></li>
 <li><p>Classes that have members of built-in or compound type usually should rely on the synthesized default constructor only if all such members have in-class initializers. If we define any constructors, the class will not have a default constructor unless we define that constructor ourselves.</p></li>
-<li><p>The only difference between <code>struct</code> and <code>class</code> is the default access level. If we use the <code>struct</code> keyword, the members defined before the first access specifier are <code>public</code>; if we use <code>class</code>, then the members are <code>private</code>.</p></li>
+<li><p><code>= default</code> defines the default constructor. We are defining this constructor only because we want to provide other constructors as well as the default constructor. We want this constructor to do exactly the same work as the synthesized version we had been using.</p></li>
+<li><p>We can define a class type using either keyword, <code>struct</code> or <code>class</code>. The only difference between them is the default access level. If we use the <code>struct</code> keyword, the members defined before the first access specifier are <code>public</code>; if we use <code>class</code>, then the members are <code>private</code>.<br />
+<em>As a matter of programming style, when we define a class intending for all of its members to be <code>public</code>, we use <code>struct</code>. If we intend to have <code>private</code> members, then we use <code>class</code>.</em></p></li>
 <li><p>Friend declarations may appear only inside a class definition. Friends are not members of the class and are not affected by the access control of the section in which they are declared.</p></li>
 <li><p>Unlike ordinary members, members that define types must appear before they are used.</p></li>
-<li><p>It sometimes (but not very often) happens that a class has a data member that we want to be able to modify, even inside a <code>const</code> member function. We indicate such members by including the <code>mutable</code> keyword in their declaration.</p></li>
+<li><p>It sometimes (but not very often) happens that a class has a data member that we want to be able to modify, even inside a <code>const</code> member function. We indicate such members by including the <code>mutable</code> keyword in their declaration. The basis for this rule is that if a class requires control to initialize an object in one case, then the class is likely to require control in all cases.</p></li>
 <li><p>When we provide an in-class initializer, we must do so following an <code>=</code> sign or inside braces. (See <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/24836526/why-c11-in-class-initializer-cannot-use-parentheses">this post</a>.)</p></li>
 <li><p>A class can also make another class its friend or it can declare specific member functions of another (previously defined) class as friends. It is important to understand that friendship is not transitive.</p></li>
 <li><p>A class must declare as a friend each function in a set of overloaded functions that it wishes to make a friend.</p></li>
@@ -598,7 +601,7 @@ Variables must be defined exactly once but can be declared many times. To use th
 <div class="copyright">
   
   &copy; 2020 – 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

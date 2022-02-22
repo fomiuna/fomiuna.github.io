@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-30T07:36:39.172Z</updated>
+  <updated>2022-02-22T09:20:28.991Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>愚夜观随笔诗其二</title>
+    <link href="http://example.com/2022/02/22/gsxb_poem_s/"/>
+    <id>http://example.com/2022/02/22/gsxb_poem_s/</id>
+    <published>2022-02-22T09:00:00.000Z</published>
+    <updated>2022-02-22T09:20:28.991Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;读故事新编有感1&quot;&gt;读《故事新编》有感&lt;a href=&quot;#fn1&quot; class=&quot;footnote-ref&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;羿射九日&lt;a href=&quot;#fn2&quot; class=&quot;footnote-ref&quot; id=&quot;fnref2&quot;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;始晓晨，禹治百川&lt;a href=&quot;#fn3&quot; class=&quot;footnote-ref&quot; id=&quot;fnref3&quot;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;系苍生。&lt;/p&gt;
+&lt;p&gt;自古年少多情思，岂为朝花作愚人。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="杂谈" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="生活" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="poem" scheme="http://example.com/tags/poem/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>(ICML20) The FAST Algorithm for Submodular Maximization</title>
+    <link href="http://example.com/2021/12/07/icml20_Fast_z/"/>
+    <id>http://example.com/2021/12/07/icml20_Fast_z/</id>
+    <published>2021-12-06T16:00:00.000Z</published>
+    <updated>2021-12-28T12:49:35.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;经过悠长的摸鱼期终于还是感受到了情况的紧迫, 继否决了一票 idea 之后我将再次冲锋, 打算基于一个全新的想法来完成自己的 paper, 希望这次人没事. 本文将怀着忐忑不安的心情介绍一下 ICML 2020 的&lt;a href=&quot;https://proceedings.mlr.press/v119/breuer20a.html&quot;&gt;一篇 paper&lt;/a&gt;, 这篇文章将使用一种快速的并行算法, 在 &lt;span class=&quot;math inline&quot;&gt;\(\mathcal{O}(\log(n)\log^2(\log k))\)&lt;/span&gt; 的自适应轮数以及 &lt;span class=&quot;math inline&quot;&gt;\(\mathcal{O}(n\log\log k)\)&lt;/span&gt; 的 query 数内重新给出单调次模函数的 &lt;span class=&quot;math inline&quot;&gt;\(k\)&lt;/span&gt; 基数约束这一经典问题的 &lt;span class=&quot;math inline&quot;&gt;\(1-1/\mathrm e\)&lt;/span&gt; 近似解.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="算法" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="submodular maximization" scheme="http://example.com/tags/submodular-maximization/"/>
+    
+    <category term="optimization" scheme="http://example.com/tags/optimization/"/>
+    
+  </entry>
   
   <entry>
     <title>料理日常</title>
@@ -42,7 +88,7 @@
     <link href="http://example.com/2021/07/20/LB_com_z/"/>
     <id>http://example.com/2021/07/20/LB_com_z/</id>
     <published>2021-07-19T17:30:00.000Z</published>
-    <updated>2021-07-20T14:23:02.234Z</updated>
+    <updated>2021-07-20T14:23:02.000Z</updated>
     
     
     <summary type="html">&lt;table&gt;
@@ -77,7 +123,7 @@
     <link href="http://example.com/2021/07/06/cpc100_poem_s/"/>
     <id>http://example.com/2021/07/06/cpc100_poem_s/</id>
     <published>2021-07-05T16:00:00.000Z</published>
-    <updated>2021-07-06T13:00:32.239Z</updated>
+    <updated>2021-07-06T13:00:32.000Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;建党百年杂糅毛公作小题&quot;&gt;《建党百年杂糅毛公作小题》&lt;/h3&gt;
@@ -123,7 +169,7 @@
     <link href="http://example.com/2021/06/30/FML_sol_z/"/>
     <id>http://example.com/2021/06/30/FML_sol_z/</id>
     <published>2021-06-29T16:00:00.000Z</published>
-    <updated>2021-06-30T08:23:17.706Z</updated>
+    <updated>2021-06-30T08:23:17.000Z</updated>
     
     
     <summary type="html">&lt;p&gt;  最近闲下来时在翻 Mohri 的 &lt;a href=&quot;https://cs.nyu.edu/~mohri/mlbook/&quot;&gt;Foundations of Machine Learning&lt;/a&gt;(Second Edition). 网上能找到的题解太少了, 自己就边看边做了一些, 大概以后还会继续更(?&lt;/p&gt;</summary>
@@ -146,7 +192,7 @@
     <link href="http://example.com/2021/06/17/mathsexam2021_z/"/>
     <id>http://example.com/2021/06/17/mathsexam2021_z/</id>
     <published>2021-06-17T11:00:00.000Z</published>
-    <updated>2021-07-04T08:27:26.799Z</updated>
+    <updated>2021-07-04T08:27:26.000Z</updated>
     
     
     <summary type="html">&lt;p&gt;(这篇是水博客用的, 不过总感觉好像之前也干过类似的事.)&lt;/p&gt;</summary>
@@ -167,7 +213,7 @@
     <link href="http://example.com/2021/05/17/yorumiti_poem_s/"/>
     <id>http://example.com/2021/05/17/yorumiti_poem_s/</id>
     <published>2021-05-17T14:00:00.000Z</published>
-    <updated>2021-05-18T02:43:34.170Z</updated>
+    <updated>2021-05-18T02:43:34.000Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;夜路&quot;&gt;夜路&lt;/h1&gt;
@@ -191,7 +237,7 @@
     <link href="http://example.com/2021/03/19/gacha_z/"/>
     <id>http://example.com/2021/03/19/gacha_z/</id>
     <published>2021-03-19T11:00:00.000Z</published>
-    <updated>2021-04-01T01:47:33.078Z</updated>
+    <updated>2021-04-01T01:47:33.000Z</updated>
     
     
     <summary type="html">&lt;p&gt;某日收到友人的一个问题, 如下&lt;strong&gt;问题 1&lt;/strong&gt; 所示.&lt;/p&gt;</summary>
@@ -214,7 +260,7 @@
     <link href="http://example.com/2021/03/12/pdftest_z/"/>
     <id>http://example.com/2021/03/12/pdftest_z/</id>
     <published>2021-03-11T16:00:00.000Z</published>
-    <updated>2021-03-16T04:03:27.835Z</updated>
+    <updated>2021-03-16T04:03:27.000Z</updated>
     
     
     <summary type="html">&lt;center&gt;
@@ -241,7 +287,7 @@
     <link href="http://example.com/2021/01/18/EightySix_comment_s/"/>
     <id>http://example.com/2021/01/18/EightySix_comment_s/</id>
     <published>2021-01-17T17:30:00.000Z</published>
-    <updated>2021-01-21T11:04:39.678Z</updated>
+    <updated>2021-01-21T11:04:39.000Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;惯例的开场白&quot;&gt;惯例的开场白&lt;/h2&gt;
@@ -263,7 +309,7 @@
     <link href="http://example.com/2021/01/09/snowshadow_poem_s/"/>
     <id>http://example.com/2021/01/09/snowshadow_poem_s/</id>
     <published>2021-01-09T08:00:00.000Z</published>
-    <updated>2021-01-15T14:36:10.792Z</updated>
+    <updated>2021-01-15T14:36:10.000Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;雪影1&quot;&gt;雪影&lt;a href=&quot;#fn1&quot; class=&quot;footnote-ref&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/h1&gt;
@@ -288,7 +334,7 @@
     <link href="http://example.com/2021/01/06/saekano_memorial2_comment_r1.0_s/"/>
     <id>http://example.com/2021/01/06/saekano_memorial2_comment_r1.0_s/</id>
     <published>2021-01-06T08:00:00.000Z</published>
-    <updated>2021-03-21T08:08:02.181Z</updated>
+    <updated>2021-03-21T08:08:02.000Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;序章&quot;&gt;序章&lt;/h2&gt;
@@ -310,7 +356,7 @@
     <link href="http://example.com/2020/12/18/cplus2_noteI_z/"/>
     <id>http://example.com/2020/12/18/cplus2_noteI_z/</id>
     <published>2020-12-17T16:00:00.000Z</published>
-    <updated>2021-07-22T03:52:12.629Z</updated>
+    <updated>2021-09-30T06:50:38.000Z</updated>
     
     
     <summary type="html">&lt;p&gt;Personalized notes taken while reading &lt;a href=&quot;https://www.informit.com/store/c-plus-plus-primer-9780321714114&quot;&gt;Cplus2 Primer Ed5&lt;/a&gt; (C++11 standard) Part I: The Basics and Part II: The C++ Library.&lt;br /&gt;
@@ -335,7 +381,7 @@ Long-term updating required.&lt;/p&gt;</summary>
     <link href="http://example.com/2020/12/14/bokutachi_comment_s/"/>
     <id>http://example.com/2020/12/14/bokutachi_comment_s/</id>
     <published>2020-12-14T08:00:00.000Z</published>
-    <updated>2021-01-14T05:07:21.385Z</updated>
+    <updated>2020-12-14T10:19:28.000Z</updated>
     
     
     <summary type="html">&lt;p&gt;  看完了心情复杂不知道说些什么，但好歹也要说一句——恭喜学不来老师 if 线完结。&lt;br /&gt;</summary>
@@ -356,7 +402,7 @@ Long-term updating required.&lt;/p&gt;</summary>
     <link href="http://example.com/2020/12/01/icml20_streaming_kset_z/"/>
     <id>http://example.com/2020/12/01/icml20_streaming_kset_z/</id>
     <published>2020-11-30T16:00:00.000Z</published>
-    <updated>2020-12-05T09:30:29.979Z</updated>
+    <updated>2021-10-08T05:45:44.000Z</updated>
     
     
     <summary type="html">&lt;p&gt;号称第一个解决 streaming + non-monotone + &lt;span class=&quot;math inline&quot;&gt;\(k\)&lt;/span&gt;-system constraint 问题的&lt;a href=&quot;https://arxiv.org/abs/2002.03352&quot;&gt;算法&lt;/a&gt;出现了. 究竟是怎么一回事呢? 现在就让小编带大家一起来看看吧.&lt;/p&gt;</summary>
@@ -402,7 +448,7 @@ Long-term updating required.&lt;/p&gt;</summary>
     <link href="http://example.com/2020/11/10/saekano_comment_s/"/>
     <id>http://example.com/2020/11/10/saekano_comment_s/</id>
     <published>2020-11-10T08:00:00.000Z</published>
-    <updated>2020-12-17T06:13:56.709Z</updated>
+    <updated>2020-12-17T06:13:56.000Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;序&quot;&gt;序&lt;/h3&gt;
@@ -428,7 +474,7 @@ Long-term updating required.&lt;/p&gt;</summary>
     <link href="http://example.com/2020/11/10/illustrator_recommendation_s/"/>
     <id>http://example.com/2020/11/10/illustrator_recommendation_s/</id>
     <published>2020-11-10T07:50:13.000Z</published>
-    <updated>2021-06-30T04:30:33.720Z</updated>
+    <updated>2021-06-30T04:30:33.000Z</updated>
     
     
     <summary type="html">&lt;p&gt;懂的都懂。&lt;/p&gt;</summary>
@@ -445,29 +491,6 @@ Long-term updating required.&lt;/p&gt;</summary>
     <category term="xp" scheme="http://example.com/tags/xp/"/>
     
     <category term="lsp" scheme="http://example.com/tags/lsp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Test</title>
-    <link href="http://example.com/2020/11/10/test_z/"/>
-    <id>http://example.com/2020/11/10/test_z/</id>
-    <published>2020-11-10T06:43:25.000Z</published>
-    <updated>2021-04-09T08:07:07.576Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;本来想写个测试文档作为第一篇博文来着，突然觉得记录一下搭建这个网站的过程也不错，名字还是叫 test 吧。具体搭建过程基本参考这个&lt;a href=&quot;https://zhuanlan.zhihu.com/p/26625249&quot;&gt;知乎专栏&lt;/a&gt;，不过这篇文章写得并不全，有些细节丢失了之后导致某些地方有点卡手。我首先会把搭建时遇到的一些问题和解决方法列举一下（Part 1），之后应该会陆陆续续整点新功能，所以到时候就接着在这里补充一些遇到的新问题（Part 2）。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="杂谈" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="生活" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
-    
-    <category term="next" scheme="http://example.com/tags/next/"/>
     
   </entry>
   
