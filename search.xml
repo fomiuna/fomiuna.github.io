@@ -510,16 +510,16 @@
   <entry>
     <title>愚夜观随笔诗其二</title>
     <url>/2022/02/22/gsxb_poem_s/</url>
-    <content><![CDATA[<h2 id="读故事新编有感1">读《故事新编》有感<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></h2>
+    <content><![CDATA[<h3 id="读故事新编有感1">读《故事新编》有感<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></h3>
 <p>羿射九日<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>始晓晨，禹治百川<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>系苍生。</p>
 <p>自古年少多情思，岂为朝花作愚人。</p>
 <a id="more"></a>
 <section class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>作于2022年1月17日，因前一天的感情旧事，反复沉思得此解，遂作下此诗用于后面警示勉励自己。<a href="#fnref1" class="footnote-back">↩</a></p></li>
-<li id="fn2"><p>指的是《故事新编》中的《奔月》一文。<a href="#fnref2" class="footnote-back">↩</a></p></li>
-<li id="fn3"><p>指的是《故事新编》中的《理水》一文。<a href="#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn1"><p><span style="font-family:楷体">作于2022年1月17日，因前一天的感情旧事，反复沉思得此解，遂作下此诗用于后面警示勉励自己。</span><a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p><span style="font-family:楷体">指的是《故事新编》中的《奔月》一文。</span><a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p><span style="font-family:楷体">指的是《故事新编》中的《理水》一文。</span><a href="#fnref3" class="footnote-back">↩</a></p></li>
 </ol>
 </section>
 ]]></content>
@@ -879,27 +879,6 @@ p.s. 水陆两栖，同人本现在画得少了</p></li>
       </tags>
   </entry>
   <entry>
-    <title>pdf test</title>
-    <url>/2021/03/12/pdftest_z/</url>
-    <content><![CDATA[<center>
-<strong>Here is a pdf file.</strong>
-</center>
-<a id="more"></a>
-<p><br></p>
-<p><div class="pdfobject-container" data-target="/notes.pdf" data-height="1000px"></div> <!-- <object data="/files/notes.pdf" type="application/pdf" width="100%" height="877px"> --></p>
-<p><br></p>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>study notes</tag>
-        <tag>submodular maximization</tag>
-        <tag>optimization</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2021 数学考试问题</title>
     <url>/2021/06/17/mathsexam2021_z/</url>
     <content><![CDATA[<p>(这篇是水博客用的, 不过总感觉好像之前也干过类似的事.)</p>
@@ -969,6 +948,27 @@ p.s. 水陆两栖，同人本现在画得少了</p></li>
       </categories>
       <tags>
         <tag>maths</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pdf test</title>
+    <url>/2021/03/12/pdftest_z/</url>
+    <content><![CDATA[<center>
+<strong>Here is a pdf file.</strong>
+</center>
+<a id="more"></a>
+<p><br></p>
+<p><div class="pdfobject-container" data-target="/notes.pdf" data-height="1000px"></div> <!-- <object data="/files/notes.pdf" type="application/pdf" width="100%" height="877px"> --></p>
+<p><br></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>study notes</tag>
+        <tag>submodular maximization</tag>
+        <tag>optimization</tag>
       </tags>
   </entry>
   <entry>
