@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Some solutions to FML Ed2</title>
+    <url>/2021/06/30/FML_sol_z/</url>
+    <content><![CDATA[<p>  最近闲下来时在翻 Mohri 的 <a href="https://cs.nyu.edu/~mohri/mlbook/">Foundations of Machine Learning</a>(Second Edition). 网上能找到的题解太少了, 自己就边看边做了一些, 大概以后还会继续更(?</p>
+<a id="more"></a>
+<p>  这里把书目录中的主要内容列一下:</p>
+<blockquote>
+<ol type="1">
+<li>Introduction</li>
+<li>The PAC Learning Framework</li>
+<li>Rademacher Complexity and VC-Dimension</li>
+<li>Model Selection</li>
+<li>Support Vector Machine</li>
+<li>Kernel Methods</li>
+<li>Boosting</li>
+<li>On-Line Learning</li>
+<li>Multi-Class Classification</li>
+<li>Ranking</li>
+<li>Regression</li>
+<li>Maximum Entropy Models</li>
+<li>Conditional Maximum Entropy Models</li>
+<li>Algorithmic Stability</li>
+<li>Dimensionality Reduction</li>
+<li>Learning Automata and Languages</li>
+<li>Reinforcement Learning</li>
+</ol>
+</blockquote>
+<p><br></p>
+<p><div class="pdfobject-container" data-target="/notes1.pdf" data-height="1000px"></div> <!-- <object data="/files/notes.pdf" type="application/pdf" width="100%" height="877px"> --></p>
+<p><br></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>ML</tag>
+        <tag>study notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《86-不存在的战区》——比起轻小说更像普通文学，很值得一读的轻小说</title>
     <url>/2021/01/18/EightySix_comment_s/</url>
     <content><![CDATA[<h2 id="惯例的开场白">惯例的开场白</h2>
@@ -75,46 +115,6 @@
       </categories>
       <tags>
         <tag>lightnovel</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Some solutions to FML Ed2</title>
-    <url>/2021/06/30/FML_sol_z/</url>
-    <content><![CDATA[<p>  最近闲下来时在翻 Mohri 的 <a href="https://cs.nyu.edu/~mohri/mlbook/">Foundations of Machine Learning</a>(Second Edition). 网上能找到的题解太少了, 自己就边看边做了一些, 大概以后还会继续更(?</p>
-<a id="more"></a>
-<p>  这里把书目录中的主要内容列一下:</p>
-<blockquote>
-<ol type="1">
-<li>Introduction</li>
-<li>The PAC Learning Framework</li>
-<li>Rademacher Complexity and VC-Dimension</li>
-<li>Model Selection</li>
-<li>Support Vector Machine</li>
-<li>Kernel Methods</li>
-<li>Boosting</li>
-<li>On-Line Learning</li>
-<li>Multi-Class Classification</li>
-<li>Ranking</li>
-<li>Regression</li>
-<li>Maximum Entropy Models</li>
-<li>Conditional Maximum Entropy Models</li>
-<li>Algorithmic Stability</li>
-<li>Dimensionality Reduction</li>
-<li>Learning Automata and Languages</li>
-<li>Reinforcement Learning</li>
-</ol>
-</blockquote>
-<p><br></p>
-<p><div class="pdfobject-container" data-target="/notes1.pdf" data-height="1000px"></div> <!-- <object data="/files/notes.pdf" type="application/pdf" width="100%" height="877px"> --></p>
-<p><br></p>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>ML</tag>
-        <tag>study notes</tag>
       </tags>
   </entry>
   <entry>
@@ -517,7 +517,7 @@
 <section class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p><span style="font-family:楷体">作于2022年1月17日，因前一天的感情旧事，反复沉思得此解，遂作下此诗用于后面警示勉励自己。</span><a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn1"><p><span style="font-family:楷体">作于 2022 年 1 月 17 日，因前一天的感情旧事，反复沉思得此解，遂作下此诗用于后面警示勉励自己。</span><a href="#fnref1" class="footnote-back">↩</a></p></li>
 <li id="fn2"><p><span style="font-family:楷体">指的是《故事新编》中的《奔月》一文。</span><a href="#fnref2" class="footnote-back">↩</a></p></li>
 <li id="fn3"><p><span style="font-family:楷体">指的是《故事新编》中的《理水》一文。</span><a href="#fnref3" class="footnote-back">↩</a></p></li>
 </ol>
@@ -1032,6 +1032,20 @@ p.s. 水陆两栖，同人本现在画得少了</p></li>
 <li>在排骨烧好前 30min 左右加入配菜，如土豆、红萝卜、四季豆等（土豆需要用油煎至半透明状，再加入到排骨中一起炖煮，这是为了防止土豆煮烂）</li>
 </ul>
 </div>
+<div class="note primary no-icon"><!-- #### No icon note -->
+<p><strong>炒肉丝（肉片）：</strong></p>
+<ol type="1">
+<li>先将生肉片成薄片，然后切成丝，装盘备用；</li>
+<li>准备姜末、蒜末少许，放入切好的肉丝中，再加入花椒面和少许耗油、生抽、老抽，顺时针同方向边加水边拌匀；</li>
+<li>加入适量淀粉，在淀粉上淋入水，然后继续顺时针拌匀，然后准备配菜；</li>
+<li>起锅烧油，放入适量的肥肉片，爆出肥油，此时下入半勺豆瓣酱煸炒香，然后放入拌好的肉丝，快速滑散至肉变色，然后加入少许开水，继续翻炒，加入配菜，待菜熟后即可起锅。</li>
+</ol>
+<p><strong><em>RMK：</em></strong></p>
+<ul>
+<li>第 2 步加水为少量多次添加，一般为 2~3 次，需搅拌至水被肉充分吸收</li>
+<li>第 3 步配菜例（青椒炒肉、芹菜胡萝卜炒肉）：青椒洗净切丝，用少许的盐抓拌均匀备用（若是芹菜就洗净切段，胡萝卜切丝焯水备用）</li>
+</ul>
+</div>
 <div class="note info no-icon"><!-- #### No icon note -->
 <p><strong>蒜香青椒茄子：</strong></p>
 <ol type="1">
@@ -1060,6 +1074,20 @@ p.s. 水陆两栖，同人本现在画得少了</p></li>
 <li>菜尖一般掐成两到三段，如果接下来部分较嫩，可以继续掐来使用。叶子只取不烂、无白色虫卵的部分。剩下的菜杆部分作他用</li>
 <li>炒料时一般用中小火，加入菜后用大火快速翻炒</li>
 </ul>
+</div>
+<div class="note info no-icon"><!-- #### No icon note -->
+<p><strong>莴笋胡萝卜丝炒鸡蛋：</strong></p>
+<ol type="1">
+<li>胡萝卜切丝焯水，莴笋切丝后用少许盐抓拌均匀，腌制一会儿后用清水淘干净后控干水备用；</li>
+<li>起锅烧油炒鸡蛋，捞出鸡蛋后，放入少许姜末蒜末煸香，再加入胡萝卜和莴笋丝，炒熟后汇入鸡蛋炒匀，加入少许的盐和鸡精即可起锅。</li>
+</ol>
+</div>
+<div class="note info no-icon"><!-- #### No icon note -->
+<p><strong>青椒炒土豆丝：</strong></p>
+<ol type="1">
+<li>土豆切丝，清水淘洗，控水备用，青椒类似上面处理；</li>
+<li>起锅烧油，放入少许姜末蒜末煸香，再加入青椒丝煸炒香，然后加入土豆丝，快速翻炒，期间淋入少许开水继续煸炒至菜熟，起锅时加盐和鸡精即可。</li>
+</ol>
 </div>
 ]]></content>
       <categories>
