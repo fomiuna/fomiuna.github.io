@@ -1,46 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Some solutions to FML Ed2</title>
-    <url>/2021/06/30/FML_sol_z/</url>
-    <content><![CDATA[<p>  最近闲下来时在翻 Mohri 的 <a href="https://cs.nyu.edu/~mohri/mlbook/">Foundations of Machine Learning</a>(Second Edition). 网上能找到的题解太少了, 自己就边看边做了一些, 大概以后还会继续更(?</p>
-<a id="more"></a>
-<p>  这里把书目录中的主要内容列一下:</p>
-<blockquote>
-<ol type="1">
-<li>Introduction</li>
-<li>The PAC Learning Framework</li>
-<li>Rademacher Complexity and VC-Dimension</li>
-<li>Model Selection</li>
-<li>Support Vector Machine</li>
-<li>Kernel Methods</li>
-<li>Boosting</li>
-<li>On-Line Learning</li>
-<li>Multi-Class Classification</li>
-<li>Ranking</li>
-<li>Regression</li>
-<li>Maximum Entropy Models</li>
-<li>Conditional Maximum Entropy Models</li>
-<li>Algorithmic Stability</li>
-<li>Dimensionality Reduction</li>
-<li>Learning Automata and Languages</li>
-<li>Reinforcement Learning</li>
-</ol>
-</blockquote>
-<p><br></p>
-<p><div class="pdfobject-container" data-target="/notes1.pdf" data-height="1000px"></div> <!-- <object data="/files/notes.pdf" type="application/pdf" width="100%" height="877px"> --></p>
-<p><br></p>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>ML</tag>
-        <tag>study notes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《86-不存在的战区》——比起轻小说更像普通文学，很值得一读的轻小说</title>
     <url>/2021/01/18/EightySix_comment_s/</url>
     <content><![CDATA[<h2 id="惯例的开场白">惯例的开场白</h2>
@@ -115,6 +75,46 @@
       </categories>
       <tags>
         <tag>lightnovel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Some solutions to FML Ed2</title>
+    <url>/2021/06/30/FML_sol_z/</url>
+    <content><![CDATA[<p>  最近闲下来时在翻 Mohri 的 <a href="https://cs.nyu.edu/~mohri/mlbook/">Foundations of Machine Learning</a>(Second Edition). 网上能找到的题解太少了, 自己就边看边做了一些, 大概以后还会继续更(?</p>
+<a id="more"></a>
+<p>  这里把书目录中的主要内容列一下:</p>
+<blockquote>
+<ol type="1">
+<li>Introduction</li>
+<li>The PAC Learning Framework</li>
+<li>Rademacher Complexity and VC-Dimension</li>
+<li>Model Selection</li>
+<li>Support Vector Machine</li>
+<li>Kernel Methods</li>
+<li>Boosting</li>
+<li>On-Line Learning</li>
+<li>Multi-Class Classification</li>
+<li>Ranking</li>
+<li>Regression</li>
+<li>Maximum Entropy Models</li>
+<li>Conditional Maximum Entropy Models</li>
+<li>Algorithmic Stability</li>
+<li>Dimensionality Reduction</li>
+<li>Learning Automata and Languages</li>
+<li>Reinforcement Learning</li>
+</ol>
+</blockquote>
+<p><br></p>
+<p><div class="pdfobject-container" data-target="/notes1.pdf" data-height="1000px"></div> <!-- <object data="/files/notes.pdf" type="application/pdf" width="100%" height="877px"> --></p>
+<p><br></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>ML</tag>
+        <tag>study notes</tag>
       </tags>
   </entry>
   <entry>
@@ -359,6 +359,79 @@
       <tags>
         <tag>study notes</tag>
         <tag>c++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>梦境调查档案① —— 恶心御宅青年真能梦到二次元小姐姐吗</title>
+    <url>/2022/04/12/dream_s/</url>
+    <content><![CDATA[<center>
+<strong>睡前千万不要看路主 11 卷，认真的</strong>
+</center>
+<a id="more"></a>
+<h3 id="前言">前言</h3>
+<p>  昨晚的梦过于离奇，醒来之后笔者细细回想，应该是自己睡前看了《路人女主养成方法》第 11 卷的锅。因为 11 卷是久违地男女主糖味儿十足的互动剧情，就算关灯之后自己只要一想起来，就会在床上扭得像条蛆。不管究竟是怎样的原因，<del>出于水博文</del>，觉得昨晚的梦有意思的想法，还是简单记录一下。</p>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><img src="/images/dream1_1.png" width="40%"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><em>路主 11 卷的封面。完结篇的开始，男主安艺伦也和女主加藤惠关系突飞猛进的一卷。男主安艺伦也为了剧本取材拉着惠各种交流和实践，具体是哪些这里就不剧透了，总之糖度爆表。</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="梦境前半段">梦境前半段</h3>
+<p>自己是一个从城市转学到乡下，喜欢看动画漫画轻小说的宅男。<br />
+第一天入住的寝室发现是男女合住，并且还住着三个妹子。<br />
+自己稀里糊涂就和一个鲍勃头妹子交往了。<br />
+性格，身材，发型都和加藤惠如出一辙。<br />
+谁会拒绝加藤惠这样的妹子呢？<br />
+我就是安艺伦也！</p>
+<p><em>（呜啊，我这也太恶心了）</em></p>
+<h3 id="中间转折选择">中间转折选择</h3>
+<p><font color=#A9A9A9>[场景 教学楼楼道 上课铃响前]</font><br />
+女朋友：诶，问你个问题？<br />
+我：嗯，你说。<br />
+女朋友：<font color=#A9A9A9>（稍有犹豫）</font>嗯……就是……你更愿意我是加藤惠那样的女孩子吗？<br />
+我：这……怎么说呢？<br />
+<font color=#A9A9A9>（我感到惊讶，且难为情，支支吾吾，不知道好不好开口）</font><br />
+我：没，没吧，我对三次元女生又没那种要求。<br />
+<font color=#A9A9A9>（具体表情记不清了，自己应该脸红了）</font><br />
+<font color=#A9A9A9>（我说完，女朋友没回应，她脸上挂着挂着浅浅一笑，快步小跑走进了教室，我一个人被扔在后面）</font><br />
+我：<font color=#A9A9A9>（苦笑且满是疑惑）</font>所以刚才到底是啥意思？</p>
+<p><em>（写下来还是这段充满妄想意味儿的情节感觉好瞎，至今回想起来还是觉得羞耻）</em></p>
+<h3 id="梦境后半段">梦境后半段</h3>
+<p>因为中间转折剧情，女方形象大变样，具体记不清了，差不多就是性格和言语更开放了，并且会伴随一些迷惑行为。<em>（妹子你谁啊，这人设彻底崩坏了吧）</em></p>
+<p>梦境内容也开始暴走，自己可以进入大地图视角。大地图上甚至出现了一群类似于邪教的反派组织，自己可以在大地图上选择据点点位进入具体场景像 ARPG 那样捣毁窝点，然后获得用于约会，强化的材料。<em>（不是，你们这群坏蛋又是谁？我只是一个从城市转来乡下，只喜欢看动画漫画轻小说，靠刷你们得各种材料的高中生啊！）</em></p>
+<p>之后，在放学回家的有一天，女方起兴提议晚饭吃蛇蛋，我没反对。然后找了个树洞趁毒蛇还睡觉时掏蛇蛋。最后两人惊醒了毒蛇，双双被毒蛇咬了毒死了。<em>（说真的，这一段槽点更多了，为啥晚饭要去吃蛇蛋啊，为啥要去偷啊，还被毒蛇要死了！这都什么狗屎结局！）</em></p>
+<p>自己死后，剧情回溯到了自己转学的第一天，二周目的第一天还没彻底发展完就醒了。<em>（所以这梦就是什么粪作 GAL 吧）</em></p>
+<h3 id="尾声">尾声</h3>
+<p>其实总结整理完了来看看，能攻略多位女角色（其实之前还另外攻略了一位，只不过这个印象最深），每个女角色有自己独立的剧情，并且最后各自的剧情线索能够最后汇总成一个结局。表面上是平淡的乡村校园生活，实际上背后隐藏着邪恶组织在暗流涌动。一个女主是这个故事的破局核心。</p>
+<p>这不就是寒蝉鸣泣之时嘛喂！</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><img src="/images/dream1_2.png" width="50%"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><em>寒蝉鸣泣之时可以说是经典轮回传奇作品了。蝉在叫，人坏掉。校园日常一转悬疑恐怖，最后全是美军的阴谋。</em></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>others</tag>
       </tags>
   </entry>
   <entry>
@@ -973,7 +1046,7 @@ p.s. 水陆两栖，同人本现在画得少了</p></li>
   </entry>
   <entry>
     <title>料理日常</title>
-    <url>/2021/08/18/ryourinichijou/</url>
+    <url>/2021/08/18/ryourinichijou_z/</url>
     <content><![CDATA[<p>（自用，记录）</p>
 <a id="more"></a>
 <div class="note primary no-icon"><!-- #### No icon note -->

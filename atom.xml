@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-02-22T09:46:42.108Z</updated>
+  <updated>2022-04-13T03:56:21.997Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>梦境调查档案① —— 恶心御宅青年真能梦到二次元小姐姐吗</title>
+    <link href="http://example.com/2022/04/12/dream_s/"/>
+    <id>http://example.com/2022/04/12/dream_s/</id>
+    <published>2022-04-12T13:00:00.000Z</published>
+    <updated>2022-04-13T03:56:21.997Z</updated>
+    
+    
+    <summary type="html">&lt;center&gt;
+&lt;strong&gt;睡前千万不要看路主 11 卷，认真的&lt;/strong&gt;
+&lt;/center&gt;</summary>
+    
+    
+    
+    <category term="杂谈" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="生活" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="others" scheme="http://example.com/tags/others/"/>
+    
+  </entry>
   
   <entry>
     <title>愚夜观随笔诗其二</title>
@@ -64,8 +87,8 @@
   
   <entry>
     <title>料理日常</title>
-    <link href="http://example.com/2021/08/18/ryourinichijou/"/>
-    <id>http://example.com/2021/08/18/ryourinichijou/</id>
+    <link href="http://example.com/2021/08/18/ryourinichijou_z/"/>
+    <id>http://example.com/2021/08/18/ryourinichijou_z/</id>
     <published>2021-08-17T16:00:00.000Z</published>
     <updated>2022-02-24T02:03:16.914Z</updated>
     
@@ -466,31 +489,6 @@ Long-term updating required.&lt;/p&gt;</summary>
     
     
     <category term="lightnovel" scheme="http://example.com/tags/lightnovel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>同人 h 本画师收集</title>
-    <link href="http://example.com/2020/11/10/illustrator_recommendation_s/"/>
-    <id>http://example.com/2020/11/10/illustrator_recommendation_s/</id>
-    <published>2020-11-10T07:50:13.000Z</published>
-    <updated>2021-06-30T04:30:33.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;懂的都懂。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="杂谈" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="acg" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/acg/"/>
-    
-    
-    <category term="manga" scheme="http://example.com/tags/manga/"/>
-    
-    <category term="xp" scheme="http://example.com/tags/xp/"/>
-    
-    <category term="lsp" scheme="http://example.com/tags/lsp/"/>
     
   </entry>
   
