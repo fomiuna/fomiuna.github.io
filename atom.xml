@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-04-13T03:56:21.997Z</updated>
+  <updated>2022-04-17T15:25:39.719Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2022 年春季动画感想汇总（一）</title>
+    <link href="http://example.com/2022/04/17/springanime22_comment_s/"/>
+    <id>http://example.com/2022/04/17/springanime22_comment_s/</id>
+    <published>2022-04-16T17:30:00.000Z</published>
+    <updated>2022-04-17T15:25:39.719Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;  我自从开始读博之后，忙得一发不可收拾，外加一个项目导致自己几乎每周都是在跨越各种各样的修罗场，久而久之博客这边都长满了杂草。于是，秉承着尽可能不断更的负责态度 &lt;em&gt;（才不是迫于编辑压力的不爽态度，哼&lt;/em&gt; o(′^｀)o &lt;em&gt;）&lt;/em&gt;，我决定将自己平常看动画后的短评整理成汇总&lt;del&gt;来凑数&lt;/del&gt;，更新博客…………好啦，我知道自己明明有时间去看动画漫画小说打游戏玩胶，其实完全是自己太懒了不想写，所以才想到用这种方法灌水。毕竟人如果平常太忙的话，也会没兴致会花心思去写大段文字的，想必有相关经验的读者应该能理解我这种为了保证文字质量而“宁缺毋滥”的想法，对吧？&lt;br /&gt;</summary>
+    
+    
+    
+    <category term="杂谈" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="acg" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/acg/"/>
+    
+    
+    <category term="anime" scheme="http://example.com/tags/anime/"/>
+    
+  </entry>
   
   <entry>
     <title>梦境调查档案① —— 恶心御宅青年真能梦到二次元小姐姐吗</title>
@@ -232,6 +254,25 @@
   </entry>
   
   <entry>
+    <title>笔名“愚夜观”的由来</title>
+    <link href="http://example.com/2021/05/18/penname_dariy_s/"/>
+    <id>http://example.com/2021/05/18/penname_dariy_s/</id>
+    <published>2021-05-18T14:00:00.000Z</published>
+    <updated>2022-04-17T15:26:51.176Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;       我原本是不太想用“愚夜观”这个笔名的。在如今社会，写一些随笔和感想还需要一个额外的笔名，其实是没啥必要的，毕竟谁都会有个网名。QQ，微信，贴吧，知乎，微博，随便拿一个昵称即可当作笔名来使用，额外去构思一个笔名反倒是成为了一件吃力不讨好的事。更何况自己也只是随便写写，既没有深邃的思想，也没有令人称奇的文采，都是些没人看的玩意儿。好巧不巧，昨日与好友 T 君的一番争吵辩驳，事后引得自己反复思量，回忆起自己写过的东西，便构思出了“愚夜观”这个名字。而今只好简单写写这个名字的意思，也便日后别人问起以作解释。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="杂谈" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="生活" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>夜路</title>
     <link href="http://example.com/2021/05/17/yorumiti_poem_s/"/>
     <id>http://example.com/2021/05/17/yorumiti_poem_s/</id>
@@ -440,55 +481,6 @@ Long-term updating required.&lt;/p&gt;</summary>
     <category term="submodular maximization" scheme="http://example.com/tags/submodular-maximization/"/>
     
     <category term="optimization" scheme="http://example.com/tags/optimization/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>(ICML20) Streaming Algorithms for M$k$SC under Noise</title>
-    <link href="http://example.com/2020/11/16/icml20_noisy_MkSC_z/"/>
-    <id>http://example.com/2020/11/16/icml20_noisy_MkSC_z/</id>
-    <published>2020-11-15T16:00:00.000Z</published>
-    <updated>2020-11-26T15:46:25.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;这几年次模优化里做 &lt;span class=&quot;math inline&quot;&gt;\(k\)&lt;/span&gt;-submodular 的开始多起来了, 不过目前不管是 offline 还是 streaming setting 下, 大多做的都是无约束的最大化算法. 而基数约束问题 Maximize a &lt;span class=&quot;math inline&quot;&gt;\(k\)&lt;/span&gt;-submodular function subject to Size Constraint (M&lt;span class=&quot;math inline&quot;&gt;\(k\)&lt;/span&gt;SC) 的研究还较少, 且也仅限于单调函数的情况. ICML2020 里出现了一篇研究 streaming 下的 non-monotone M&lt;span class=&quot;math inline&quot;&gt;\(k\)&lt;/span&gt;SC 算法的&lt;a href=&quot;http://optnetsci.cise.ufl.edu/papers/icml20lan.pdf&quot;&gt;文章&lt;/a&gt;, 且文章还假设了对 objective function 的 query 是困难的, 只能间接获得一个 (有 bound 保证的) 真实值的估计 (就是所谓带噪数据). 这篇博文在介绍一下该论文的同时, 也是对 &lt;span class=&quot;math inline&quot;&gt;\(k\)&lt;/span&gt; 次模函数的一个简单调研.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="算法" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="submodular maximization" scheme="http://example.com/tags/submodular-maximization/"/>
-    
-    <category term="optimization" scheme="http://example.com/tags/optimization/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>重温“路人女主”至10卷的一些感受</title>
-    <link href="http://example.com/2020/11/10/saekano_comment_s/"/>
-    <id>http://example.com/2020/11/10/saekano_comment_s/</id>
-    <published>2020-11-10T08:00:00.000Z</published>
-    <updated>2020-12-17T06:13:56.000Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;序&quot;&gt;序&lt;/h3&gt;
-  花了近一个月时间终于重温完了“路人女主”第8卷至第10卷，效率大不如从前（明明之前一个月都可以重温俺妹整部作品），简直就是怠惰的化身（你啊，真是怠惰呢！.jpg）。其实我个人不喜欢写长评的，因为需要花大量的时间来整理思绪和观点，但无奈当初自己第 10 卷看得草草了事，重温这小说第 10 卷给我带来的感受累积太多又使我不得不在最终章突入前写点东西来消化一下。同时动画也磕磕绊绊地看到了第二季的第 6 集（对应小说第 6 卷完），顺便也提一下吧。&lt;br /&gt;
-  
-&lt;center&gt;
-&lt;em&gt;温馨提示，&lt;br/&gt;以下的内容带有严重的剧透和强烈的个人主观，并且可能含有大量的过度解读，&lt;br/&gt;请读者酌情观看。&lt;/em&gt;
-&lt;/center&gt;</summary>
-    
-    
-    
-    <category term="杂谈" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="acg" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/acg/"/>
-    
-    
-    <category term="lightnovel" scheme="http://example.com/tags/lightnovel/"/>
     
   </entry>
   
