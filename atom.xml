@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-04-18T12:12:27.510Z</updated>
+  <updated>2022-04-22T09:00:34.418Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2022 年春季动画感想汇总（二）</title>
+    <link href="http://example.com/2022/04/22/springanime22_comment2_s/"/>
+    <id>http://example.com/2022/04/22/springanime22_comment2_s/</id>
+    <published>2022-04-22T07:00:00.000Z</published>
+    <updated>2022-04-22T09:00:34.418Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;  ok，既然这次也是汇总，前言就不搞那么多废话了，直接开始吧。这次的是《夏日重现》，《机动奥特曼》，剧场版《魔法少女伊莉雅：无名的少女》，以及附送的古见第二季第 3 集与《间谍过家家》第 2 集。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="杂谈" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="acg" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/acg/"/>
+    
+    
+    <category term="anime" scheme="http://example.com/tags/anime/"/>
+    
+  </entry>
   
   <entry>
     <title>2022 年春季动画感想汇总（一）</title>
@@ -458,29 +480,6 @@ Long-term updating required.&lt;/p&gt;</summary>
     
     
     <category term="manga" scheme="http://example.com/tags/manga/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>(ICML20) Streaming Submodular Maximization under a $k$-Set System</title>
-    <link href="http://example.com/2020/12/01/icml20_streaming_kset_z/"/>
-    <id>http://example.com/2020/12/01/icml20_streaming_kset_z/</id>
-    <published>2020-11-30T16:00:00.000Z</published>
-    <updated>2021-10-08T05:45:44.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;号称第一个解决 streaming + non-monotone + &lt;span class=&quot;math inline&quot;&gt;\(k\)&lt;/span&gt;-system constraint 问题的&lt;a href=&quot;https://arxiv.org/abs/2002.03352&quot;&gt;算法&lt;/a&gt;出现了. 究竟是怎么一回事呢? 现在就让小编带大家一起来看看吧.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="算法" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="submodular maximization" scheme="http://example.com/tags/submodular-maximization/"/>
-    
-    <category term="optimization" scheme="http://example.com/tags/optimization/"/>
     
   </entry>
   
