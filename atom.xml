@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-04-22T14:59:35.714Z</updated>
+  <updated>2022-06-12T14:59:59.151Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2022 高考数学问题</title>
+    <link href="http://example.com/2022/06/12/gaokao2022_z/"/>
+    <id>http://example.com/2022/06/12/gaokao2022_z/</id>
+    <published>2022-06-12T11:00:00.000Z</published>
+    <updated>2022-06-12T14:59:59.151Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;(年年水, 不说了.)&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="杂谈" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="生活" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="maths" scheme="http://example.com/tags/maths/"/>
+    
+  </entry>
   
   <entry>
     <title>2022 年春季动画感想汇总（二）</title>
@@ -459,27 +480,6 @@ Long-term updating required.&lt;/p&gt;</summary>
     <category term="study notes" scheme="http://example.com/tags/study-notes/"/>
     
     <category term="c++" scheme="http://example.com/tags/c/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>学不来老师 if 线完结感想</title>
-    <link href="http://example.com/2020/12/14/bokutachi_comment_s/"/>
-    <id>http://example.com/2020/12/14/bokutachi_comment_s/</id>
-    <published>2020-12-14T08:00:00.000Z</published>
-    <updated>2020-12-14T10:19:28.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;  看完了心情复杂不知道说些什么，但好歹也要说一句——恭喜学不来老师 if 线完结。&lt;br /&gt;</summary>
-    
-    
-    
-    <category term="杂谈" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="acg" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/acg/"/>
-    
-    
-    <category term="manga" scheme="http://example.com/tags/manga/"/>
     
   </entry>
   
