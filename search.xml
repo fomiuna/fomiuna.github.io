@@ -78,46 +78,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Some solutions to FML Ed2</title>
-    <url>/2021/06/30/FML_sol_z/</url>
-    <content><![CDATA[<p>  最近闲下来时在翻 Mohri 的 <a href="https://cs.nyu.edu/~mohri/mlbook/">Foundations of Machine Learning</a>(Second Edition). 网上能找到的题解太少了, 自己就边看边做了一些, 大概以后还会继续更(?</p>
-<a id="more"></a>
-<p>  这里把书目录中的主要内容列一下:</p>
-<blockquote>
-<ol type="1">
-<li>Introduction</li>
-<li>The PAC Learning Framework</li>
-<li>Rademacher Complexity and VC-Dimension</li>
-<li>Model Selection</li>
-<li>Support Vector Machine</li>
-<li>Kernel Methods</li>
-<li>Boosting</li>
-<li>On-Line Learning</li>
-<li>Multi-Class Classification</li>
-<li>Ranking</li>
-<li>Regression</li>
-<li>Maximum Entropy Models</li>
-<li>Conditional Maximum Entropy Models</li>
-<li>Algorithmic Stability</li>
-<li>Dimensionality Reduction</li>
-<li>Learning Automata and Languages</li>
-<li>Reinforcement Learning</li>
-</ol>
-</blockquote>
-<p><br></p>
-<p><div class="pdfobject-container" data-target="/notes1.pdf" data-height="1000px"></div> <!-- <object data="/files/notes.pdf" type="application/pdf" width="100%" height="877px"> --></p>
-<p><br></p>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>ML</tag>
-        <tag>study notes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Look Back and Step Forward</title>
     <url>/2021/07/20/LB_com_z/</url>
     <content><![CDATA[<table>
@@ -357,8 +317,48 @@
         <category>语言</category>
       </categories>
       <tags>
-        <tag>study notes</tag>
         <tag>c++</tag>
+        <tag>study notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Some solutions to FML Ed2</title>
+    <url>/2021/06/30/FML_sol_z/</url>
+    <content><![CDATA[<p>  最近闲下来时在翻 Mohri 的 <a href="https://cs.nyu.edu/~mohri/mlbook/">Foundations of Machine Learning</a>(Second Edition). 网上能找到的题解太少了, 自己就边看边做了一些, 大概以后还会继续更(?</p>
+<a id="more"></a>
+<p>  这里把书目录中的主要内容列一下:</p>
+<blockquote>
+<ol type="1">
+<li>Introduction</li>
+<li>The PAC Learning Framework</li>
+<li>Rademacher Complexity and VC-Dimension</li>
+<li>Model Selection</li>
+<li>Support Vector Machine</li>
+<li>Kernel Methods</li>
+<li>Boosting</li>
+<li>On-Line Learning</li>
+<li>Multi-Class Classification</li>
+<li>Ranking</li>
+<li>Regression</li>
+<li>Maximum Entropy Models</li>
+<li>Conditional Maximum Entropy Models</li>
+<li>Algorithmic Stability</li>
+<li>Dimensionality Reduction</li>
+<li>Learning Automata and Languages</li>
+<li>Reinforcement Learning</li>
+</ol>
+</blockquote>
+<p><br></p>
+<p><div class="pdfobject-container" data-target="/notes1.pdf" data-height="1000px"></div> <!-- <object data="/files/notes.pdf" type="application/pdf" width="100%" height="877px"> --></p>
+<p><br></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>study notes</tag>
+        <tag>ML</tag>
       </tags>
   </entry>
   <entry>
@@ -693,7 +693,7 @@
 </tr>
 </tbody>
 </table>
-<p>显然, 由对称性可知 <span class="math inline">\(|AB|=|CD|\)</span>. 故问题可以转化为证明存在实数 <span class="math inline">\(b\)</span> 使得 <span class="math inline">\(B,C\)</span> 两点横坐标相等, 即 <span class="math inline">\(x_B=x_C\)</span>. 可以证明 <span class="math inline">\(b\)</span> 从 <span class="math inline">\(1+\)</span> 到 <span class="math inline">\(+\infty\)</span> 时 <span class="math inline">\(x_B\)</span> 从 <span class="math inline">\(0+\)</span> 单调递增至 <span class="math inline">\(+\infty\)</span>, <span class="math inline">\(x_C\)</span> 从 <span class="math inline">\(1-\)</span> 单调递减至 <span class="math inline">\(-\infty\)</span>. 故存在满足条件的 <span class="math inline">\(b\)</span>. <br/><br/></p>
+<p>显然, 由对称性可知 <span class="math inline">\(|AB|=|CD|\)</span>. 故问题可以转化为证明存在实数 <span class="math inline">\(b\)</span> 使得 <span class="math inline">\(B,C\)</span> 两点横坐标相等, 即 <span class="math inline">\(x_B=x_C\)</span>. 可以证明 <span class="math inline">\(b\)</span> 从 <span class="math inline">\(1+\)</span> 到 <span class="math inline">\(+\infty\)</span> 时 <span class="math inline">\(x_B\)</span> 从 <span class="math inline">\(0+\)</span> 单调递增至 <span class="math inline">\(+\infty\)</span>, <span class="math inline">\(x_C\)</span> 从 <span class="math inline">\(1-\)</span> 单调递减至 <span class="math inline">\(0-\)</span>. 故存在满足条件的 <span class="math inline">\(b\)</span>. <br/><br/></p>
 <div class="note info no-icon"><!-- #### No icon note -->
 <p><strong>(全国新高考 II 卷)</strong> 已知函数 <span class="math inline">\(f(x)=x\mathrm{e}^{ax}-\mathrm e^x\)</span>.</p>
 <ol type="1">
@@ -969,119 +969,6 @@ Let <span class="math inline">\(\ell\leftarrow\lfloor\log_2(4\rho)\rfloor\)</spa
       <tags>
         <tag>submodular maximization</tag>
         <tag>optimization</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>同人 h 本画师收集</title>
-    <url>/2020/11/10/illustrator_recommendation_s/</url>
-    <content><![CDATA[<p>懂的都懂。</p>
-<a id="more"></a>
-<ol type="1">
-<li><p><strong>YD</strong>  隶属社团：Orangemaru<br />
-(COMIC1☆13) [OrangeMaru (YD)] スキル強化解禁 + OrangeMaru Special 04 (Fate/Grand Order)<br />
-(COMIC1☆11) [OrangeMaru (YD)] TOKIMEKI ニオイ (アイドルマスター シンデレラガールズ)</p></li>
-<li><p><strong>北原亜希</strong>  隶属社团：秘密結社M<br />
-(C92) [秘密結社M (北原亜希)] 詩羽アナザーバッドエンド (冴えない彼女の育てかた)<br />
-(C91) [秘密結社M (北原亜希)] 妊娠しちゃった...誰か「たすけて」。 (美少女戦士セーラームーン)</p></li>
-<li><p><strong>あるぷ</strong>  隶属社团：リンゴヤ<br />
-(C97) [リンゴヤ (あるぷ)] 松浦の休日 (ラブライブ！サンシャイン!!)<br />
-(C96) [リンゴヤ (あるぷ)] 高海の休日～2日目～<br />
-p.s. 此人非常肝，量大质高，强力推荐</p></li>
-<li><p><strong>酔っ払い鬼?</strong>  隶属社团：CORORI<br />
-(C94) [CORORI (酔っ払い鬼?)] かなかん身代わり果南ちゃんふんばルビィ! (ラブライブ! サンシャイン!!)<br />
-(C97) [CORORI (酔っ払い鬼?)] かなかん 果南ちゃん大ピンチ(拉致編) (ラブライブ! サンシャイン!!)</p></li>
-<li><p><strong>いちたか</strong>  隶属社团：Crazy9<br />
-(C93) [Crazy9 (いちたか)] C9-33 女神様のハジメテ エレシュキガルの場合 (Fate/Grand Order)<br />
-(COMIC1☆10) [Crazy9 (いちたか)] C9-24 鹿島とハジメテ (艦隊これくしょん -艦これ-)</p></li>
-<li><p><strong>アサヒナヒカゲ</strong>  隶属社团：アカペンギン<br />
-(C97) [アカペンギン (アサヒナヒカゲ)] 桐須先生が教える保健体育 (ぼくたちは勉強ができない)<br />
-(C92) [アカペンギン (アサヒナヒカゲ)] たわわな後輩ちゃん (月曜日のたわわ)</p></li>
-<li><p><strong>たまごろー</strong>  隶属社团：フニフニラボ<br />
-(C97) [フニフニラボ (たまごろー)] たびのきろくに (ポケモンマスターズ)<br />
-(C92) [フニフニラボ (たまごろー)] マオフレンズ (ポケットモンスター)</p></li>
-<li><p><strong>きくらげ</strong>  隶属社团：きくらげ屋<br />
-(C87) [きくらげ屋 (きくらげ )] 恋姦6 [中国翻訳]<br />
-(C86) [きくらげ屋 (きくらげ )] 黒のリーマンと妖精姫エルニース<br />
-p.s. 这位失联了</p></li>
-<li><p><strong>白野ジア</strong>  隶属社团：シロジア<br />
-(C93) [シロジア (白野ジア)] ゆきのひ。 (やはり俺の青春ラブコメはまちがっている。)<br />
-[シロジア (白野ジア)] がまんして、ほしがって。 (やはり俺の青春ラブコメはまちがっている。)</p></li>
-<li><p><strong>愛上陸</strong>  隶属社团：50on!<br />
-(C95) [50on! (愛上陸)] 催眠性指導 倉敷麗華の場合<br />
-(C96) [50on! (愛上陸)] 催眠性指導4 妊娠体験指導</p></li>
-<li><p><strong>あらくれ</strong>  隶属社团：あらくれた者たち<br />
-[あらくれた者たち (あらくれ)] 最高に食べごろの夜<br />
-[あらくれた者たち (あらくれ)] 寝取られた人妻と寝取られる人妻</p></li>
-<li><p><strong>キチロク</strong>  隶属社团：第6基地<br />
-(C96) [第6基地 (キチロク)] 推シツケ<br />
-(C97) [第6基地 (キチロク)] 女子大生高坂穂乃果のヤリサー事件簿 (ラブライブ!)</p></li>
-<li><p><strong>イシガキタカシ</strong>  隶属社团：Type-G<br />
-[Type-G (イシガキタカシ)] 雌神楽 -フェイト編1- (魔法少女リリカルなのは) [DL版]<br />
-(C83) [Type-G (イシガキタカシ)] 桜花散る！ (マブラヴ オルタネイティブ トータル・イクリプス)<br />
-p.s. 这位现在很少画同人了，目前是alicesoft的主力画师之一</p></li>
-<li><p><strong>冷泉、和泉</strong>  隶属社团：サイクロン<br />
-(C94) [サイクロン (冷泉、和泉)] T-32 hooollow (Fate/Grand Order)<br />
-(C92) [サイクロン (和泉、冷泉)] T-30 Do (Fate/Grand Order)</p></li>
-<li><p><strong>kiasa</strong>  隶属社团：ジョウ・レン騎士団<br />
-(C90) [ジョウ・レン騎士団 (kiasa)] 青子BLUE IF (魔法使いの夜)<br />
-(C93) [ジョウ・レン騎士団 (kiasa)] 桜檻 弐 (Fate/stay night) [中国翻訳]<br />
-p.s. 是个樱厨</p></li>
-<li><p><strong>ぐすたふ</strong>  隶属社团：てろめあな<br />
-(C96) [てろめあな (ぐすたふ)] 水着の下の誘惑 (アイドルマスター シンデレラガールズ)<br />
-(C95) [てろめあな (ぐすたふ)] 美波だって誘惑しますよ? (アイドルマスター シンデレラガールズ)<br />
-p.s. 新田美波忠实单推人，产能不高但质量很棒</p></li>
-<li><p><strong>クロエ</strong>  隶属社团：Sugar<em>Berry</em>Syrup<br />
-(COMIC1☆15) [Sugar<em>Berry</em>Syrup (クロエ)] 恥辱の痴漢電車4～彼氏にせがまれ痴漢電車に乗った少女～<br />
-[Sugar<em>Berry</em>Syrup (クロエ)] 淫溺の令嬢5 ～冷たいくちづけ～ + 蜜瓜特典</p></li>
-<li><p><strong>清炭ハリケーン</strong>  隶属社团：清炭ハリケーン<br />
-(C93) [清炭ハリケーン (清炭ハリケーン)] ONE-HURRICANE 6 (ワンパンマン)<br />
-(C88) [清炭ハリケーン (清炭ハリケーン)] ONE-HURRICANE 囚われのフブキ (ワンパンマン)</p></li>
-<li><p><strong>八尋ぽち</strong>  隶属社团：ぽぽちち<br />
-[ぽぽちち (八尋ぽち)] レンタル彼女お触りします (彼女、お借りします)<br />
-[ぽぽちち (八尋ぽち)] レンタル彼女お触りします02 (彼女、お借りします)</p></li>
-<li><p><strong>稲鳴四季</strong>  隶属社团：studio A<br />
-[studio A (稲鳴四季)] 奉仕部のいやらしい慰安旅行。 (やはり俺の青春ラブコメはまちがっている。)<br />
-[studio A (稲鳴四季)] ある日の火照った女の子達。 (やはり俺の青春ラブコメはまちがっている。)</p></li>
-<li><p><strong>アズマサワヨシ</strong>  隶属社团：A・L・L<br />
-[A・L・L (アズマサワヨシ)] ご指名は？マリーちゃんで！ (デッド・オア・アライブ)<br />
-[アズマサワヨシ] あやかし館へようこそ!<br />
-p.s. 这位彻底上岸了</p></li>
-<li><p><strong>みちきんぐ</strong>  隶属社团：あんみつよもぎ亭<br />
-(C97) [あんみつよもぎ亭 (みちきんぐ)] わちきは赤ちゃんになり申した (東方Project)<br />
-(C96) [あんみつよもぎ亭 (みちきんぐ)] ANMITSU TOUHOU THE AFTER Vol.2 (東方Project)</p></li>
-<li><p><strong>あきのそら</strong>  隶属社团：ぺたパン<br />
-(C91) [ぺたパン (あきのそら)] IROHA STORY 01 (やはり俺の青春ラブコメはまちがっている。)<br />
-(C88) [ぺたパン (あきのそら)] LOVE STORY #02 (やはり俺の青春ラブコメはまちがっている。)<br />
-p.s. 水陆两栖，同人本现在画得少了</p></li>
-<li><p><strong>きょくちょ</strong>  隶属社团：きょくちょ局<br />
-[きょくちょ局 (きょくちょ)] 遠坂姉妹凌辱-凛編- (Fate/stay night)<br />
-[きょくちょ局 (きょくちょ)] 凛辱 (Fate/stay night)</p></li>
-<li><p><strong>中乃空</strong>  隶属社团：In The Sky<br />
-[In The Sky (中乃空)] 姉を寝取った日<br />
-(C97) [In The Sky (中乃空)] 北斎純情乙女噺 (Fate/Grand Order)</p></li>
-<li><p><strong>なかじまゆか</strong>  隶属社团：Digital Lover<br />
-[Digital Lover (なかじまゆか)] 人妻幼馴染とひと夏のできごと3 DLO-14<br />
-[Digital Lover (なかじまゆか)] 人妻幼馴染とひと夏のできごと DLO-07</p></li>
-<li><p><strong>智弘カイ</strong>  隶属社团：Ink Complex<br />
-(C97) [Ink Complex (智弘カイ)] 秘公開プラン<br />
-(C92) [Ink Complex (智弘カイ)] The Dark Side of the Moon (アイドルマスター シンデレラガールズ)</p></li>
-<li><p><strong>立花オミナ</strong>  隶属社团：しまぱん<br />
-[しまぱん (立花オミナ)] P5ハーレム～双葉編～ (ペルソナ5)<br />
-[しまぱん (立花オミナ)] P5ハーレム (ペルソナ5)</p></li>
-<li><p><strong>桃屋しょう猫</strong>  隶属社团：U.R.C</p></li>
-<li><p><strong>つかこ</strong>  </p></li>
-<li><p><strong>井藤ななみ</strong>  </p></li>
-<li><p><strong>朝峰テル</strong>  </p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-        <category>acg</category>
-      </categories>
-      <tags>
-        <tag>manga</tag>
-        <tag>xp</tag>
-        <tag>lsp</tag>
       </tags>
   </entry>
   <entry>
@@ -1726,6 +1613,119 @@ R姐版伊莉雅 <em>（R姐，你又在头铁怼光炮）</em><br />
       </tags>
   </entry>
   <entry>
+    <title>同人 h 本画师收集</title>
+    <url>/2020/11/10/illustrator_recommendation_s/</url>
+    <content><![CDATA[<p>懂的都懂。</p>
+<a id="more"></a>
+<ol type="1">
+<li><p><strong>YD</strong>  隶属社团：Orangemaru<br />
+(COMIC1☆13) [OrangeMaru (YD)] スキル強化解禁 + OrangeMaru Special 04 (Fate/Grand Order)<br />
+(COMIC1☆11) [OrangeMaru (YD)] TOKIMEKI ニオイ (アイドルマスター シンデレラガールズ)</p></li>
+<li><p><strong>北原亜希</strong>  隶属社团：秘密結社M<br />
+(C92) [秘密結社M (北原亜希)] 詩羽アナザーバッドエンド (冴えない彼女の育てかた)<br />
+(C91) [秘密結社M (北原亜希)] 妊娠しちゃった...誰か「たすけて」。 (美少女戦士セーラームーン)</p></li>
+<li><p><strong>あるぷ</strong>  隶属社团：リンゴヤ<br />
+(C97) [リンゴヤ (あるぷ)] 松浦の休日 (ラブライブ！サンシャイン!!)<br />
+(C96) [リンゴヤ (あるぷ)] 高海の休日～2日目～<br />
+p.s. 此人非常肝，量大质高，强力推荐</p></li>
+<li><p><strong>酔っ払い鬼?</strong>  隶属社团：CORORI<br />
+(C94) [CORORI (酔っ払い鬼?)] かなかん身代わり果南ちゃんふんばルビィ! (ラブライブ! サンシャイン!!)<br />
+(C97) [CORORI (酔っ払い鬼?)] かなかん 果南ちゃん大ピンチ(拉致編) (ラブライブ! サンシャイン!!)</p></li>
+<li><p><strong>いちたか</strong>  隶属社团：Crazy9<br />
+(C93) [Crazy9 (いちたか)] C9-33 女神様のハジメテ エレシュキガルの場合 (Fate/Grand Order)<br />
+(COMIC1☆10) [Crazy9 (いちたか)] C9-24 鹿島とハジメテ (艦隊これくしょん -艦これ-)</p></li>
+<li><p><strong>アサヒナヒカゲ</strong>  隶属社团：アカペンギン<br />
+(C97) [アカペンギン (アサヒナヒカゲ)] 桐須先生が教える保健体育 (ぼくたちは勉強ができない)<br />
+(C92) [アカペンギン (アサヒナヒカゲ)] たわわな後輩ちゃん (月曜日のたわわ)</p></li>
+<li><p><strong>たまごろー</strong>  隶属社团：フニフニラボ<br />
+(C97) [フニフニラボ (たまごろー)] たびのきろくに (ポケモンマスターズ)<br />
+(C92) [フニフニラボ (たまごろー)] マオフレンズ (ポケットモンスター)</p></li>
+<li><p><strong>きくらげ</strong>  隶属社团：きくらげ屋<br />
+(C87) [きくらげ屋 (きくらげ )] 恋姦6 [中国翻訳]<br />
+(C86) [きくらげ屋 (きくらげ )] 黒のリーマンと妖精姫エルニース<br />
+p.s. 这位失联了</p></li>
+<li><p><strong>白野ジア</strong>  隶属社团：シロジア<br />
+(C93) [シロジア (白野ジア)] ゆきのひ。 (やはり俺の青春ラブコメはまちがっている。)<br />
+[シロジア (白野ジア)] がまんして、ほしがって。 (やはり俺の青春ラブコメはまちがっている。)</p></li>
+<li><p><strong>愛上陸</strong>  隶属社团：50on!<br />
+(C95) [50on! (愛上陸)] 催眠性指導 倉敷麗華の場合<br />
+(C96) [50on! (愛上陸)] 催眠性指導4 妊娠体験指導</p></li>
+<li><p><strong>あらくれ</strong>  隶属社团：あらくれた者たち<br />
+[あらくれた者たち (あらくれ)] 最高に食べごろの夜<br />
+[あらくれた者たち (あらくれ)] 寝取られた人妻と寝取られる人妻</p></li>
+<li><p><strong>キチロク</strong>  隶属社团：第6基地<br />
+(C96) [第6基地 (キチロク)] 推シツケ<br />
+(C97) [第6基地 (キチロク)] 女子大生高坂穂乃果のヤリサー事件簿 (ラブライブ!)</p></li>
+<li><p><strong>イシガキタカシ</strong>  隶属社团：Type-G<br />
+[Type-G (イシガキタカシ)] 雌神楽 -フェイト編1- (魔法少女リリカルなのは) [DL版]<br />
+(C83) [Type-G (イシガキタカシ)] 桜花散る！ (マブラヴ オルタネイティブ トータル・イクリプス)<br />
+p.s. 这位现在很少画同人了，目前是alicesoft的主力画师之一</p></li>
+<li><p><strong>冷泉、和泉</strong>  隶属社团：サイクロン<br />
+(C94) [サイクロン (冷泉、和泉)] T-32 hooollow (Fate/Grand Order)<br />
+(C92) [サイクロン (和泉、冷泉)] T-30 Do (Fate/Grand Order)</p></li>
+<li><p><strong>kiasa</strong>  隶属社团：ジョウ・レン騎士団<br />
+(C90) [ジョウ・レン騎士団 (kiasa)] 青子BLUE IF (魔法使いの夜)<br />
+(C93) [ジョウ・レン騎士団 (kiasa)] 桜檻 弐 (Fate/stay night) [中国翻訳]<br />
+p.s. 是个樱厨</p></li>
+<li><p><strong>ぐすたふ</strong>  隶属社团：てろめあな<br />
+(C96) [てろめあな (ぐすたふ)] 水着の下の誘惑 (アイドルマスター シンデレラガールズ)<br />
+(C95) [てろめあな (ぐすたふ)] 美波だって誘惑しますよ? (アイドルマスター シンデレラガールズ)<br />
+p.s. 新田美波忠实单推人，产能不高但质量很棒</p></li>
+<li><p><strong>クロエ</strong>  隶属社团：Sugar<em>Berry</em>Syrup<br />
+(COMIC1☆15) [Sugar<em>Berry</em>Syrup (クロエ)] 恥辱の痴漢電車4～彼氏にせがまれ痴漢電車に乗った少女～<br />
+[Sugar<em>Berry</em>Syrup (クロエ)] 淫溺の令嬢5 ～冷たいくちづけ～ + 蜜瓜特典</p></li>
+<li><p><strong>清炭ハリケーン</strong>  隶属社团：清炭ハリケーン<br />
+(C93) [清炭ハリケーン (清炭ハリケーン)] ONE-HURRICANE 6 (ワンパンマン)<br />
+(C88) [清炭ハリケーン (清炭ハリケーン)] ONE-HURRICANE 囚われのフブキ (ワンパンマン)</p></li>
+<li><p><strong>八尋ぽち</strong>  隶属社团：ぽぽちち<br />
+[ぽぽちち (八尋ぽち)] レンタル彼女お触りします (彼女、お借りします)<br />
+[ぽぽちち (八尋ぽち)] レンタル彼女お触りします02 (彼女、お借りします)</p></li>
+<li><p><strong>稲鳴四季</strong>  隶属社团：studio A<br />
+[studio A (稲鳴四季)] 奉仕部のいやらしい慰安旅行。 (やはり俺の青春ラブコメはまちがっている。)<br />
+[studio A (稲鳴四季)] ある日の火照った女の子達。 (やはり俺の青春ラブコメはまちがっている。)</p></li>
+<li><p><strong>アズマサワヨシ</strong>  隶属社团：A・L・L<br />
+[A・L・L (アズマサワヨシ)] ご指名は？マリーちゃんで！ (デッド・オア・アライブ)<br />
+[アズマサワヨシ] あやかし館へようこそ!<br />
+p.s. 这位彻底上岸了</p></li>
+<li><p><strong>みちきんぐ</strong>  隶属社团：あんみつよもぎ亭<br />
+(C97) [あんみつよもぎ亭 (みちきんぐ)] わちきは赤ちゃんになり申した (東方Project)<br />
+(C96) [あんみつよもぎ亭 (みちきんぐ)] ANMITSU TOUHOU THE AFTER Vol.2 (東方Project)</p></li>
+<li><p><strong>あきのそら</strong>  隶属社团：ぺたパン<br />
+(C91) [ぺたパン (あきのそら)] IROHA STORY 01 (やはり俺の青春ラブコメはまちがっている。)<br />
+(C88) [ぺたパン (あきのそら)] LOVE STORY #02 (やはり俺の青春ラブコメはまちがっている。)<br />
+p.s. 水陆两栖，同人本现在画得少了</p></li>
+<li><p><strong>きょくちょ</strong>  隶属社团：きょくちょ局<br />
+[きょくちょ局 (きょくちょ)] 遠坂姉妹凌辱-凛編- (Fate/stay night)<br />
+[きょくちょ局 (きょくちょ)] 凛辱 (Fate/stay night)</p></li>
+<li><p><strong>中乃空</strong>  隶属社团：In The Sky<br />
+[In The Sky (中乃空)] 姉を寝取った日<br />
+(C97) [In The Sky (中乃空)] 北斎純情乙女噺 (Fate/Grand Order)</p></li>
+<li><p><strong>なかじまゆか</strong>  隶属社团：Digital Lover<br />
+[Digital Lover (なかじまゆか)] 人妻幼馴染とひと夏のできごと3 DLO-14<br />
+[Digital Lover (なかじまゆか)] 人妻幼馴染とひと夏のできごと DLO-07</p></li>
+<li><p><strong>智弘カイ</strong>  隶属社团：Ink Complex<br />
+(C97) [Ink Complex (智弘カイ)] 秘公開プラン<br />
+(C92) [Ink Complex (智弘カイ)] The Dark Side of the Moon (アイドルマスター シンデレラガールズ)</p></li>
+<li><p><strong>立花オミナ</strong>  隶属社团：しまぱん<br />
+[しまぱん (立花オミナ)] P5ハーレム～双葉編～ (ペルソナ5)<br />
+[しまぱん (立花オミナ)] P5ハーレム (ペルソナ5)</p></li>
+<li><p><strong>桃屋しょう猫</strong>  隶属社团：U.R.C</p></li>
+<li><p><strong>つかこ</strong>  </p></li>
+<li><p><strong>井藤ななみ</strong>  </p></li>
+<li><p><strong>朝峰テル</strong>  </p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+        <category>acg</category>
+      </categories>
+      <tags>
+        <tag>manga</tag>
+        <tag>xp</tag>
+        <tag>lsp</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>夜路</title>
     <url>/2021/05/17/yorumiti_poem_s/</url>
     <content><![CDATA[<h1 id="夜路">夜路</h1>
@@ -1908,8 +1908,8 @@ Variables must be defined exactly once but can be declared many times. To use th
         <category>语言</category>
       </categories>
       <tags>
-        <tag>study notes</tag>
         <tag>c++</tag>
+        <tag>study notes</tag>
       </tags>
   </entry>
   <entry>
