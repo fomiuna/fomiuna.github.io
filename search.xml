@@ -78,6 +78,46 @@
       </tags>
   </entry>
   <entry>
+    <title>Some solutions to FML Ed2</title>
+    <url>/2021/06/30/FML_sol_z/</url>
+    <content><![CDATA[<p>  最近闲下来时在翻 Mohri 的 <a href="https://cs.nyu.edu/~mohri/mlbook/">Foundations of Machine Learning</a>(Second Edition). 网上能找到的题解太少了, 自己就边看边做了一些, 大概以后还会继续更(?</p>
+<a id="more"></a>
+<p>  这里把书目录中的主要内容列一下:</p>
+<blockquote>
+<ol type="1">
+<li>Introduction</li>
+<li>The PAC Learning Framework</li>
+<li>Rademacher Complexity and VC-Dimension</li>
+<li>Model Selection</li>
+<li>Support Vector Machine</li>
+<li>Kernel Methods</li>
+<li>Boosting</li>
+<li>On-Line Learning</li>
+<li>Multi-Class Classification</li>
+<li>Ranking</li>
+<li>Regression</li>
+<li>Maximum Entropy Models</li>
+<li>Conditional Maximum Entropy Models</li>
+<li>Algorithmic Stability</li>
+<li>Dimensionality Reduction</li>
+<li>Learning Automata and Languages</li>
+<li>Reinforcement Learning</li>
+</ol>
+</blockquote>
+<p><br></p>
+<p><div class="pdfobject-container" data-target="/notes1.pdf" data-height="1000px"></div> <!-- <object data="/files/notes.pdf" type="application/pdf" width="100%" height="877px"> --></p>
+<p><br></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>ML</tag>
+        <tag>study notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Look Back and Step Forward</title>
     <url>/2021/07/20/LB_com_z/</url>
     <content><![CDATA[<table>
@@ -317,121 +357,8 @@
         <category>语言</category>
       </categories>
       <tags>
+        <tag>study notes</tag>
         <tag>c++</tag>
-        <tag>study notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Some solutions to FML Ed2</title>
-    <url>/2021/06/30/FML_sol_z/</url>
-    <content><![CDATA[<p>  最近闲下来时在翻 Mohri 的 <a href="https://cs.nyu.edu/~mohri/mlbook/">Foundations of Machine Learning</a>(Second Edition). 网上能找到的题解太少了, 自己就边看边做了一些, 大概以后还会继续更(?</p>
-<a id="more"></a>
-<p>  这里把书目录中的主要内容列一下:</p>
-<blockquote>
-<ol type="1">
-<li>Introduction</li>
-<li>The PAC Learning Framework</li>
-<li>Rademacher Complexity and VC-Dimension</li>
-<li>Model Selection</li>
-<li>Support Vector Machine</li>
-<li>Kernel Methods</li>
-<li>Boosting</li>
-<li>On-Line Learning</li>
-<li>Multi-Class Classification</li>
-<li>Ranking</li>
-<li>Regression</li>
-<li>Maximum Entropy Models</li>
-<li>Conditional Maximum Entropy Models</li>
-<li>Algorithmic Stability</li>
-<li>Dimensionality Reduction</li>
-<li>Learning Automata and Languages</li>
-<li>Reinforcement Learning</li>
-</ol>
-</blockquote>
-<p><br></p>
-<p><div class="pdfobject-container" data-target="/notes1.pdf" data-height="1000px"></div> <!-- <object data="/files/notes.pdf" type="application/pdf" width="100%" height="877px"> --></p>
-<p><br></p>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>study notes</tag>
-        <tag>ML</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>梦境调查档案① —— 恶心御宅青年真能梦到二次元小姐姐吗</title>
-    <url>/2022/04/12/dream_s/</url>
-    <content><![CDATA[<center>
-<strong>睡前千万不要看路主 11 卷，认真的</strong>
-</center>
-<a id="more"></a>
-<h3 id="前言">前言</h3>
-<p>  昨晚的梦过于离奇，醒来之后笔者细细回想，应该是自己睡前看了《路人女主养成方法》第 11 卷的锅。因为 11 卷是久违地男女主糖味儿十足的互动剧情，就算关灯之后自己只要一想起来，就会在床上扭得像条蛆。不管究竟是怎样的原因，<del>出于水博文</del>，觉得昨晚的梦有意思的想法，还是简单记录一下。</p>
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><img src="/images/dream1_1.png" width="40%"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><em>路主 11 卷的封面。完结篇的开始，男主安艺伦也和女主加藤惠关系突飞猛进的一卷。男主安艺伦也为了剧本取材拉着惠各种交流和实践，具体是哪些这里就不剧透了，总之糖度爆表。</em></td>
-</tr>
-</tbody>
-</table>
-<h3 id="梦境前半段">梦境前半段</h3>
-<p>自己是一个从城市转学到乡下，喜欢看动画漫画轻小说的宅男。<br />
-第一天入住的寝室发现是男女合住，并且还住着三个妹子。<br />
-自己稀里糊涂就和一个鲍勃头妹子交往了。<br />
-性格，身材，发型都和加藤惠如出一辙。<br />
-谁会拒绝加藤惠这样的妹子呢？<br />
-我就是安艺伦也！</p>
-<p><em>（呜啊，我这也太恶心了）</em></p>
-<h3 id="中间转折选择">中间转折选择</h3>
-<p><font color=#A9A9A9>[场景 教学楼楼道 上课铃响前]</font><br />
-女朋友：诶，问你个问题？<br />
-我：嗯，你说。<br />
-女朋友：<font color=#A9A9A9>（稍有犹豫）</font>嗯……就是……你更愿意我是加藤惠那样的女孩子吗？<br />
-我：这……怎么说呢？<br />
-<font color=#A9A9A9>（我感到惊讶，且难为情，支支吾吾，不知道好不好开口）</font><br />
-我：没，没吧，我对三次元女生又没那种要求。<br />
-<font color=#A9A9A9>（具体表情记不清了，自己应该脸红了）</font><br />
-<font color=#A9A9A9>（我说完，女朋友没回应，她脸上挂着挂着浅浅一笑，快步小跑走进了教室，我一个人被扔在后面）</font><br />
-我：<font color=#A9A9A9>（苦笑且满是疑惑）</font>所以刚才到底是啥意思？</p>
-<p><em>（写下来还是这段充满妄想意味儿的情节感觉好瞎，至今回想起来还是觉得羞耻）</em></p>
-<h3 id="梦境后半段">梦境后半段</h3>
-<p>因为中间转折剧情，女方形象大变样，具体记不清了，差不多就是性格和言语更开放了，并且会伴随一些迷惑行为。<em>（妹子你谁啊，这人设彻底崩坏了吧）</em></p>
-<p>梦境内容也开始暴走，自己可以进入大地图视角。大地图上甚至出现了一群类似于邪教的反派组织，自己可以在大地图上选择据点点位进入具体场景像 ARPG 那样捣毁窝点，然后获得用于约会，强化的材料。<em>（不是，你们这群坏蛋又是谁？我只是一个从城市转来乡下，只喜欢看动画漫画轻小说，靠刷你们得各种材料的高中生啊！）</em></p>
-<p>之后，在放学回家的有一天，女方起兴提议晚饭吃蛇蛋，我没反对。然后找了个树洞趁毒蛇还睡觉时掏蛇蛋。最后两人惊醒了毒蛇，双双被毒蛇咬了毒死了。<em>（说真的，这一段槽点更多了，为啥晚饭要去吃蛇蛋啊，为啥要去偷啊，还被毒蛇要死了！这都什么狗屎结局！）</em></p>
-<p>自己死后，剧情回溯到了自己转学的第一天，二周目的第一天还没彻底发展完就醒了。<em>（所以这梦就是什么粪作 GAL 吧）</em></p>
-<h3 id="尾声">尾声</h3>
-<p>其实总结整理完了来看看，能攻略多位女角色（其实之前还另外攻略了一位，只不过这个印象最深），每个女角色有自己独立的剧情，并且最后各自的剧情线索能够最后汇总成一个结局。表面上是平淡的乡村校园生活，实际上背后隐藏着邪恶组织在暗流涌动。一个女主是这个故事的破局核心。</p>
-<p>这不就是寒蝉鸣泣之时嘛喂！</p>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><img src="/images/dream1_2.png" width="50%"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><em>寒蝉鸣泣之时可以说是经典轮回传奇作品了。蝉在叫，人坏掉。校园日常一转悬疑恐怖，最后全是美军的阴谋。</em></td>
-</tr>
-</tbody>
-</table>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>others</tag>
       </tags>
   </entry>
   <entry>
@@ -581,6 +508,79 @@
       </tags>
   </entry>
   <entry>
+    <title>梦境调查档案① —— 恶心御宅青年真能梦到二次元小姐姐吗</title>
+    <url>/2022/04/12/dream_s/</url>
+    <content><![CDATA[<center>
+<strong>睡前千万不要看路主 11 卷，认真的</strong>
+</center>
+<a id="more"></a>
+<h3 id="前言">前言</h3>
+<p>  昨晚的梦过于离奇，醒来之后笔者细细回想，应该是自己睡前看了《路人女主养成方法》第 11 卷的锅。因为 11 卷是久违地男女主糖味儿十足的互动剧情，就算关灯之后自己只要一想起来，就会在床上扭得像条蛆。不管究竟是怎样的原因，<del>出于水博文</del>，觉得昨晚的梦有意思的想法，还是简单记录一下。</p>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><img src="/images/dream1_1.png" width="40%"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><em>路主 11 卷的封面。完结篇的开始，男主安艺伦也和女主加藤惠关系突飞猛进的一卷。男主安艺伦也为了剧本取材拉着惠各种交流和实践，具体是哪些这里就不剧透了，总之糖度爆表。</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="梦境前半段">梦境前半段</h3>
+<p>自己是一个从城市转学到乡下，喜欢看动画漫画轻小说的宅男。<br />
+第一天入住的寝室发现是男女合住，并且还住着三个妹子。<br />
+自己稀里糊涂就和一个鲍勃头妹子交往了。<br />
+性格，身材，发型都和加藤惠如出一辙。<br />
+谁会拒绝加藤惠这样的妹子呢？<br />
+我就是安艺伦也！</p>
+<p><em>（呜啊，我这也太恶心了）</em></p>
+<h3 id="中间转折选择">中间转折选择</h3>
+<p><font color=#A9A9A9>[场景 教学楼楼道 上课铃响前]</font><br />
+女朋友：诶，问你个问题？<br />
+我：嗯，你说。<br />
+女朋友：<font color=#A9A9A9>（稍有犹豫）</font>嗯……就是……你更愿意我是加藤惠那样的女孩子吗？<br />
+我：这……怎么说呢？<br />
+<font color=#A9A9A9>（我感到惊讶，且难为情，支支吾吾，不知道好不好开口）</font><br />
+我：没，没吧，我对三次元女生又没那种要求。<br />
+<font color=#A9A9A9>（具体表情记不清了，自己应该脸红了）</font><br />
+<font color=#A9A9A9>（我说完，女朋友没回应，她脸上挂着挂着浅浅一笑，快步小跑走进了教室，我一个人被扔在后面）</font><br />
+我：<font color=#A9A9A9>（苦笑且满是疑惑）</font>所以刚才到底是啥意思？</p>
+<p><em>（写下来还是这段充满妄想意味儿的情节感觉好瞎，至今回想起来还是觉得羞耻）</em></p>
+<h3 id="梦境后半段">梦境后半段</h3>
+<p>因为中间转折剧情，女方形象大变样，具体记不清了，差不多就是性格和言语更开放了，并且会伴随一些迷惑行为。<em>（妹子你谁啊，这人设彻底崩坏了吧）</em></p>
+<p>梦境内容也开始暴走，自己可以进入大地图视角。大地图上甚至出现了一群类似于邪教的反派组织，自己可以在大地图上选择据点点位进入具体场景像 ARPG 那样捣毁窝点，然后获得用于约会，强化的材料。<em>（不是，你们这群坏蛋又是谁？我只是一个从城市转来乡下，只喜欢看动画漫画轻小说，靠刷你们得各种材料的高中生啊！）</em></p>
+<p>之后，在放学回家的有一天，女方起兴提议晚饭吃蛇蛋，我没反对。然后找了个树洞趁毒蛇还睡觉时掏蛇蛋。最后两人惊醒了毒蛇，双双被毒蛇咬了毒死了。<em>（说真的，这一段槽点更多了，为啥晚饭要去吃蛇蛋啊，为啥要去偷啊，还被毒蛇要死了！这都什么狗屎结局！）</em></p>
+<p>自己死后，剧情回溯到了自己转学的第一天，二周目的第一天还没彻底发展完就醒了。<em>（所以这梦就是什么粪作 GAL 吧）</em></p>
+<h3 id="尾声">尾声</h3>
+<p>其实总结整理完了来看看，能攻略多位女角色（其实之前还另外攻略了一位，只不过这个印象最深），每个女角色有自己独立的剧情，并且最后各自的剧情线索能够最后汇总成一个结局。表面上是平淡的乡村校园生活，实际上背后隐藏着邪恶组织在暗流涌动。一个女主是这个故事的破局核心。</p>
+<p>这不就是寒蝉鸣泣之时嘛喂！</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><img src="/images/dream1_2.png" width="50%"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><em>寒蝉鸣泣之时可以说是经典轮回传奇作品了。蝉在叫，人坏掉。校园日常一转悬疑恐怖，最后全是美军的阴谋。</em></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>others</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2022 高考数学问题</title>
     <url>/2022/06/12/gaokaomaths2022_z/</url>
     <content><![CDATA[<p>(年年水, 不说了.)</p>
@@ -693,7 +693,7 @@
 </tr>
 </tbody>
 </table>
-<p>显然, 由对称性可知 <span class="math inline">\(|AB|=|CD|\)</span>. 故问题可以转化为证明存在实数 <span class="math inline">\(b\)</span> 使得 <span class="math inline">\(B,C\)</span> 两点横坐标相等, 即 <span class="math inline">\(x_B=x_C\)</span>. 可以证明 <span class="math inline">\(b\)</span> 从 <span class="math inline">\(1+\)</span> 到 <span class="math inline">\(+\infty\)</span> 时 <span class="math inline">\(x_B\)</span> 从 <span class="math inline">\(0+\)</span> 单调递增至 <span class="math inline">\(+\infty\)</span>, <span class="math inline">\(x_C\)</span> 从 <span class="math inline">\(1-\)</span> 单调递减至 <span class="math inline">\(0-\)</span>. 故存在满足条件的 <span class="math inline">\(b\)</span>. <br/><br/></p>
+<p>显然, 由对称性可知 <span class="math inline">\(|AB|=|CD|\)</span>. 故问题可以转化为证明存在实数 <span class="math inline">\(b\)</span> 使得 <span class="math inline">\(B,C\)</span> 两点横坐标相等, 即 <span class="math inline">\(x_B=x_C\)</span>. 可以证明 <span class="math inline">\(b\)</span> 从 <span class="math inline">\(1+\)</span> 到 <span class="math inline">\(+\infty\)</span> 时 <span class="math inline">\(x_B\)</span> 从 <span class="math inline">\(0+\)</span> 单调递增至 <span class="math inline">\(+\infty\)</span>, <span class="math inline">\(x_C\)</span> 从 <span class="math inline">\(1-\)</span> 单调递减至 <span class="math inline">\(0+\)</span>. 故存在满足条件的 <span class="math inline">\(b\)</span>. <br/><br/></p>
 <div class="note info no-icon"><!-- #### No icon note -->
 <p><strong>(全国新高考 II 卷)</strong> 已知函数 <span class="math inline">\(f(x)=x\mathrm{e}^{ax}-\mathrm e^x\)</span>.</p>
 <ol type="1">
@@ -972,6 +972,119 @@ Let <span class="math inline">\(\ell\leftarrow\lfloor\log_2(4\rho)\rfloor\)</spa
       </tags>
   </entry>
   <entry>
+    <title>同人 h 本画师收集</title>
+    <url>/2020/11/10/illustrator_recommendation_s/</url>
+    <content><![CDATA[<p>懂的都懂。</p>
+<a id="more"></a>
+<ol type="1">
+<li><p><strong>YD</strong>  隶属社团：Orangemaru<br />
+(COMIC1☆13) [OrangeMaru (YD)] スキル強化解禁 + OrangeMaru Special 04 (Fate/Grand Order)<br />
+(COMIC1☆11) [OrangeMaru (YD)] TOKIMEKI ニオイ (アイドルマスター シンデレラガールズ)</p></li>
+<li><p><strong>北原亜希</strong>  隶属社团：秘密結社M<br />
+(C92) [秘密結社M (北原亜希)] 詩羽アナザーバッドエンド (冴えない彼女の育てかた)<br />
+(C91) [秘密結社M (北原亜希)] 妊娠しちゃった...誰か「たすけて」。 (美少女戦士セーラームーン)</p></li>
+<li><p><strong>あるぷ</strong>  隶属社团：リンゴヤ<br />
+(C97) [リンゴヤ (あるぷ)] 松浦の休日 (ラブライブ！サンシャイン!!)<br />
+(C96) [リンゴヤ (あるぷ)] 高海の休日～2日目～<br />
+p.s. 此人非常肝，量大质高，强力推荐</p></li>
+<li><p><strong>酔っ払い鬼?</strong>  隶属社团：CORORI<br />
+(C94) [CORORI (酔っ払い鬼?)] かなかん身代わり果南ちゃんふんばルビィ! (ラブライブ! サンシャイン!!)<br />
+(C97) [CORORI (酔っ払い鬼?)] かなかん 果南ちゃん大ピンチ(拉致編) (ラブライブ! サンシャイン!!)</p></li>
+<li><p><strong>いちたか</strong>  隶属社团：Crazy9<br />
+(C93) [Crazy9 (いちたか)] C9-33 女神様のハジメテ エレシュキガルの場合 (Fate/Grand Order)<br />
+(COMIC1☆10) [Crazy9 (いちたか)] C9-24 鹿島とハジメテ (艦隊これくしょん -艦これ-)</p></li>
+<li><p><strong>アサヒナヒカゲ</strong>  隶属社团：アカペンギン<br />
+(C97) [アカペンギン (アサヒナヒカゲ)] 桐須先生が教える保健体育 (ぼくたちは勉強ができない)<br />
+(C92) [アカペンギン (アサヒナヒカゲ)] たわわな後輩ちゃん (月曜日のたわわ)</p></li>
+<li><p><strong>たまごろー</strong>  隶属社团：フニフニラボ<br />
+(C97) [フニフニラボ (たまごろー)] たびのきろくに (ポケモンマスターズ)<br />
+(C92) [フニフニラボ (たまごろー)] マオフレンズ (ポケットモンスター)</p></li>
+<li><p><strong>きくらげ</strong>  隶属社团：きくらげ屋<br />
+(C87) [きくらげ屋 (きくらげ )] 恋姦6 [中国翻訳]<br />
+(C86) [きくらげ屋 (きくらげ )] 黒のリーマンと妖精姫エルニース<br />
+p.s. 这位失联了</p></li>
+<li><p><strong>白野ジア</strong>  隶属社团：シロジア<br />
+(C93) [シロジア (白野ジア)] ゆきのひ。 (やはり俺の青春ラブコメはまちがっている。)<br />
+[シロジア (白野ジア)] がまんして、ほしがって。 (やはり俺の青春ラブコメはまちがっている。)</p></li>
+<li><p><strong>愛上陸</strong>  隶属社团：50on!<br />
+(C95) [50on! (愛上陸)] 催眠性指導 倉敷麗華の場合<br />
+(C96) [50on! (愛上陸)] 催眠性指導4 妊娠体験指導</p></li>
+<li><p><strong>あらくれ</strong>  隶属社团：あらくれた者たち<br />
+[あらくれた者たち (あらくれ)] 最高に食べごろの夜<br />
+[あらくれた者たち (あらくれ)] 寝取られた人妻と寝取られる人妻</p></li>
+<li><p><strong>キチロク</strong>  隶属社团：第6基地<br />
+(C96) [第6基地 (キチロク)] 推シツケ<br />
+(C97) [第6基地 (キチロク)] 女子大生高坂穂乃果のヤリサー事件簿 (ラブライブ!)</p></li>
+<li><p><strong>イシガキタカシ</strong>  隶属社团：Type-G<br />
+[Type-G (イシガキタカシ)] 雌神楽 -フェイト編1- (魔法少女リリカルなのは) [DL版]<br />
+(C83) [Type-G (イシガキタカシ)] 桜花散る！ (マブラヴ オルタネイティブ トータル・イクリプス)<br />
+p.s. 这位现在很少画同人了，目前是alicesoft的主力画师之一</p></li>
+<li><p><strong>冷泉、和泉</strong>  隶属社团：サイクロン<br />
+(C94) [サイクロン (冷泉、和泉)] T-32 hooollow (Fate/Grand Order)<br />
+(C92) [サイクロン (和泉、冷泉)] T-30 Do (Fate/Grand Order)</p></li>
+<li><p><strong>kiasa</strong>  隶属社团：ジョウ・レン騎士団<br />
+(C90) [ジョウ・レン騎士団 (kiasa)] 青子BLUE IF (魔法使いの夜)<br />
+(C93) [ジョウ・レン騎士団 (kiasa)] 桜檻 弐 (Fate/stay night) [中国翻訳]<br />
+p.s. 是个樱厨</p></li>
+<li><p><strong>ぐすたふ</strong>  隶属社团：てろめあな<br />
+(C96) [てろめあな (ぐすたふ)] 水着の下の誘惑 (アイドルマスター シンデレラガールズ)<br />
+(C95) [てろめあな (ぐすたふ)] 美波だって誘惑しますよ? (アイドルマスター シンデレラガールズ)<br />
+p.s. 新田美波忠实单推人，产能不高但质量很棒</p></li>
+<li><p><strong>クロエ</strong>  隶属社团：Sugar<em>Berry</em>Syrup<br />
+(COMIC1☆15) [Sugar<em>Berry</em>Syrup (クロエ)] 恥辱の痴漢電車4～彼氏にせがまれ痴漢電車に乗った少女～<br />
+[Sugar<em>Berry</em>Syrup (クロエ)] 淫溺の令嬢5 ～冷たいくちづけ～ + 蜜瓜特典</p></li>
+<li><p><strong>清炭ハリケーン</strong>  隶属社团：清炭ハリケーン<br />
+(C93) [清炭ハリケーン (清炭ハリケーン)] ONE-HURRICANE 6 (ワンパンマン)<br />
+(C88) [清炭ハリケーン (清炭ハリケーン)] ONE-HURRICANE 囚われのフブキ (ワンパンマン)</p></li>
+<li><p><strong>八尋ぽち</strong>  隶属社团：ぽぽちち<br />
+[ぽぽちち (八尋ぽち)] レンタル彼女お触りします (彼女、お借りします)<br />
+[ぽぽちち (八尋ぽち)] レンタル彼女お触りします02 (彼女、お借りします)</p></li>
+<li><p><strong>稲鳴四季</strong>  隶属社团：studio A<br />
+[studio A (稲鳴四季)] 奉仕部のいやらしい慰安旅行。 (やはり俺の青春ラブコメはまちがっている。)<br />
+[studio A (稲鳴四季)] ある日の火照った女の子達。 (やはり俺の青春ラブコメはまちがっている。)</p></li>
+<li><p><strong>アズマサワヨシ</strong>  隶属社团：A・L・L<br />
+[A・L・L (アズマサワヨシ)] ご指名は？マリーちゃんで！ (デッド・オア・アライブ)<br />
+[アズマサワヨシ] あやかし館へようこそ!<br />
+p.s. 这位彻底上岸了</p></li>
+<li><p><strong>みちきんぐ</strong>  隶属社团：あんみつよもぎ亭<br />
+(C97) [あんみつよもぎ亭 (みちきんぐ)] わちきは赤ちゃんになり申した (東方Project)<br />
+(C96) [あんみつよもぎ亭 (みちきんぐ)] ANMITSU TOUHOU THE AFTER Vol.2 (東方Project)</p></li>
+<li><p><strong>あきのそら</strong>  隶属社团：ぺたパン<br />
+(C91) [ぺたパン (あきのそら)] IROHA STORY 01 (やはり俺の青春ラブコメはまちがっている。)<br />
+(C88) [ぺたパン (あきのそら)] LOVE STORY #02 (やはり俺の青春ラブコメはまちがっている。)<br />
+p.s. 水陆两栖，同人本现在画得少了</p></li>
+<li><p><strong>きょくちょ</strong>  隶属社团：きょくちょ局<br />
+[きょくちょ局 (きょくちょ)] 遠坂姉妹凌辱-凛編- (Fate/stay night)<br />
+[きょくちょ局 (きょくちょ)] 凛辱 (Fate/stay night)</p></li>
+<li><p><strong>中乃空</strong>  隶属社团：In The Sky<br />
+[In The Sky (中乃空)] 姉を寝取った日<br />
+(C97) [In The Sky (中乃空)] 北斎純情乙女噺 (Fate/Grand Order)</p></li>
+<li><p><strong>なかじまゆか</strong>  隶属社团：Digital Lover<br />
+[Digital Lover (なかじまゆか)] 人妻幼馴染とひと夏のできごと3 DLO-14<br />
+[Digital Lover (なかじまゆか)] 人妻幼馴染とひと夏のできごと DLO-07</p></li>
+<li><p><strong>智弘カイ</strong>  隶属社团：Ink Complex<br />
+(C97) [Ink Complex (智弘カイ)] 秘公開プラン<br />
+(C92) [Ink Complex (智弘カイ)] The Dark Side of the Moon (アイドルマスター シンデレラガールズ)</p></li>
+<li><p><strong>立花オミナ</strong>  隶属社团：しまぱん<br />
+[しまぱん (立花オミナ)] P5ハーレム～双葉編～ (ペルソナ5)<br />
+[しまぱん (立花オミナ)] P5ハーレム (ペルソナ5)</p></li>
+<li><p><strong>桃屋しょう猫</strong>  隶属社团：U.R.C</p></li>
+<li><p><strong>つかこ</strong>  </p></li>
+<li><p><strong>井藤ななみ</strong>  </p></li>
+<li><p><strong>朝峰テル</strong>  </p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+        <category>acg</category>
+      </categories>
+      <tags>
+        <tag>manga</tag>
+        <tag>xp</tag>
+        <tag>lsp</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2021 数学考试问题</title>
     <url>/2021/06/17/mathsexam2021_z/</url>
     <content><![CDATA[<p>(这篇是水博客用的, 不过总感觉好像之前也干过类似的事.)</p>
@@ -1082,133 +1195,6 @@ Let <span class="math inline">\(\ell\leftarrow\lfloor\log_2(4\rho)\rfloor\)</spa
         <category>杂谈</category>
         <category>生活</category>
       </categories>
-  </entry>
-  <entry>
-    <title>料理日常</title>
-    <url>/2021/08/18/ryourinichijou_z/</url>
-    <content><![CDATA[<p>（自用，记录）</p>
-<a id="more"></a>
-<div class="note primary no-icon"><!-- #### No icon note -->
-<p><strong>芋头、藕炖排骨：</strong></p>
-<ol type="1">
-<li>排骨早早泡水，用时清洗。藕去皮、清洗、切块，用盐浸渍；</li>
-<li>准备一锅清水，加入生姜片、花椒、料酒少许，将清洗好的排骨加入后点火加热（焯水）。在焯水的同时准备另一锅（砂锅）清水放入生姜和花椒，加热；</li>
-<li>排骨焯水完成捞出，将锅清空加热后倒入少许清油，待油热后（小烟）将排骨倒入翻炒至表面变黄（几十秒即可），关火捞出排骨；</li>
-<li>清洗煸炒完成的排骨和用盐浸渍的藕，当砂锅中的水开后，将藕和排骨放入砂锅；</li>
-<li>藕和排骨需要炖煮 90~120min，在结束前 30~40min 时将洗好的芋头加入，起锅前 10min 左右加盐调味；</li>
-<li>出锅开恰。</li>
-</ol>
-<p><strong><em>RMK：</em></strong></p>
-<ul>
-<li>炖排骨使用的藕较老，所以炖煮时间较长（大块、老猪排骨也相应地需要长时间炖煮）。在处理时用盐浸渍藕也是使其能更快煮软</li>
-<li>肉类焯水是冷水入锅，否则破坏口感。焯水时大火冲开后翻动排骨使其受热均匀，最终排骨要完全变色才起锅</li>
-<li>在炖前用油过一遍排骨是让排骨的最终口感更香。在油煸时由于排骨中含水，可将火调小后再加入排骨，等水汽蒸发后再将火开大</li>
-<li>同样，为了使排骨更快煮软，可以在加入排骨到砂锅后再加入一点醋，用大火冲开后再加入藕。如果想要有葱香味儿，可以在这个时候取几段葱捆在一起投入锅中</li>
-<li>芋头易氧化变色，所以我们在要用的时候才处理它。如果提前去皮，最好浸泡在水中</li>
-<li>龙骨肉嫩但少，适合炖汤。又想恰肉又想喝汤的话可以选用肋排</li>
-</ul>
-</div>
-<div class="note primary no-icon"><!-- #### No icon note -->
-<p><strong>猪肉圆子汤：</strong></p>
-<ol type="1">
-<li>肉洗净剁碎成泥，放入大碗，加入少许生抽、老抽和蚝油；</li>
-<li>加入姜末和花椒面，按一个方向拌匀；</li>
-<li>加入少许蛋清液（半到一个蛋的量），加入红苕淀粉，再加入少量清水，继续搅拌至均匀糊状；</li>
-<li>加入少许香葱末，继续拌匀；</li>
-<li>起锅烧清水至沸腾，关小火，将肉馅团成圆球放入锅中，轻轻搅动后关好锅盖，用中火烧沸；</li>
-<li>继续搅动圆子，调至中小火，关盖继续焖煮 5~7min，加入配菜；</li>
-<li>待配菜煮熟，起锅前加入少许的盐和鸡精调味即可。</li>
-</ol>
-<p><strong><em>RMK：</em></strong></p>
-<ul>
-<li>做圆子使用的是猪的前胛肉</li>
-<li>在上述第 2 步的搅拌过程中要加入两到三次<strong>少量</strong>清水，然后反复搅拌，直至肉有相当黏性、筷子能直立在其中，再进入下一步的加料搅拌</li>
-<li>可以根据自己的喜好加入配菜，例如西红柿、白菜、冬瓜片、黄瓜、木耳等（西红柿需要提前煸炒出汁）</li>
-<li>起锅前调味时可加入少量香油和香葱花</li>
-</ul>
-</div>
-<div class="note primary no-icon"><!-- #### No icon note -->
-<p><strong>红烧排骨：</strong></p>
-<ol type="1">
-<li>先将宰好的排骨放入清水中浸泡 1h 左右；</li>
-<li>将排骨洗净，以冷水下锅，然后锅中加入姜片、花椒和料酒，大火煮沸；</li>
-<li>排骨捞出，用热水反复清洗干净，控水备用；</li>
-<li>起锅烧油（油温五六成热，例如菜籽油刚有小烟），放入姜片、花椒炒香至变黄收缩，然后捞出；</li>
-<li>放入排骨，中火煸炒，将水气煸干后放入少许豆瓣酱于油中煸香，反复翻炒，炒至排骨变色（呈淡黄色），加入沸水直至淹没排骨；</li>
-<li>大火冲开后转至小火慢慢炖煮，放入少许白砂糖或冰糖与少许醋，加入少许老抽调色，继续炖煮约 90~120min；</li>
-<li>起锅前使用大火收汁，此时可以加入适量生抽或盐提味（可再加点鸡精）。</li>
-</ol>
-<p><strong><em>RMK：</em></strong></p>
-<ul>
-<li>浸泡是为了去除血水以及杂质</li>
-<li>在排骨烧好前 30min 左右加入配菜，如土豆、红萝卜、四季豆等（土豆需要用油煎至半透明状，再加入到排骨中一起炖煮，这是为了防止土豆煮烂）</li>
-</ul>
-</div>
-<div class="note primary no-icon"><!-- #### No icon note -->
-<p><strong>炒肉丝（肉片）：</strong></p>
-<ol type="1">
-<li>先将生肉片成薄片，然后切成丝，装盘备用；</li>
-<li>准备姜末、蒜末少许，放入切好的肉丝中，再加入花椒面和少许耗油、生抽、老抽，顺时针同方向边加水边拌匀；</li>
-<li>加入适量淀粉，在淀粉上淋入水，然后继续顺时针拌匀，然后准备配菜；</li>
-<li>起锅烧油，放入适量的肥肉片，爆出肥油，此时下入半勺豆瓣酱煸炒香，然后放入拌好的肉丝，快速滑散至肉变色，然后加入少许开水，继续翻炒，加入配菜，待菜熟后即可起锅。</li>
-</ol>
-<p><strong><em>RMK：</em></strong></p>
-<ul>
-<li>第 2 步加水为少量多次添加，一般为 2~3 次，需搅拌至水被肉充分吸收</li>
-<li>第 3 步配菜例（青椒炒肉、芹菜胡萝卜炒肉）：青椒洗净切丝，用少许的盐抓拌均匀备用（若是芹菜就洗净切段，胡萝卜切丝焯水备用）</li>
-</ul>
-</div>
-<div class="note info no-icon"><!-- #### No icon note -->
-<p><strong>蒜香青椒茄子：</strong></p>
-<ol type="1">
-<li>茄子洗净切片，用清水浸泡。切蒜末、姜末备用。尖椒洗净切丝，用少许的盐码匀备用；</li>
-<li>起锅烧油，放入青椒丝煸炒，然后放入蒜末、姜末炒香；</li>
-<li>茄子捞出控水，倒入锅中翻炒至茄子变软变色；</li>
-<li>放入少许老抽调色，再放入适当的盐和醋调味，继续炒至入味。起锅时加入少许鸡精和生抽即可。</li>
-</ol>
-<p><strong><em>RMK：</em></strong></p>
-<ul>
-<li>煸炒青椒丝需要炒断生（变色）</li>
-<li>调理根据个人口味调整即可</li>
-</ul>
-</div>
-<div class="note info no-icon"><!-- #### No icon note -->
-<p><strong>炝炒藤藤菜：</strong></p>
-<ol type="1">
-<li>择菜：掐菜尖和叶子来炒；</li>
-<li>将择好的菜浸泡在盐水中备用；</li>
-<li>切两到三个干红辣椒、两半蒜末、少许姜末，取出藤藤菜用清水洗净；</li>
-<li>起锅烧油，加入切好的料炒香，将菜下锅翻炒直到菜变色；</li>
-<li>加入少许的盐和鸡精即可起锅。</li>
-</ol>
-<p><strong><em>RMK：</em></strong></p>
-<ul>
-<li>菜尖一般掐成两到三段，如果接下来部分较嫩，可以继续掐来使用。叶子只取不烂、无白色虫卵的部分。剩下的菜杆部分作他用</li>
-<li>炒料时一般用中小火，加入菜后用大火快速翻炒</li>
-</ul>
-</div>
-<div class="note info no-icon"><!-- #### No icon note -->
-<p><strong>莴笋胡萝卜丝炒鸡蛋：</strong></p>
-<ol type="1">
-<li>胡萝卜切丝焯水，莴笋切丝后用少许盐抓拌均匀，腌制一会儿后用清水淘干净后控干水备用；</li>
-<li>起锅烧油炒鸡蛋，捞出鸡蛋后，放入少许姜末蒜末煸香，再加入胡萝卜和莴笋丝，炒熟后汇入鸡蛋炒匀，加入少许的盐和鸡精即可起锅。</li>
-</ol>
-</div>
-<div class="note info no-icon"><!-- #### No icon note -->
-<p><strong>青椒炒土豆丝：</strong></p>
-<ol type="1">
-<li>土豆切丝，清水淘洗，控水备用，青椒类似上面处理；</li>
-<li>起锅烧油，放入少许姜末蒜末煸香，再加入青椒丝煸炒香，然后加入土豆丝，快速翻炒，期间淋入少许开水继续煸炒至菜熟，起锅时加盐和鸡精即可。</li>
-</ol>
-</div>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>recipe</tag>
-      </tags>
   </entry>
   <entry>
     <title>重温“路人女主”至10卷的一些感受</title>
@@ -1469,6 +1455,133 @@ R姐版伊莉雅 <em>（R姐，你又在头铁怼光炮）</em><br />
       </tags>
   </entry>
   <entry>
+    <title>料理日常</title>
+    <url>/2021/08/18/ryourinichijou_z/</url>
+    <content><![CDATA[<p>（自用，记录）</p>
+<a id="more"></a>
+<div class="note primary no-icon"><!-- #### No icon note -->
+<p><strong>芋头、藕炖排骨：</strong></p>
+<ol type="1">
+<li>排骨早早泡水，用时清洗。藕去皮、清洗、切块，用盐浸渍；</li>
+<li>准备一锅清水，加入生姜片、花椒、料酒少许，将清洗好的排骨加入后点火加热（焯水）。在焯水的同时准备另一锅（砂锅）清水放入生姜和花椒，加热；</li>
+<li>排骨焯水完成捞出，将锅清空加热后倒入少许清油，待油热后（小烟）将排骨倒入翻炒至表面变黄（几十秒即可），关火捞出排骨；</li>
+<li>清洗煸炒完成的排骨和用盐浸渍的藕，当砂锅中的水开后，将藕和排骨放入砂锅；</li>
+<li>藕和排骨需要炖煮 90~120min，在结束前 30~40min 时将洗好的芋头加入，起锅前 10min 左右加盐调味；</li>
+<li>出锅开恰。</li>
+</ol>
+<p><strong><em>RMK：</em></strong></p>
+<ul>
+<li>炖排骨使用的藕较老，所以炖煮时间较长（大块、老猪排骨也相应地需要长时间炖煮）。在处理时用盐浸渍藕也是使其能更快煮软</li>
+<li>肉类焯水是冷水入锅，否则破坏口感。焯水时大火冲开后翻动排骨使其受热均匀，最终排骨要完全变色才起锅</li>
+<li>在炖前用油过一遍排骨是让排骨的最终口感更香。在油煸时由于排骨中含水，可将火调小后再加入排骨，等水汽蒸发后再将火开大</li>
+<li>同样，为了使排骨更快煮软，可以在加入排骨到砂锅后再加入一点醋，用大火冲开后再加入藕。如果想要有葱香味儿，可以在这个时候取几段葱捆在一起投入锅中</li>
+<li>芋头易氧化变色，所以我们在要用的时候才处理它。如果提前去皮，最好浸泡在水中</li>
+<li>龙骨肉嫩但少，适合炖汤。又想恰肉又想喝汤的话可以选用肋排</li>
+</ul>
+</div>
+<div class="note primary no-icon"><!-- #### No icon note -->
+<p><strong>猪肉圆子汤：</strong></p>
+<ol type="1">
+<li>肉洗净剁碎成泥，放入大碗，加入少许生抽、老抽和蚝油；</li>
+<li>加入姜末和花椒面，按一个方向拌匀；</li>
+<li>加入少许蛋清液（半到一个蛋的量），加入红苕淀粉，再加入少量清水，继续搅拌至均匀糊状；</li>
+<li>加入少许香葱末，继续拌匀；</li>
+<li>起锅烧清水至沸腾，关小火，将肉馅团成圆球放入锅中，轻轻搅动后关好锅盖，用中火烧沸；</li>
+<li>继续搅动圆子，调至中小火，关盖继续焖煮 5~7min，加入配菜；</li>
+<li>待配菜煮熟，起锅前加入少许的盐和鸡精调味即可。</li>
+</ol>
+<p><strong><em>RMK：</em></strong></p>
+<ul>
+<li>做圆子使用的是猪的前胛肉</li>
+<li>在上述第 2 步的搅拌过程中要加入两到三次<strong>少量</strong>清水，然后反复搅拌，直至肉有相当黏性、筷子能直立在其中，再进入下一步的加料搅拌</li>
+<li>可以根据自己的喜好加入配菜，例如西红柿、白菜、冬瓜片、黄瓜、木耳等（西红柿需要提前煸炒出汁）</li>
+<li>起锅前调味时可加入少量香油和香葱花</li>
+</ul>
+</div>
+<div class="note primary no-icon"><!-- #### No icon note -->
+<p><strong>红烧排骨：</strong></p>
+<ol type="1">
+<li>先将宰好的排骨放入清水中浸泡 1h 左右；</li>
+<li>将排骨洗净，以冷水下锅，然后锅中加入姜片、花椒和料酒，大火煮沸；</li>
+<li>排骨捞出，用热水反复清洗干净，控水备用；</li>
+<li>起锅烧油（油温五六成热，例如菜籽油刚有小烟），放入姜片、花椒炒香至变黄收缩，然后捞出；</li>
+<li>放入排骨，中火煸炒，将水气煸干后放入少许豆瓣酱于油中煸香，反复翻炒，炒至排骨变色（呈淡黄色），加入沸水直至淹没排骨；</li>
+<li>大火冲开后转至小火慢慢炖煮，放入少许白砂糖或冰糖与少许醋，加入少许老抽调色，继续炖煮约 90~120min；</li>
+<li>起锅前使用大火收汁，此时可以加入适量生抽或盐提味（可再加点鸡精）。</li>
+</ol>
+<p><strong><em>RMK：</em></strong></p>
+<ul>
+<li>浸泡是为了去除血水以及杂质</li>
+<li>在排骨烧好前 30min 左右加入配菜，如土豆、红萝卜、四季豆等（土豆需要用油煎至半透明状，再加入到排骨中一起炖煮，这是为了防止土豆煮烂）</li>
+</ul>
+</div>
+<div class="note primary no-icon"><!-- #### No icon note -->
+<p><strong>炒肉丝（肉片）：</strong></p>
+<ol type="1">
+<li>先将生肉片成薄片，然后切成丝，装盘备用；</li>
+<li>准备姜末、蒜末少许，放入切好的肉丝中，再加入花椒面和少许耗油、生抽、老抽，顺时针同方向边加水边拌匀；</li>
+<li>加入适量淀粉，在淀粉上淋入水，然后继续顺时针拌匀，然后准备配菜；</li>
+<li>起锅烧油，放入适量的肥肉片，爆出肥油，此时下入半勺豆瓣酱煸炒香，然后放入拌好的肉丝，快速滑散至肉变色，然后加入少许开水，继续翻炒，加入配菜，待菜熟后即可起锅。</li>
+</ol>
+<p><strong><em>RMK：</em></strong></p>
+<ul>
+<li>第 2 步加水为少量多次添加，一般为 2~3 次，需搅拌至水被肉充分吸收</li>
+<li>第 3 步配菜例（青椒炒肉、芹菜胡萝卜炒肉）：青椒洗净切丝，用少许的盐抓拌均匀备用（若是芹菜就洗净切段，胡萝卜切丝焯水备用）</li>
+</ul>
+</div>
+<div class="note info no-icon"><!-- #### No icon note -->
+<p><strong>蒜香青椒茄子：</strong></p>
+<ol type="1">
+<li>茄子洗净切片，用清水浸泡。切蒜末、姜末备用。尖椒洗净切丝，用少许的盐码匀备用；</li>
+<li>起锅烧油，放入青椒丝煸炒，然后放入蒜末、姜末炒香；</li>
+<li>茄子捞出控水，倒入锅中翻炒至茄子变软变色；</li>
+<li>放入少许老抽调色，再放入适当的盐和醋调味，继续炒至入味。起锅时加入少许鸡精和生抽即可。</li>
+</ol>
+<p><strong><em>RMK：</em></strong></p>
+<ul>
+<li>煸炒青椒丝需要炒断生（变色）</li>
+<li>调理根据个人口味调整即可</li>
+</ul>
+</div>
+<div class="note info no-icon"><!-- #### No icon note -->
+<p><strong>炝炒藤藤菜：</strong></p>
+<ol type="1">
+<li>择菜：掐菜尖和叶子来炒；</li>
+<li>将择好的菜浸泡在盐水中备用；</li>
+<li>切两到三个干红辣椒、两半蒜末、少许姜末，取出藤藤菜用清水洗净；</li>
+<li>起锅烧油，加入切好的料炒香，将菜下锅翻炒直到菜变色；</li>
+<li>加入少许的盐和鸡精即可起锅。</li>
+</ol>
+<p><strong><em>RMK：</em></strong></p>
+<ul>
+<li>菜尖一般掐成两到三段，如果接下来部分较嫩，可以继续掐来使用。叶子只取不烂、无白色虫卵的部分。剩下的菜杆部分作他用</li>
+<li>炒料时一般用中小火，加入菜后用大火快速翻炒</li>
+</ul>
+</div>
+<div class="note info no-icon"><!-- #### No icon note -->
+<p><strong>莴笋胡萝卜丝炒鸡蛋：</strong></p>
+<ol type="1">
+<li>胡萝卜切丝焯水，莴笋切丝后用少许盐抓拌均匀，腌制一会儿后用清水淘干净后控干水备用；</li>
+<li>起锅烧油炒鸡蛋，捞出鸡蛋后，放入少许姜末蒜末煸香，再加入胡萝卜和莴笋丝，炒熟后汇入鸡蛋炒匀，加入少许的盐和鸡精即可起锅。</li>
+</ol>
+</div>
+<div class="note info no-icon"><!-- #### No icon note -->
+<p><strong>青椒炒土豆丝：</strong></p>
+<ol type="1">
+<li>土豆切丝，清水淘洗，控水备用，青椒类似上面处理；</li>
+<li>起锅烧油，放入少许姜末蒜末煸香，再加入青椒丝煸炒香，然后加入土豆丝，快速翻炒，期间淋入少许开水继续煸炒至菜熟，起锅时加盐和鸡精即可。</li>
+</ol>
+</div>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>recipe</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2022 年春季动画感想汇总（一）</title>
     <url>/2022/04/17/springanime22_comment_s/</url>
     <content><![CDATA[<h2 id="前言">前言</h2>
@@ -1610,119 +1723,6 @@ R姐版伊莉雅 <em>（R姐，你又在头铁怼光炮）</em><br />
       <tags>
         <tag>hexo</tag>
         <tag>next</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>同人 h 本画师收集</title>
-    <url>/2020/11/10/illustrator_recommendation_s/</url>
-    <content><![CDATA[<p>懂的都懂。</p>
-<a id="more"></a>
-<ol type="1">
-<li><p><strong>YD</strong>  隶属社团：Orangemaru<br />
-(COMIC1☆13) [OrangeMaru (YD)] スキル強化解禁 + OrangeMaru Special 04 (Fate/Grand Order)<br />
-(COMIC1☆11) [OrangeMaru (YD)] TOKIMEKI ニオイ (アイドルマスター シンデレラガールズ)</p></li>
-<li><p><strong>北原亜希</strong>  隶属社团：秘密結社M<br />
-(C92) [秘密結社M (北原亜希)] 詩羽アナザーバッドエンド (冴えない彼女の育てかた)<br />
-(C91) [秘密結社M (北原亜希)] 妊娠しちゃった...誰か「たすけて」。 (美少女戦士セーラームーン)</p></li>
-<li><p><strong>あるぷ</strong>  隶属社团：リンゴヤ<br />
-(C97) [リンゴヤ (あるぷ)] 松浦の休日 (ラブライブ！サンシャイン!!)<br />
-(C96) [リンゴヤ (あるぷ)] 高海の休日～2日目～<br />
-p.s. 此人非常肝，量大质高，强力推荐</p></li>
-<li><p><strong>酔っ払い鬼?</strong>  隶属社团：CORORI<br />
-(C94) [CORORI (酔っ払い鬼?)] かなかん身代わり果南ちゃんふんばルビィ! (ラブライブ! サンシャイン!!)<br />
-(C97) [CORORI (酔っ払い鬼?)] かなかん 果南ちゃん大ピンチ(拉致編) (ラブライブ! サンシャイン!!)</p></li>
-<li><p><strong>いちたか</strong>  隶属社团：Crazy9<br />
-(C93) [Crazy9 (いちたか)] C9-33 女神様のハジメテ エレシュキガルの場合 (Fate/Grand Order)<br />
-(COMIC1☆10) [Crazy9 (いちたか)] C9-24 鹿島とハジメテ (艦隊これくしょん -艦これ-)</p></li>
-<li><p><strong>アサヒナヒカゲ</strong>  隶属社团：アカペンギン<br />
-(C97) [アカペンギン (アサヒナヒカゲ)] 桐須先生が教える保健体育 (ぼくたちは勉強ができない)<br />
-(C92) [アカペンギン (アサヒナヒカゲ)] たわわな後輩ちゃん (月曜日のたわわ)</p></li>
-<li><p><strong>たまごろー</strong>  隶属社团：フニフニラボ<br />
-(C97) [フニフニラボ (たまごろー)] たびのきろくに (ポケモンマスターズ)<br />
-(C92) [フニフニラボ (たまごろー)] マオフレンズ (ポケットモンスター)</p></li>
-<li><p><strong>きくらげ</strong>  隶属社团：きくらげ屋<br />
-(C87) [きくらげ屋 (きくらげ )] 恋姦6 [中国翻訳]<br />
-(C86) [きくらげ屋 (きくらげ )] 黒のリーマンと妖精姫エルニース<br />
-p.s. 这位失联了</p></li>
-<li><p><strong>白野ジア</strong>  隶属社团：シロジア<br />
-(C93) [シロジア (白野ジア)] ゆきのひ。 (やはり俺の青春ラブコメはまちがっている。)<br />
-[シロジア (白野ジア)] がまんして、ほしがって。 (やはり俺の青春ラブコメはまちがっている。)</p></li>
-<li><p><strong>愛上陸</strong>  隶属社团：50on!<br />
-(C95) [50on! (愛上陸)] 催眠性指導 倉敷麗華の場合<br />
-(C96) [50on! (愛上陸)] 催眠性指導4 妊娠体験指導</p></li>
-<li><p><strong>あらくれ</strong>  隶属社团：あらくれた者たち<br />
-[あらくれた者たち (あらくれ)] 最高に食べごろの夜<br />
-[あらくれた者たち (あらくれ)] 寝取られた人妻と寝取られる人妻</p></li>
-<li><p><strong>キチロク</strong>  隶属社团：第6基地<br />
-(C96) [第6基地 (キチロク)] 推シツケ<br />
-(C97) [第6基地 (キチロク)] 女子大生高坂穂乃果のヤリサー事件簿 (ラブライブ!)</p></li>
-<li><p><strong>イシガキタカシ</strong>  隶属社团：Type-G<br />
-[Type-G (イシガキタカシ)] 雌神楽 -フェイト編1- (魔法少女リリカルなのは) [DL版]<br />
-(C83) [Type-G (イシガキタカシ)] 桜花散る！ (マブラヴ オルタネイティブ トータル・イクリプス)<br />
-p.s. 这位现在很少画同人了，目前是alicesoft的主力画师之一</p></li>
-<li><p><strong>冷泉、和泉</strong>  隶属社团：サイクロン<br />
-(C94) [サイクロン (冷泉、和泉)] T-32 hooollow (Fate/Grand Order)<br />
-(C92) [サイクロン (和泉、冷泉)] T-30 Do (Fate/Grand Order)</p></li>
-<li><p><strong>kiasa</strong>  隶属社团：ジョウ・レン騎士団<br />
-(C90) [ジョウ・レン騎士団 (kiasa)] 青子BLUE IF (魔法使いの夜)<br />
-(C93) [ジョウ・レン騎士団 (kiasa)] 桜檻 弐 (Fate/stay night) [中国翻訳]<br />
-p.s. 是个樱厨</p></li>
-<li><p><strong>ぐすたふ</strong>  隶属社团：てろめあな<br />
-(C96) [てろめあな (ぐすたふ)] 水着の下の誘惑 (アイドルマスター シンデレラガールズ)<br />
-(C95) [てろめあな (ぐすたふ)] 美波だって誘惑しますよ? (アイドルマスター シンデレラガールズ)<br />
-p.s. 新田美波忠实单推人，产能不高但质量很棒</p></li>
-<li><p><strong>クロエ</strong>  隶属社团：Sugar<em>Berry</em>Syrup<br />
-(COMIC1☆15) [Sugar<em>Berry</em>Syrup (クロエ)] 恥辱の痴漢電車4～彼氏にせがまれ痴漢電車に乗った少女～<br />
-[Sugar<em>Berry</em>Syrup (クロエ)] 淫溺の令嬢5 ～冷たいくちづけ～ + 蜜瓜特典</p></li>
-<li><p><strong>清炭ハリケーン</strong>  隶属社团：清炭ハリケーン<br />
-(C93) [清炭ハリケーン (清炭ハリケーン)] ONE-HURRICANE 6 (ワンパンマン)<br />
-(C88) [清炭ハリケーン (清炭ハリケーン)] ONE-HURRICANE 囚われのフブキ (ワンパンマン)</p></li>
-<li><p><strong>八尋ぽち</strong>  隶属社团：ぽぽちち<br />
-[ぽぽちち (八尋ぽち)] レンタル彼女お触りします (彼女、お借りします)<br />
-[ぽぽちち (八尋ぽち)] レンタル彼女お触りします02 (彼女、お借りします)</p></li>
-<li><p><strong>稲鳴四季</strong>  隶属社团：studio A<br />
-[studio A (稲鳴四季)] 奉仕部のいやらしい慰安旅行。 (やはり俺の青春ラブコメはまちがっている。)<br />
-[studio A (稲鳴四季)] ある日の火照った女の子達。 (やはり俺の青春ラブコメはまちがっている。)</p></li>
-<li><p><strong>アズマサワヨシ</strong>  隶属社团：A・L・L<br />
-[A・L・L (アズマサワヨシ)] ご指名は？マリーちゃんで！ (デッド・オア・アライブ)<br />
-[アズマサワヨシ] あやかし館へようこそ!<br />
-p.s. 这位彻底上岸了</p></li>
-<li><p><strong>みちきんぐ</strong>  隶属社团：あんみつよもぎ亭<br />
-(C97) [あんみつよもぎ亭 (みちきんぐ)] わちきは赤ちゃんになり申した (東方Project)<br />
-(C96) [あんみつよもぎ亭 (みちきんぐ)] ANMITSU TOUHOU THE AFTER Vol.2 (東方Project)</p></li>
-<li><p><strong>あきのそら</strong>  隶属社团：ぺたパン<br />
-(C91) [ぺたパン (あきのそら)] IROHA STORY 01 (やはり俺の青春ラブコメはまちがっている。)<br />
-(C88) [ぺたパン (あきのそら)] LOVE STORY #02 (やはり俺の青春ラブコメはまちがっている。)<br />
-p.s. 水陆两栖，同人本现在画得少了</p></li>
-<li><p><strong>きょくちょ</strong>  隶属社团：きょくちょ局<br />
-[きょくちょ局 (きょくちょ)] 遠坂姉妹凌辱-凛編- (Fate/stay night)<br />
-[きょくちょ局 (きょくちょ)] 凛辱 (Fate/stay night)</p></li>
-<li><p><strong>中乃空</strong>  隶属社团：In The Sky<br />
-[In The Sky (中乃空)] 姉を寝取った日<br />
-(C97) [In The Sky (中乃空)] 北斎純情乙女噺 (Fate/Grand Order)</p></li>
-<li><p><strong>なかじまゆか</strong>  隶属社团：Digital Lover<br />
-[Digital Lover (なかじまゆか)] 人妻幼馴染とひと夏のできごと3 DLO-14<br />
-[Digital Lover (なかじまゆか)] 人妻幼馴染とひと夏のできごと DLO-07</p></li>
-<li><p><strong>智弘カイ</strong>  隶属社团：Ink Complex<br />
-(C97) [Ink Complex (智弘カイ)] 秘公開プラン<br />
-(C92) [Ink Complex (智弘カイ)] The Dark Side of the Moon (アイドルマスター シンデレラガールズ)</p></li>
-<li><p><strong>立花オミナ</strong>  隶属社团：しまぱん<br />
-[しまぱん (立花オミナ)] P5ハーレム～双葉編～ (ペルソナ5)<br />
-[しまぱん (立花オミナ)] P5ハーレム (ペルソナ5)</p></li>
-<li><p><strong>桃屋しょう猫</strong>  隶属社团：U.R.C</p></li>
-<li><p><strong>つかこ</strong>  </p></li>
-<li><p><strong>井藤ななみ</strong>  </p></li>
-<li><p><strong>朝峰テル</strong>  </p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-        <category>acg</category>
-      </categories>
-      <tags>
-        <tag>manga</tag>
-        <tag>xp</tag>
-        <tag>lsp</tag>
       </tags>
   </entry>
   <entry>
@@ -1908,8 +1908,8 @@ Variables must be defined exactly once but can be declared many times. To use th
         <category>语言</category>
       </categories>
       <tags>
-        <tag>c++</tag>
         <tag>study notes</tag>
+        <tag>c++</tag>
       </tags>
   </entry>
   <entry>
