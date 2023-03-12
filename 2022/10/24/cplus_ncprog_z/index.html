@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/avatar_s-apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/avatar_s-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/avatar_s-16x16.png">
+  <link rel="mask-icon" href="/images/avatar_s-safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"8.0.2","exturl":false,"sidebar":{"position":"right","width":400,"display":"post","padding":30,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="来自牛客 C++ 项目.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cplus2 Linux Development Course Note">
+<meta property="og:url" content="http://example.com/2022/10/24/cplus_ncprog_z/index.html">
+<meta property="og:site_name" content="路人博客的写作方法">
+<meta property="og:description" content="来自牛客 C++ 项目.">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-10-23T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-10-28T10:51:34.475Z">
+<meta property="article:author" content="司马酸">
+<meta property="article:tag" content="study notes">
+<meta property="article:tag" content="c++">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2022/10/24/cplus_ncprog_z/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Cplus2 Linux Development Course Note | 路人博客的写作方法</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="路人博客的写作方法" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">路人博客的写作方法</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">releasing your tsukkomi tamashii</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ch2.-%E5%A4%9A%E8%BF%9B%E7%A8%8B%E5%BC%80%E5%8F%91"><span class="nav-number">1.</span> <span class="nav-text">Ch2. 多进程开发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E6%A6%82%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">2.1 进程概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2"><span class="nav-number">1.2.</span> <span class="nav-text">2.2 进程状态转换</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chapter-1.-getting-started"><span class="nav-number">2.</span> <span class="nav-text">Chapter 1. Getting Started</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chapter-2.-variables-and-basic-types"><span class="nav-number">3.</span> <span class="nav-text">Chapter 2. Variables and Basic Types</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chapter-3.-strings-vectors-and-arrays"><span class="nav-number">4.</span> <span class="nav-text">Chapter 3. Strings, Vectors, and Arrays</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chapter-4.-expressions"><span class="nav-number">5.</span> <span class="nav-text">Chapter 4. Expressions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chapter-5.-statements"><span class="nav-number">6.</span> <span class="nav-text">Chapter 5. Statements</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chapter-6.-functions"><span class="nav-number">7.</span> <span class="nav-text">Chapter 6. Functions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chapter-7.-classes"><span class="nav-number">8.</span> <span class="nav-text">Chapter 7. Classes</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chapter-8.-the-io-library"><span class="nav-number">9.</span> <span class="nav-text">Chapter 8. The IO Library</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chapter-9.-sequential-containers"><span class="nav-number">10.</span> <span class="nav-text">Chapter 9. Sequential Containers</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chapter-10.-generic-algorithms"><span class="nav-number">11.</span> <span class="nav-text">Chapter 10. Generic Algorithms</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chapter-11.-associative-containers"><span class="nav-number">12.</span> <span class="nav-text">Chapter 11. Associative Containers</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chapter-12.-dynamic-memory"><span class="nav-number">13.</span> <span class="nav-text">Chapter 12. Dynamic Memory</span></a></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="司马酸"
+      src="/images/avatar_s.jpg">
+  <p class="site-author-name" itemprop="name">司马酸</p>
+  <div class="site-description" itemprop="description">加藤惠的老公</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/songmx223" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;songmx223" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:song_minx@163.com" title="E-Mail → mailto:song_minx@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/fomiuna" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;fomiuna" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      other links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://arxiv.com/" title="https:&#x2F;&#x2F;arxiv.com" rel="noopener" target="_blank">A 站</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://danbooru.donmai.us/" title="https:&#x2F;&#x2F;danbooru.donmai.us" rel="noopener" target="_blank">D 站</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://ieee.com/" title="https:&#x2F;&#x2F;ieee.com" rel="noopener" target="_blank">I 站</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://pixiv.com/" title="https:&#x2F;&#x2F;pixiv.com" rel="noopener" target="_blank">P 站</a>
+        </li>
+    </ul>
+  </div>
+
+        </section>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/24/cplus_ncprog_z/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar_s.jpg">
+      <meta itemprop="name" content="司马酸">
+      <meta itemprop="description" content="加藤惠的老公">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="路人博客的写作方法">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Cplus2 Linux Development Course Note
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-10-24 00:00:00" itemprop="dateCreated datePublished" datetime="2022-10-24T00:00:00+08:00">2022-10-24</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2022-10-28 18:51:34" itemprop="dateModified" datetime="2022-10-28T18:51:34+08:00">2022-10-28</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0/%E9%A1%B9%E7%9B%AE/" itemprop="url" rel="index"><span itemprop="name">项目</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>19k</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>来自牛客 C++ 项目.</p>
+<a id="more"></a>
+<h1 id="ch2.-多进程开发">Ch2. 多进程开发</h1>
+<h2 id="进程概述">2.1 进程概述</h2>
+<ul>
+<li>程序是包含一系列信息的文件, 这些信息描述了如何在运行时创建一个进程.</li>
+<li>进程是正在运行的程序的实例, 是一个具有一定独立功能的程序关于某个数据集合的一次运行活动, 是操作系统动态执行的基本单元. 在传统的操作系统中, 进程既是基本的分配单元, 也是基本的执行单元.</li>
+<li>进程是内核定义的抽象实体, 并为该实体分配用以执行程序的各项系统资源. 从内核角度看, 进程由<strong>用户内存空间</strong>和<strong>一系列内核数据结构</strong>组成.</li>
+<li>单道程序, 多道程序, 时间片, Linux 进程调度算法.</li>
+<li>并行: 指在同一时刻，有多条指令在多个处理器上同时执行. 并发: 指在同一时刻只能有一条指令执行, 但多个进程指令被快速地轮换执行, 使得宏观上具有多个进程同时执行的效果.</li>
+<li>内核会为每个进程分配一个进程控制块 (Processing Control Block, PCB), 维护进程相关的信息. Linux 下的 PCB 是 <code>task_struct</code> 结构体, 可在 <code>/usr/src/linux-headers-xxx/include/linux/sched.h</code> 文件中查询相关定义. 其成员包括不限于: 进程 id, 进程状态, 进程切换时需要保存和恢复的 CPU 寄存器, 描述虚拟地址空间的信息, 描述控制终端的信息, 当前工作目录, umask 掩码, 文件描述符表, 和信号相关的信息, 用户 id 与组 id, 会话和进程组, 进程可用资源上限 (<code>ulimit -a</code>) 等.</li>
+</ul>
+<h2 id="进程状态转换">2.2 进程状态转换</h2>
+<ul>
+<li>三态模型. <strong>就绪</strong>: 进程具备运行条件, 等待系统分配处理器以便运行; <strong>运行</strong>: 进程占有处理器正在运行; <strong>阻塞</strong>: wait 或 sleep, 进程不具备运行条件, 正在等待某个事件的完成. 五态模型. <strong>新建</strong>: 进程刚被创建时的状态, 尚未进入就绪队列; <strong>就绪</strong>; <strong>运行</strong>; <strong>阻塞</strong>; <strong>终止</strong>: 正常结束或异常终止, 或被操作系统或其他进程终止. 终止态进程不再执行, 待其他进程完成了对其的信息抽取后, 操作系统将删除该进程.</li>
+<li>查看进程: | <code>ps aux / ajx</code> | | --------------------------------------------- | | <code>a</code>: 显示终端上的所有进程, 包括其他用户的进程 | | <code>u</code>: 详细信息 | | <code>x</code>: 没有控制终端的进程 | | <code>j</code>: 与作业控制相关的信息 | <code>tty</code>: 终端信息; <code>STAT</code>: 状态信息; <code>PPID</code>, <code>PID</code>, <code>PGID</code>: 父进程, 进程, 进程组 id. ## 2.3 进程创建</li>
+</ul>
+<h1 id="chapter-1.-getting-started">Chapter 1. Getting Started</h1>
+<ul>
+<li><p>The operating system runs a C++ program by calling <code>main</code>.</p></li>
+<li><p>On most systems, the value returned from main is a status indicator. A return value of <code>0</code> indicates suceess. A nonzero return has a meaning that is defined by the system. Ordinarily a nonzero return indicates what kind of error occurred.</p></li>
+<li><p>A type defines both the contents of a data element and the operations that are possible on those data.</p></li>
+<li><p>The value returned from <code>main</code> is accessed in a system-dependent manner. On both UNIX and Windows systems, after executing the program, you must issue an appropriate <code>echo</code> command.<br />
+On UNIX systems, we obtain the status by writing <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ echo $?</span><br></pre></td></tr></table></figure> To see the status on a Windows system, we write <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ echo %ERRORLEVEL%</span><br></pre></td></tr></table></figure></p></li>
+<li><p>The output operator <code>&lt;&lt;</code> takes two operands: the left-hand operand must be an <code>ostream</code> object; the right-hand operand is a vaule to print. The result of the output operator is its left-hand operand. The input operator <code>&gt;&gt;</code> behaves analogously to the output operator.</p></li>
+<li><p>The manipulator <code>endl</code> has the effect of ending the current line and flushing the buffer associated with that device. Flushing buffer ensures that all the output the program has generated so far is actually written to the output stream, rather than sitting in memory waiting to be written. By default, reading <code>cin</code> flushes <code>cout</code>; <code>cout</code> is also flushed when the program ends normally; writes to <code>cerr</code> are not buffered, usually used for error messages or other output that is not part of the normal logic of the program.<br />
+<em>Programmers often add print statements during debugging. Such statements should always flush the stream. Otherwise, if the program crashes, output my be left in the buffer, leading to incorrect inferences about where the program crashed.</em></p></li>
+<li><p>When a comment pair does span multiple lines (surely, the best way is to use single-line comments cause comment pairs do not nest), it is often a good idea to indicate visually that the inner lines are part of a multiple comment (e.g. begin each line with an asterisk).</p></li>
+<li><p>The best way to comment a block of code is to insert single-line comments at the beginning of each line in the section we want to ignore since that code might contain nested comment pairs but comment pairs do not nest.</p></li>
+<li><p>The variable defined in init-statement of <code>for</code>'s header exists only inside the <code>for</code>; it is not possible to use the variable after the loop terminates.</p></li>
+<li><p>When we use an <code>istream</code> as a condition, <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (<span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; value)</span><br></pre></td></tr></table></figure> the effect is to test the state of the stream. If the stream is valid—that is, if the stream hasn't encountered an error—then the test succeeds.<br />
+<em>An <code>istream</code> becomes invalid when we hit end-of-file (e.g. ctrl+z on Win or ctrl+d on UNIX) or encounter an invalid input, such as reading a value that is not an integer.</em></p></li>
+<li><p>Most operating systems support file redirection (to avoid tediously repeated typing), which lets us associate a named file with the standard input and the standard output: <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ exefile &lt;infile &gt;outfile</span><br></pre></td></tr></table></figure> This command will read input from a file named <code>infile</code> and write its output to a file named <code>outfile</code> in the current directory.</p></li>
+</ul>
+<h1 id="chapter-2.-variables-and-basic-types">Chapter 2. Variables and Basic Types</h1>
+<ul>
+<li><p>C++ is a statically typed language; type checking is done at compile time.</p></li>
+<li><p>To give meaning to memory at a given address, we must know the type of the value stored there. The type determines how many bits are used and how to interpret those bits.</p></li>
+<li><p>Which of the two character representations <code>signed char</code> and <code>unsigned char</code> is equivalent to <code>char</code> depends on the compiler. So computations using <code>char</code> are especially problematic because <code>char</code> is <code>signed</code> on some machines and <code>unsigned</code> on others. If you need a tiny integer, explicitly specify either <code>signed char</code> or <code>unsigned char</code>.<br />
+<em>Do not use plain <code>char</code> or <code>bool</code> in arithmetic expressions. Use them only to hold characters or truth values.</em></p></li>
+<li><p>If we assign an out-of-range value to an object of unsigned type, the result is the remainder of the value modulo the number of values the target type can hold. If we assign an out-of-range value to an object of signed type, the result is undefined. Expressions that mix signed and unsigned values can yield suprising results when the signed value is negative since signed values are automatically converted to unsigned in an arithmetic expression.</p></li>
+<li><p>Programs usually should avoid implementation-defined behavior. Such programs are said to be nonportable. When program is moved to another machine, code that relied on implementation-defined behavior may fail.<br />
+<em>Tracking down these sorts of problems in previously working programs is, mildly put, unpleasant.</em></p></li>
+<li><p>The type of a string literal is array of constant <code>char</code>s. The compiler appends a null character (<code>'\0'</code>) to every string literal. Thus, the actual size of a string literal is one more that its apparent size.</p></li>
+<li><p>Two string literals that appear adjacent to one another and that are seperated only by spaces, tabs or newlines are concatenated into a single literal.<br />
+<em>We use this form of literal when we need to write a literal that would otherwise be too large to fit comfortably on a single line.</em></p></li>
+<li><p>Initialization is not assignment. Initialization happens when a variable is given a value when it is created. Assignment obliterates an object's current value and replaces that value with a new one.</p></li>
+<li><p>When used with variables of built-in type, the list initialization has one important property: The compiler will not let us initialize variables of built-in type if the initializer might lead to the loss of information: <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> <span class="keyword">double</span> ld = <span class="number">3.1415926536</span>;</span><br><span class="line"><span class="keyword">int</span> a&#123;ld&#125;, b = &#123;ld&#125;; <span class="comment">// error: narrowing conversion required</span></span><br><span class="line">int c(ld), d = ld; // ok: but value will be truncated</span><br></pre></td></tr></table></figure></p></li>
+<li><p>The value of an object of built-in type that is not explicitly initialized depends on where it is defined. Variables defined outside any function body are initialized to zero. With one exception, variables of built-in type defined inside a function are uninitialized. The value of an uninitialized variable of built-in type is undefined. (<strong>NCC</strong>)</p></li>
+<li><p>DEFINITION <span class="math inline">\(\subseteq\)</span> DECLARATION.<br />
+To support seperate compilation, C++ distinguishes between declarations and definitions. A declaration makes a name known to the program. A file that wants to use a name defined elsewhere includes a declaration for that name.<br />
+Variables must be defined exactly once but can be declared many times. To use the same variable in multiple files, we must define that variable in one—and only one—file. Other files that use that variable must declare—but not define—that variable. It is an error to provide an initializer on an <code>extern</code> inside a function.</p></li>
+<li><p>Local object with a same as the global object will hide the global one. Use scope operator <code>::</code> to override the default scoping rules. When the scope operator has an empty left-hand side, it is a request to fetch the name on the right-hand side from the global scope.</p></li>
+<li><p>Ordinarily, when we initialize a variable, the value of the initializer is copied into the object we are creating. When we define a reference, instead of copying the initializer's value, we bind the reference to its initializer. References must be initialized and cannot be rebound to refer to other different objects.<br />
+<em>A reference is not an object. Instead, it is just another name for an already existing object. So we may not define a reference to a reference. Since references do not have addresses, we may not define a reference or pointer to a reference.</em></p></li>
+<li><p><code>nullptr</code> is a literal that has a special type that can be converted to any other pointer type. If the pointer is 0, then the condition is <code>false</code>. Any nonzero pointer evaluates as <code>true</code>. Using an invalid pointer as a condition or in a comparison is undefined.</p></li>
+<li><p>A <code>void*</code> pointer holds an address, but the type of the object at that address is unknown. We cannot use a <code>void*</code> to operate on the object it addresses—we don't know that object's type. Generally, we use a <code>void*</code> pointer to deal with memory as memory, rather than using the pointer to access the object stored in that memory.</p></li>
+<li><p>In the code <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">1024</span>, *p = &amp;i, &amp;r = i;</span><br></pre></td></tr></table></figure> the <code>int</code> is called base type, <code>*</code> and <code>&amp;</code> are type modifiers.</p></li>
+<li><p>It can be easier to understand complicated pointer or reference declarations if you read them from right to left. <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *p;</span><br><span class="line"><span class="keyword">int</span> *&amp;r = p; <span class="comment">// r is a reference to the pointer p</span></span><br><span class="line"><span class="keyword">int</span>* ip, &amp;r = ip; <span class="comment">// invalid bind</span></span><br></pre></td></tr></table></figure></p></li>
+<li><p><code>const</code> variables are defined as local to the file. When we define a <code>const</code> with the same name in multiple files, it is as if we had written definitions for seperate variables in each file. When we have a <code>const</code> that we want to share across multiple files but whose initializer is not a constant expression, we need to use <code>extern</code> on both its definition and declaration(s).</p></li>
+<li><p>We can initialize a reference to <code>const</code> from any expression that can be converted to the type of the reference. In particular, we can bind a reference to <code>const</code> to a non<code>const</code> object, a literal, or a more general expression. <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">42</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp;r1 = i;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp;r2 = <span class="number">42</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp;r3 = r1 * <span class="number">2</span>;</span><br></pre></td></tr></table></figure> but here we cannot use <code>r1</code> to change <code>i</code>. When we use <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> dval = <span class="number">3.14</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp;ri = dval;</span><br></pre></td></tr></table></figure> the compiler transforms this into something like <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> temp = dval;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp;ri = temp;</span><br></pre></td></tr></table></figure> Since binding a reference to a temporary is almost surely not what the programmer intended and the language makes it illegal, we cannot use a nonconst reference in the above examples.</p></li>
+<li><p>We use the term top-level <code>const</code> to indicate that the pointer itself is a <code>const</code>. When a pointer can point to a <code>const</code> object, we refer to that <code>const</code> as a low-level <code>const</code>. The distinction between top-level and low-level matters when we copy an object: top-level <code>const</code>s are ignored at that time. On the other hand, low-level <code>const</code> is never ignored. When we copy an object, both objects must have the same low-level <code>const</code> qualification or there must be a conversion between the types of the two objects.<br />
+<em><code>const</code> in reference types is always low-level.</em></p></li>
+<li><p>When define a pointer in a <code>constexpr</code> declaration, the <code>constexpr</code> specifier applies to the pointer, not the type to which the pointer points, which means that the <code>constexpr</code> imposes a top-level <code>const</code> on the objects it defines.</p></li>
+<li><p>Attension, <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> *pstring;</span><br><span class="line"><span class="keyword">const</span> pstring *cstr = <span class="number">0</span>; <span class="comment">// cstr is a constant pointer to char, not a pointer to `const` `char`, since the type of pstring is &quot;pointer to `char`&quot;, which means that the base type of declaration is a pointer type</span></span><br></pre></td></tr></table></figure></p></li>
+<li><p>As with any other type specifier, we can define multiple variables using <code>auto</code>. Because a declaration can involve only a single base type, the initializers for all the variables in the declaration must have types that are consistent with each other.</p></li>
+<li><p><code>auto</code> ordinarily ignores top-level <code>const</code>s. As usual in initializations, low-level <code>const</code>s, such as when an initializer is a pointer to <code>const</code>, are kept. If we want the deduced type to have top-level <code>const</code>, we must say so explicitly. <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> ci = <span class="number">42</span>;</span><br><span class="line"><span class="keyword">auto</span> a = ci; <span class="comment">// a is an int</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">auto</span> b = ci; <span class="comment">// b has type const int</span></span><br><span class="line"><span class="keyword">auto</span> &amp;c = ci; <span class="comment">// c is a const int&amp;</span></span><br><span class="line"><span class="keyword">auto</span> &amp;d = <span class="number">42</span>; <span class="comment">// error: cannot bind a plain reference to a literal</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">auto</span> &amp;e = <span class="number">42</span>; <span class="comment">// ok</span></span><br></pre></td></tr></table></figure> From above we can see that when we ask for a reference to an <code>auto</code>-deduced type, top-level <code>const</code>s in the initializer are not ignored.</p></li>
+<li><p>When the expression to which we apply <code>decltype</code> is a variable, <code>decltype</code> returns the type of that variable, including top-level <code>const</code> and references. And <code>decltype</code> returns a reference type for expressions that yield objects that can stand on the left-hand side of the assignment. <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> ci = <span class="number">0</span>, &amp;cj = ci;</span><br><span class="line"><span class="keyword">decltype</span>(ci) a = <span class="number">0</span>; <span class="comment">// a has type const int</span></span><br><span class="line"><span class="keyword">decltype</span>(cj) b; <span class="comment">// error: b is a reference and must be initialized</span></span><br><span class="line"><span class="keyword">int</span> i = <span class="number">42</span>, *p = &amp;i, &amp;r = i;</span><br><span class="line"><span class="keyword">decltype</span>(r + <span class="number">0</span>) c; <span class="comment">// ok: addition yields an int; c is an (uninitialized) int</span></span><br><span class="line"><span class="keyword">decltype</span>(*p) d; <span class="comment">// error: d is int&amp; and must be initialized</span></span><br></pre></td></tr></table></figure> If we use <code>decltype(r)</code>, we will get a reference type. Another important difference between <code>decltype</code> and <code>auto</code> is that the deduction done by <code>decltype</code> depends on the form of its given expression. <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">decltype</span>((i)) e; <span class="comment">// error: e is int&amp;</span></span><br><span class="line"><span class="keyword">decltype</span>(i) f; <span class="comment">// ok: f is an int</span></span><br></pre></td></tr></table></figure></p></li>
+</ul>
+<h1 id="chapter-3.-strings-vectors-and-arrays">Chapter 3. Strings, Vectors, and Arrays</h1>
+<ul>
+<li><p>Code inside headers ordinarily should not use <code>using</code> declarations. The reason is that the contents of a header are copied into the including program's text. If a header has a <code>using</code> declaration, then every program that includes that header gets that same <code>using</code> declaration. As a result, a program that didn't intend to use the specified library name might encounter unexpected name conflicts. Use the C++ versions of C library headers.</p></li>
+<li><p>Like the input operator, <code>getline</code> returns its <code>istream</code> argument. The newline that causes <code>getline</code> to return is discarded; the newline is not stored in the <code>string</code>.</p></li>
+<li><p>String literals are not standard library <code>string</code>s. The <code>string</code> library lets us convert both character literals and character string literals to <code>string</code>s. E.g. when we mix <code>string</code>s and string or character literals, at least one operand to each <code>+</code> operator must be of <code>string</code> type.</p></li>
+<li><p>When we use curly braces, we're saying that, if possible, we want to list initialize the object. That is, if there is a way to use the values inside the curly braces as a list of element initializers, the class will do so. Only if it is not possible to list initialize the object will the other ways to initialize the object be considered.</p></li>
+<li><p>Since <code>vector</code>s grow efficiently, it is often unnecessary—and can result in poorer performance—to define a <code>vector</code> of a specific size.<br />
+<em>The exception to this rule is if all the elements actually need the same value. If differing element values are needed, it is usually more efficient to define an empty <code>vector</code> and add elements as the values we need become known at run time.</em></p></li>
+<li><p>The body of a range <code>for</code> must not change the size of the sequence over which it is iterating. (<strong>NCC</strong>)</p></li>
+<li><p>A valid iterator either denotes an element or denotes a position one past the last element in a container. All other iterator values are invalid. If container is empty, <code>begin</code> returns the same iterator as the one returned by <code>end</code>-they are both off-the-end iterators.</p></li>
+<li><p>Any operation, such as <code>push_back</code>, that changes the size of a <code>vector</code> potentially invalidates all iterators into that <code>vector</code>. It is important to realize that loops that use iterators should not add elements to the container to which the iterators refer.</p></li>
+<li><p>Iterators are equal if they denote the same element or if they are both off-the-end iterators for the same container. Otherwise, they are unequal. Subtracting two iterators yields the number that when added to the right-hand iterator yields the left-hand iterator. The iterators must denote elements in, or one past the end of, the same container.<br />
+<em>In subtracting the result type is a signed integral type named <code>difference_type</code>.</em></p></li>
+<li><p>In most expressions, when we use an object of array type, we are really using a pointer to the first element in that array.</p></li>
+<li><p>Unlike subscripts for <code>vector</code> and <code>string</code>, the index of the built-in subscript operator is not an <code>unsigned</code> type.</p></li>
+</ul>
+<h1 id="chapter-4.-expressions">Chapter 4. Expressions</h1>
+<ul>
+<li><p>Roughly speaking, when we use an object as an rvalue, we use the object's value (its contents). When we use an object as an lvalue, we use the object's identity (its location in memory). We can use an lvalue when an rvalue is requried, but we cannot use an rvalue when an lvalue (i.e., a location) is required (with one exception that will be covered later).</p></li>
+<li><p><code>sizeof</code> does not evaluate its operand, so dereferencing an invalid pointer as the operand to <code>sizeof</code> is safe because the pointer is not actually used.</p></li>
+</ul>
+<h1 id="chapter-5.-statements">Chapter 5. Statements</h1>
+<ul>
+<li>Throwing an exception terminates the current function and transfers control to a handler that will know how to handle this error. When a <code>catch</code> is selected to handle an exception, the associated block is executed.</li>
+</ul>
+<h1 id="chapter-6.-functions">Chapter 6. Functions</h1>
+<ul>
+<li><p>Parameter initialization works the same way as variable in initialization.</p></li>
+<li><p>Using reference parameters could avoid copying objects of large class types or large containers. (Moreover, some class type cannot be copied.) Reference parameters that are not changed inside a function should be references to <code>const</code>.</p></li>
+<li><p>When you use the arguments in <code>argv</code>, remember that the optional arguments begin in <code>argv[1]</code>, <code>arg[0]</code> contains the program's name (or empty string), not user input.</p></li>
+<li><p>Never return a reference or pointer to a local object. Reference returns are LVALUES.</p></li>
+<li><p>The form of a function that returns a pointer to an array is <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Type (*function(parameter_list))[dimension]</span><br></pre></td></tr></table></figure></p></li>
+<li><p>Overloaded functions must differ in the number or the type(s) of their parameters. It is an error for two functions to differ only in terms of their return types. A parameter that has a top-level <code>const</code> is indistinguishable from one without a top-level <code>const</code>. On the other hand, we can overload based on whether the parameter is a reference (or pointer) to the <code>const</code> or non<code>const</code> version of a given type; such <code>const</code>s are low-level. <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Record <span class="title">lookup</span><span class="params">(Phone)</span></span>;</span><br><span class="line"><span class="function">Record <span class="title">lookup</span><span class="params">(<span class="keyword">const</span> Phone)</span></span>; <span class="comment">// redeclares</span></span><br><span class="line"></span><br><span class="line"><span class="function">Record <span class="title">lookup</span><span class="params">(Phone*)</span></span>;</span><br><span class="line"><span class="function">Record <span class="title">lookup</span><span class="params">(Phone* <span class="keyword">const</span>)</span></span>; <span class="comment">// also redeclares</span></span><br><span class="line"></span><br><span class="line"><span class="function">Record <span class="title">lookup</span><span class="params">(Account&amp;)</span></span>;</span><br><span class="line"><span class="function">Record <span class="title">lookup</span><span class="params">(<span class="keyword">const</span> Account&amp;)</span></span>; <span class="comment">// new function that takes a const reference</span></span><br><span class="line"></span><br><span class="line"><span class="function">Record <span class="title">lookup</span><span class="params">(Account*)</span></span>;</span><br><span class="line"><span class="function">Record <span class="title">lookup</span><span class="params">(<span class="keyword">const</span> Account*)</span></span>; <span class="comment">// new function, takes a pointer to const</span></span><br></pre></td></tr></table></figure></p></li>
+<li><p>If a parameter has a default argument, all the parameters that follow it must also have default arguments. To override the default for the last parameter, we must also supply arguments for the first several parameters (if exist). So we may design the ordering of parameters so that those least likely to use a default value appear first and those most likely to use a default appear last.</p></li>
+<li><p>Names used as default arguments are resolved in the scope of the function declaration.</p></li>
+<li><p>The <code>inline</code> mechanism is meant to optimize small, straight-line functions that are called frequnetly. The specification is only a request to the compiler. The compiler may choose to ignore this request.</p></li>
+</ul>
+<h1 id="chapter-7.-classes">Chapter 7. Classes</h1>
+<ul>
+<li><p>Member functions access the object on which they were called through an extra, implicit parameter named <code>this</code>. When we call a member function, <code>this</code> is initialized with the address of the object on which the function was invoked. Any direct use of a member of the class is assumed to be an implicit reference through <code>this</code>. (<code>this</code> is a <code>const</code> pointer.)</p></li>
+<li><p>Although <code>this</code> is implicit, it follows the normal initialization rules, which means that (by default) we cannot bind <code>this</code> to a <code>const</code> object. This means that we cannot call an ordinary member function on a <code>const</code> object. A <code>const</code> following the parameter list (i.e., <code>const</code> member function) indicates that <code>this</code> is a pointer to <code>const</code>. <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Sales_data</span> &#123;</span></span><br><span class="line">  <span class="function"><span class="built_in">std</span>::<span class="built_in">string</span> <span class="title">isbn</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> bookNo; &#125;</span><br><span class="line">  <span class="function">Sales_data&amp; <span class="title">combine</span><span class="params">(<span class="keyword">const</span> Sales_data&amp;)</span></span>;</span><br><span class="line">  <span class="function"><span class="keyword">double</span> <span class="title">avg_price</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">string</span> bookNo;</span><br><span class="line">  <span class="keyword">unsigned</span> units_sold = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">double</span> revenue = <span class="number">0.0</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Sales_data total;</span><br><span class="line">total.isbn();</span><br><span class="line">Sales_data::isbn(&amp;total);</span><br><span class="line"><span class="function"><span class="built_in">std</span>::<span class="built_in">string</span> <span class="title">Sales_data::isbn</span><span class="params">(<span class="keyword">const</span> Sales_data *<span class="keyword">const</span> <span class="keyword">this</span>)</span> </span>&#123; <span class="keyword">return</span> <span class="keyword">this</span>-&gt;bookNo; &#125;</span><br></pre></td></tr></table></figure></p></li>
+<li><p>Unlike other member functions, constructors may not be declared as <code>const</code>. When we create a <code>const</code> object of a class type, the object does not assume its &quot;<code>const</code>ness&quot; until after the constructor completes the object's initialization.</p></li>
+<li><p>Classes that have members of built-in or compound type usually should rely on the synthesized default constructor only if all such members have in-class initializers. If we define any constructors, the class will not have a default constructor unless we define that constructor ourselves.</p></li>
+<li><p><code>= default</code> defines the default constructor. We are defining this constructor only because we want to provide other constructors as well as the default constructor. We want this constructor to do exactly the same work as the synthesized version we had been using.</p></li>
+<li><p>We can define a class type using either keyword, <code>struct</code> or <code>class</code>. The only difference between them is the default access level. If we use the <code>struct</code> keyword, the members defined before the first access specifier are <code>public</code>; if we use <code>class</code>, then the members are <code>private</code>.<br />
+<em>As a matter of programming style, when we define a class intending for all of its members to be <code>public</code>, we use <code>struct</code>. If we intend to have <code>private</code> members, then we use <code>class</code>.</em></p></li>
+<li><p>Friend declarations may appear only inside a class definition. Friends are not members of the class and are not affected by the access control of the section in which they are declared.</p></li>
+<li><p>Unlike ordinary members, members that define types must appear before they are used.</p></li>
+<li><p>It sometimes (but not very often) happens that a class has a data member that we want to be able to modify, even inside a <code>const</code> member function. We indicate such members by including the <code>mutable</code> keyword in their declaration. The basis for this rule is that if a class requires control to initialize an object in one case, then the class is likely to require control in all cases.</p></li>
+<li><p>When we provide an in-class initializer, we must do so following an <code>=</code> sign or inside braces. (See <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/24836526/why-c11-in-class-initializer-cannot-use-parentheses">this post</a>.)</p></li>
+<li><p>A class can also make another class its friend or it can declare specific member functions of another (previously defined) class as friends. It is important to understand that friendship is not transitive.</p></li>
+<li><p>A class must declare as a friend each function in a set of overloaded functions that it wishes to make a friend.</p></li>
+<li>Class definitions are processed in two phases:
+<ul>
+<li>First, the member declarations are compiled.</li>
+<li>Function bodies are compiled only after the entire class has been seen.</li>
+</ul>
+<p>Member function definitions are processed after the compiler processes all of the declarations in the class.</p></li>
+</ul>
+<h1 id="chapter-8.-the-io-library">Chapter 8. The IO Library</h1>
+<h1 id="chapter-9.-sequential-containers">Chapter 9. Sequential Containers</h1>
+<h1 id="chapter-10.-generic-algorithms">Chapter 10. Generic Algorithms</h1>
+<h1 id="chapter-11.-associative-containers">Chapter 11. Associative Containers</h1>
+<h1 id="chapter-12.-dynamic-memory">Chapter 12. Dynamic Memory</h1>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer"><!-- 文件位置：~/source/_data/post-body-end.swig -->
+
+<div>
+    <div>
+        
+        <div style="text-align:center;color: #ccc;font-size:14px;">-----------------------<span style="margin: 0 10px;">THANKS FOR YOUR READING</span>-----------------------</div>
+        
+    </div>
+</div>
+          <div class="post-tags">
+              <a href="/tags/study-notes/" rel="tag"># study notes</a>
+              <a href="/tags/c/" rel="tag"># c++</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/03/12/autumntospring2023_poem_s/" rel="prev" title="随笔诗四则汇总">
+                  <i class="fa fa-chevron-left"></i> 随笔诗四则汇总
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/06/12/gaokaomaths2022_z/" rel="next" title="2022 高考数学问题">
+                  2022 高考数学问题 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">司马酸</span>
+</div>
+<div class="busuanzi-count">
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  const url = element.dataset.target;
+  const pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  const pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  const fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <meta name="referrer" content="no-referrer-when-downgrade">
+
+
+
+
+
+
+
+  
+
+  
+      <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = '//cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

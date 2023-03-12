@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-06-15T09:21:14.084Z</updated>
+  <updated>2023-03-12T08:38:25.090Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>随笔诗四则汇总</title>
+    <link href="http://example.com/2023/03/12/autumntospring2023_poem_s/"/>
+    <id>http://example.com/2023/03/12/autumntospring2023_poem_s/</id>
+    <published>2023-03-12T08:00:00.000Z</published>
+    <updated>2023-03-12T08:38:25.090Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;因为科研许久没有更新博客，于是把愚夜观近半年来写的诗进行整理做成汇总，简单地记录一下。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="杂谈" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="生活" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="poem" scheme="http://example.com/tags/poem/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cplus2 Linux Development Course Note</title>
+    <link href="http://example.com/2022/10/24/cplus_ncprog_z/"/>
+    <id>http://example.com/2022/10/24/cplus_ncprog_z/</id>
+    <published>2022-10-23T16:00:00.000Z</published>
+    <updated>2022-10-28T10:51:34.475Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;来自牛客 C++ 项目.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="项目" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+    <category term="study notes" scheme="http://example.com/tags/study-notes/"/>
+    
+    <category term="c++" scheme="http://example.com/tags/c/"/>
+    
+  </entry>
   
   <entry>
     <title>2022 高考数学问题</title>
@@ -433,53 +477,6 @@
     
     
     <category term="poem" scheme="http://example.com/tags/poem/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>路人女主系列的尾声一 —— memorial 2 豪华版分享</title>
-    <link href="http://example.com/2021/01/06/saekano_memorial2_comment_r1.0_s/"/>
-    <id>http://example.com/2021/01/06/saekano_memorial2_comment_r1.0_s/</id>
-    <published>2021-01-06T08:00:00.000Z</published>
-    <updated>2021-03-21T08:08:02.000Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;序章&quot;&gt;序章&lt;/h2&gt;
-&lt;p&gt;  新年伊始，预定的台版路人女主小说的最后一卷 memorial 2 的豪华版是终于到货了。原本想把去年到货的我惠手办和剧场版 BD 当作是我对这个系列的句点（因为这小说日版其实很早就发售了），但实际到手看过之后，觉得很有意思，就想拿出来再说一说。同时觉得角川还想用这个作品再捞一笔钱，比如没收录的剧场版特典和深琦暮人老师的路主画集，自己多半还要掏钱，所以我对这个系列到底哪里才算是真正的完结自己也不敢说死，姑且就写个“尾声一”吧。至于会不会有“尾声二”，看我心情随缘吧。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="杂谈" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="acg" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/acg/"/>
-    
-    
-    <category term="lightnovel" scheme="http://example.com/tags/lightnovel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Cplus2 Primer Ed5 Reading Notes 1</title>
-    <link href="http://example.com/2020/12/18/cplus2_noteI_z/"/>
-    <id>http://example.com/2020/12/18/cplus2_noteI_z/</id>
-    <published>2020-12-17T16:00:00.000Z</published>
-    <updated>2021-09-30T06:50:38.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Personalized notes taken while reading &lt;a href=&quot;https://www.informit.com/store/c-plus-plus-primer-9780321714114&quot;&gt;Cplus2 Primer Ed5&lt;/a&gt; (C++11 standard) Part I: The Basics and Part II: The C++ Library.&lt;br /&gt;
-Since the standard has changed now, I will use &amp;quot;&lt;strong&gt;NCC&lt;/strong&gt;&amp;quot; to reprensent &amp;quot;not the case currently&amp;quot;. Anyway, good programming convention matters.&lt;br /&gt;
-Long-term updating required.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="语言" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/%E8%AF%AD%E8%A8%80/"/>
-    
-    
-    <category term="study notes" scheme="http://example.com/tags/study-notes/"/>
-    
-    <category term="c++" scheme="http://example.com/tags/c/"/>
     
   </entry>
   

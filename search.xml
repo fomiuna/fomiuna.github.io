@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Some solutions to FML Ed2</title>
+    <url>/2021/06/30/FML_sol_z/</url>
+    <content><![CDATA[<p>  最近闲下来时在翻 Mohri 的 <a href="https://cs.nyu.edu/~mohri/mlbook/">Foundations of Machine Learning</a>(Second Edition). 网上能找到的题解太少了, 自己就边看边做了一些, 大概以后还会继续更(?</p>
+<a id="more"></a>
+<p>  这里把书目录中的主要内容列一下:</p>
+<blockquote>
+<ol type="1">
+<li>Introduction</li>
+<li>The PAC Learning Framework</li>
+<li>Rademacher Complexity and VC-Dimension</li>
+<li>Model Selection</li>
+<li>Support Vector Machine</li>
+<li>Kernel Methods</li>
+<li>Boosting</li>
+<li>On-Line Learning</li>
+<li>Multi-Class Classification</li>
+<li>Ranking</li>
+<li>Regression</li>
+<li>Maximum Entropy Models</li>
+<li>Conditional Maximum Entropy Models</li>
+<li>Algorithmic Stability</li>
+<li>Dimensionality Reduction</li>
+<li>Learning Automata and Languages</li>
+<li>Reinforcement Learning</li>
+</ol>
+</blockquote>
+<p><br></p>
+<p><div class="pdfobject-container" data-target="/notes1.pdf" data-height="1000px"></div> <!-- <object data="/files/notes.pdf" type="application/pdf" width="100%" height="877px"> --></p>
+<p><br></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>ML</tag>
+        <tag>study notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《86-不存在的战区》——比起轻小说更像普通文学，很值得一读的轻小说</title>
     <url>/2021/01/18/EightySix_comment_s/</url>
     <content><![CDATA[<h2 id="惯例的开场白">惯例的开场白</h2>
@@ -75,46 +115,6 @@
       </categories>
       <tags>
         <tag>lightnovel</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Some solutions to FML Ed2</title>
-    <url>/2021/06/30/FML_sol_z/</url>
-    <content><![CDATA[<p>  最近闲下来时在翻 Mohri 的 <a href="https://cs.nyu.edu/~mohri/mlbook/">Foundations of Machine Learning</a>(Second Edition). 网上能找到的题解太少了, 自己就边看边做了一些, 大概以后还会继续更(?</p>
-<a id="more"></a>
-<p>  这里把书目录中的主要内容列一下:</p>
-<blockquote>
-<ol type="1">
-<li>Introduction</li>
-<li>The PAC Learning Framework</li>
-<li>Rademacher Complexity and VC-Dimension</li>
-<li>Model Selection</li>
-<li>Support Vector Machine</li>
-<li>Kernel Methods</li>
-<li>Boosting</li>
-<li>On-Line Learning</li>
-<li>Multi-Class Classification</li>
-<li>Ranking</li>
-<li>Regression</li>
-<li>Maximum Entropy Models</li>
-<li>Conditional Maximum Entropy Models</li>
-<li>Algorithmic Stability</li>
-<li>Dimensionality Reduction</li>
-<li>Learning Automata and Languages</li>
-<li>Reinforcement Learning</li>
-</ol>
-</blockquote>
-<p><br></p>
-<p><div class="pdfobject-container" data-target="/notes1.pdf" data-height="1000px"></div> <!-- <object data="/files/notes.pdf" type="application/pdf" width="100%" height="877px"> --></p>
-<p><br></p>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>ML</tag>
-        <tag>study notes</tag>
       </tags>
   </entry>
   <entry>
@@ -206,6 +206,128 @@
       </categories>
       <tags>
         <tag>manga</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>随笔诗四则汇总</title>
+    <url>/2023/03/12/autumntospring2023_poem_s/</url>
+    <content><![CDATA[<p>因为科研许久没有更新博客，于是把愚夜观近半年来写的诗进行整理做成汇总，简单地记录一下。</p>
+<a id="more"></a>
+<escape><br />
+
+<table>
+<tr>
+<th>
+《秋日独步有感》<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>
+</th>
+</tr>
+<tr>
+<td>
+<p>叶黄纷飞卷珠帘，莺歌缭绕奏清弦。</p>
+不见伊人伤逝者<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>，当下黄花犹少年。
+</td>
+</tr>
+</table>
+<p></escape></p>
+<escape><br />
+
+<table>
+<tr>
+<th>
+《夜读有感告友人书》<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>
+</th>
+</tr>
+<tr>
+<td>
+<p>一叶家函溢乡情，一声杜鹃<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>道归音。</p>
+<p>秋风无情欲狂乱，平仲<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>寡静苦不停。</p>
+<p>官渡<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>水寒诗<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a>豪迈，赤壁<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>江暖<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a>歌<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a>酬勤。</p>
+昔时凯旋孰无难，今日泪饮亦前行。
+</td>
+</tr>
+</table>
+<p></escape></p>
+<escape><br />
+
+<table>
+<tr>
+<th>
+《春晓》<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a>
+</th>
+</tr>
+<tr>
+<td>
+<p>夜梦寒霜尚凝存，​晨觉莺歌始告温。</p>
+<p>​窗前白梅悄复盛，​释书望外既知春。</p>
+​无须挂念昨日的寒霜，无须担忧明日的春寒，​今日不享受，明日岂珍惜。
+</td>
+</tr>
+</table>
+<p></escape></p>
+<escape>
+<table>
+<tr>
+<th colspan="4">
+《夜雨》<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a>
+</th>
+</tr>
+<tr>
+<td>
+<p>今夜的雨，</p>
+<p>是昏昏灯光下的竖琴。</p>
+<p>风儿撩拨出琴音，</p>
+<p>娓娓道来着，</p>
+这源于莎翁<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a>手笔的旋律。
+</td>
+<td>
+<p>傲慢与暴怒，</p>
+<p>是前段的感情。</p>
+<p>傲慢蒙蔽了他的眼睛；</p>
+<p>暴怒断送了他的权力，</p>
+和他幻想的幸福光阴。
+</td>
+<td>
+<p>破灭与悔恨，</p>
+<p>是后段的主题。</p>
+<p>破灭宣告了他的结局，</p>
+<p>悔恨唤醒了他的泪滴，</p>
+和他仅有的美好回忆。
+</td>
+<td>
+<p>风儿继续撩拨出琴音，</p>
+<p>夹杂着树的啜泣，</p>
+<p>和灯的叹息。</p>
+<p>我静静聆听着，</p>
+这源于夜雨演奏的内心。
+</td>
+</tr>
+</table>
+<p></escape></p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><span style="font-family:楷体">作于2022年10月30日，漫步校园触景生情，原本感叹一下物是人非，但仍然不想服老wwwww。</span><a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p><span style="font-family:楷体">指时间，出自《论语·子罕》：子在川上曰：“逝者如斯夫，不舍昼夜。”</span><a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p><span style="font-family:楷体">作于2022年11月4日，正值新冠疫情期间，一位师弟家中老人身体抱恙，想回家而不能。于是化用三国的两大典故出于安慰写下此诗。</span><a href="#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn4"><p><span style="font-family:楷体">杜鹃亦称“不归鸟”，其叫声也称“不如归去”。</span><a href="#fnref4" class="footnote-back">↩</a></p></li>
+<li id="fn5"><p><span style="font-family:楷体">银杏的别名。</span><a href="#fnref5" class="footnote-back">↩</a></p></li>
+<li id="fn6"><p><span style="font-family:楷体">指官渡之战，曹操军“以少胜多”，大败袁绍。</span><a href="#fnref6" class="footnote-back">↩</a></p></li>
+<li id="fn7"><p><span style="font-family:楷体">这里指曹操在官渡之战大胜之后写下的《观沧海》，但实际好像是北征乌桓之后写的。</span><a href="#fnref7" class="footnote-back">↩</a></p></li>
+<li id="fn8"><p><span style="font-family:楷体">指赤壁之战，孙刘联合”以少胜多”，大破曹军。</span><a href="#fnref8" class="footnote-back">↩</a></p></li>
+<li id="fn9"><p><span style="font-family:楷体">火烧赤壁，水当然是暖的wwwwww。</span><a href="#fnref9" class="footnote-back">↩</a></p></li>
+<li id="fn10"><p><span style="font-family:楷体">指由周瑜所作的《长河吟》。</span><a href="#fnref10" class="footnote-back">↩</a></p></li>
+<li id="fn11"><p><span style="font-family:楷体">作于2023年3月5日，觉得去年的疫情（寒冬）终于过去，未来还有不知道何时会来到的倒春寒（战乱），觉得应该珍惜当下这短暂的春日，享受当下。</span><a href="#fnref11" class="footnote-back">↩</a></p></li>
+<li id="fn12"><p><span style="font-family:楷体">作于2023年3月11日，写下此诗以反思自己白天的傲慢态度和最近容易动怒的表现，戒焦躁，戒焦躁，戒焦躁！</span><a href="#fnref12" class="footnote-back">↩</a></p></li>
+<li id="fn13"><p><span style="font-family:楷体">莎士比亚的别称，后续的内容化用了莎士比亚的著名戏剧《李尔王》。</span><a href="#fnref13" class="footnote-back">↩</a></p></li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>poem</tag>
       </tags>
   </entry>
   <entry>
@@ -1429,95 +1551,6 @@ p.s. 水陆两栖，同人本现在画得少了</p></li>
       </tags>
   </entry>
   <entry>
-    <title>2022 年春季动画感想汇总（一）</title>
-    <url>/2022/04/17/springanime22_comment_s/</url>
-    <content><![CDATA[<h2 id="前言">前言</h2>
-<p>  我自从开始读博之后，忙得一发不可收拾，外加一个项目导致自己几乎每周都是在跨越各种各样的修罗场，久而久之博客这边都长满了杂草。于是，秉承着尽可能不断更的负责态度 <em>（才不是迫于编辑压力的不爽态度，哼</em> o(′^｀)o <em>）</em>，我决定将自己平常看动画后的短评整理成汇总<del>来凑数</del>，更新博客…………好啦，我知道自己明明有时间去看动画漫画小说打游戏玩胶，其实完全是自己太懒了不想写，所以才想到用这种方法灌水。毕竟人如果平常太忙的话，也会没兴致会花心思去写大段文字的，想必有相关经验的读者应该能理解我这种为了保证文字质量而“宁缺毋滥”的想法，对吧？<br />
-<a id="more"></a>   咳咳，严肃点。虽然这次是类似于总集篇性质的博文，但因为自己有着“绝对不会给别人呈现一模一样的东西”的死宅执著，我还是会或多或少进行一些订正和补充的。总之，这次就先整理了自己这个季度在追的三部动画第一集的短评作为汇总（一），汇总（二）和（三）不出意外也会出吧。唉，明明自己有挺多坑没填，又给自己挖了新坑……</p>
-<h2 id="古见同学有交流障碍症">《古见同学有交流障碍症》</h2>
-<p>  相比于这个季度的其他霸权动画，老实说这动画才是我最期待的作品。第一季于去年 10 月秋季播出，虽然整体上因为剧情起伏不大，白开水一般导致观感很一般，但是其远超原作出彩的演出和细节的制作完全打动了我这个从第一话就追到更新的原作粉丝，可以说是我去年看过的最推荐的校园恋爱漫改作品，个人心目中不亚于前年的《辉夜大小姐想让我告白》，甚至排名还高一些。真心佩服制作组厨力，以及川越一生监督 YYDS！</p>
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><img src="/images/komi2_ep1.png" width="60%"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><em><a href="https://www.bilibili.com/video/BV1Xf4y177VB">第一话的黑板交流名场景</a>，将原作前期不算特别起眼的一幕改编得十分出彩，搭配抓耳的配乐完全戳中了的我好球区。以及这一幕之后神 OP 的神插入，交替带来的惊艳冲击，也是我迷上这改编动画原因之一。</em></td>
-</tr>
-</tbody>
-</table>
-<p>  说回到第二季的第一集，虽然剧情仍旧是剧情白开水，但质量还是顶。不过 OP 被片居夺舍了我实在忍不住了，这滤镜，这特写，这真的不是什么奇怪的耽美动画吗？以及麻烦不要再玩这橡皮这种元素了行不行，《just because》ptsd 犯了。你们日本高中生就不能考前多检查检查文具吗？哦，这次是男女主之间插入橡皮元素啊，那没事了。<br />
-  最后，第一集最让我惊喜的莫过于，看似马赛克，实则动作表现细腻的神 ED，不输给真人实拍的日常作画，日常打趣甚至离开教室提上挎包这个简单动作都细节满满。</p>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><img src="/images/komi2_ed.png" width="60%"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><em><a href="https://www.bilibili.com/video/BV1o34y1s7H7">古见第二季的 ED 动画</a>。可以说与第一季是近似手绘的神 OP 并肩的存在了。</em></td>
-</tr>
-</tbody>
-</table>
-<p>  总之，期待一手后面的修学旅行剧情，感觉这动画就制作来说随时随地都会带给我惊喜。</p>
-<h2 id="相合之物">《相合之物》</h2>
-<p>  这动画第一集怎么说呢？对我来说其实蛮微妙的。<br />
-  原作在我心目中是比肩《天真与闪电/甜蜜稻妻》的温馨日常向亲子漫画，当然还有我喜闻乐道的淡淡的恋爱元素：前女友 vs. 天降 JK，这都是什么丸户史明、冈妈之类的胃药批发作者才会用的设定啊wwwwww</p>
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><img src="/images/springa_1.png" width="40%"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><em>男主经典木头男设定，左数第二个是天降 JK，右数第三个是前女友。其实这作品前期甚至还有丧心病狂的养女股的，只不过作者终究还是想要坚持温馨路线，所以中途股市就崩盘了，甚至现在养女都和男主没啥互动戏份了。</em></td>
-</tr>
-</tbody>
-</table>
-<p>  可惜的是，虽然我还是一个不看字幕听不懂讲啥的萌萌人，但真心习惯不了动画那奇怪的关西腔（动画的舞台是在京都），所以我第一集没看完就弃了。外加动画没让我感觉很来电，等后面找机会再补吧。</p>
-<h2 id="间谍过家家">《间谍过家家》</h2>
-<p>  最后是期待已久的《间谍过家家》第一集，意料之中的高质量，忠实还原原作的一集，几乎找不到什么明显的缺点。<br />
-  但要说好看的话，我觉得这动画的编剧和 86 动画的编剧一样还是太保守了。第一话太忠于原作，同时为了合理分集还塞入了前期大量的剧情，导致第一集剧情就和流水帐一样表现略平淡。原作黄昏撕脸转身可以说是这一集的小高潮，但是画面定格特写太短；回忆杀和独白使用太简单、尾声太长（原作这一话只到父女回家）等诸多因素冲淡了这第一个名场景。个人认为这里真应该大胆地对原作的内容进行调整，以保证动画这种载体下的最佳观感。希望后几集的名场景“手雷拉环求婚”能好一些。<br />
-  另外，真的不是我特意去玩声优梗，黄昏一开口我直接喷了出来，尤其是前面论述“特工不能结婚”的台词，这就是大老师转世吧喂！</p>
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><img src="/images/springa_2.jpeg" width="60%"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><em>这动画由霸权社和 CW 共同负责，但其实我个人其实看见这种多公司联合制作的作品就心情复杂，单集质量不稳定，剧本风格不统一，运气差还可能因为两个公司制作团队配合不好导致剧情暴走，没错，我说的就是“国家队”。</em></td>
-</tr>
-</tbody>
-</table>
-<p>  总之，继续看瓜神颜艺就对了。<br />
-  哦，差点忘说了，还有主题曲，该说我老了吗，还是说对流行不感冒吗？老实说我欣赏不来这动画的 OP 和 ED ，都觉得挺一般的。</p>
-<h2 id="尾声">尾声</h2>
-<p>  这季度目前我就差不多看了这些，之后应该还有《夏日重现》和《机动奥特曼》，以及这个月才出的《魔法少女伊莉雅：无名的少女》剧场版的 BD，运气好有时间的话，这些动画的评论及后续的评论应该会以汇总的形式更新，运气好的话。但就博文来说，我个人其实想在自己主办的 86 动画鉴赏会 <em>（所以到底是谁说的自己没时间的啊喂！）</em>之后写一篇 86 动画的评论，好歹也是我去年看到的最棒的轻小说改编动画。或者以到手的路人女主画册来填一篇路人女主系列尾声二的坑了 <em>（怎么还是路人女主啊，真就不带换的是吧，取关取关了）</em>，嗯看情况吧。</p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-        <category>acg</category>
-      </categories>
-      <tags>
-        <tag>anime</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2022 年春季动画感想汇总（二）</title>
     <url>/2022/04/22/springanime22_comment2_s/</url>
     <content><![CDATA[<h2 id="前言">前言</h2>
@@ -1679,50 +1712,92 @@ R姐版伊莉雅 <em>（R姐，你又在头铁怼光炮）</em><br />
       </tags>
   </entry>
   <entry>
-    <title>夜路</title>
-    <url>/2021/05/17/yorumiti_poem_s/</url>
-    <content><![CDATA[<h1 id="夜路">夜路</h1>
-<p>夜是幽暗的，</p>
-<p>它自始自终是那样，</p>
-<p>令人迷茫而不明方向；</p>
-<a id="more"></a>
-<p>家是美好的，</p>
-<p>它理所应该在前方，</p>
-<p>令人向往而憧憬着安详。</p>
-<p> </p>
-<p>我跟随着人流，</p>
-<p>快步走在路上，</p>
-<p>走在属于自己的，</p>
-<p>独一无二的家的路上。</p>
-<p> </p>
-<p>夜终究阻挡了前进的方向，</p>
-<p>彷徨！</p>
-<p>无处寻访，</p>
-<p>因为大家不了解各自家的方向。</p>
-<p>流浪，</p>
-<p>“是时候搬去一个明亮的地方”</p>
-<p>有人道出了最合适的感想。</p>
-<p> </p>
-<p>我聆听着，</p>
-<p>失望于指不了路的思想，</p>
-<p>感慨这自然而然的现状。</p>
-<p>但我知道，</p>
-<p>我是能回家的，</p>
-<p>因为，</p>
-<p>灯还亮着，</p>
-<p>路在脚下，</p>
-<p>而钥匙在身上。</p>
-<p> </p>
-<blockquote>
-<p>辛丑年5月16日，忆白天琐事走夜路有感，徘徊思索无果，只叹一声“希望博士申请答辩顺利通过”，遂寻道回家。</p>
-</blockquote>
+    <title>2022 年春季动画感想汇总（一）</title>
+    <url>/2022/04/17/springanime22_comment_s/</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>  我自从开始读博之后，忙得一发不可收拾，外加一个项目导致自己几乎每周都是在跨越各种各样的修罗场，久而久之博客这边都长满了杂草。于是，秉承着尽可能不断更的负责态度 <em>（才不是迫于编辑压力的不爽态度，哼</em> o(′^｀)o <em>）</em>，我决定将自己平常看动画后的短评整理成汇总<del>来凑数</del>，更新博客…………好啦，我知道自己明明有时间去看动画漫画小说打游戏玩胶，其实完全是自己太懒了不想写，所以才想到用这种方法灌水。毕竟人如果平常太忙的话，也会没兴致会花心思去写大段文字的，想必有相关经验的读者应该能理解我这种为了保证文字质量而“宁缺毋滥”的想法，对吧？<br />
+<a id="more"></a>   咳咳，严肃点。虽然这次是类似于总集篇性质的博文，但因为自己有着“绝对不会给别人呈现一模一样的东西”的死宅执著，我还是会或多或少进行一些订正和补充的。总之，这次就先整理了自己这个季度在追的三部动画第一集的短评作为汇总（一），汇总（二）和（三）不出意外也会出吧。唉，明明自己有挺多坑没填，又给自己挖了新坑……</p>
+<h2 id="古见同学有交流障碍症">《古见同学有交流障碍症》</h2>
+<p>  相比于这个季度的其他霸权动画，老实说这动画才是我最期待的作品。第一季于去年 10 月秋季播出，虽然整体上因为剧情起伏不大，白开水一般导致观感很一般，但是其远超原作出彩的演出和细节的制作完全打动了我这个从第一话就追到更新的原作粉丝，可以说是我去年看过的最推荐的校园恋爱漫改作品，个人心目中不亚于前年的《辉夜大小姐想让我告白》，甚至排名还高一些。真心佩服制作组厨力，以及川越一生监督 YYDS！</p>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><img src="/images/komi2_ep1.png" width="60%"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><em><a href="https://www.bilibili.com/video/BV1Xf4y177VB">第一话的黑板交流名场景</a>，将原作前期不算特别起眼的一幕改编得十分出彩，搭配抓耳的配乐完全戳中了的我好球区。以及这一幕之后神 OP 的神插入，交替带来的惊艳冲击，也是我迷上这改编动画原因之一。</em></td>
+</tr>
+</tbody>
+</table>
+<p>  说回到第二季的第一集，虽然剧情仍旧是剧情白开水，但质量还是顶。不过 OP 被片居夺舍了我实在忍不住了，这滤镜，这特写，这真的不是什么奇怪的耽美动画吗？以及麻烦不要再玩这橡皮这种元素了行不行，《just because》ptsd 犯了。你们日本高中生就不能考前多检查检查文具吗？哦，这次是男女主之间插入橡皮元素啊，那没事了。<br />
+  最后，第一集最让我惊喜的莫过于，看似马赛克，实则动作表现细腻的神 ED，不输给真人实拍的日常作画，日常打趣甚至离开教室提上挎包这个简单动作都细节满满。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><img src="/images/komi2_ed.png" width="60%"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><em><a href="https://www.bilibili.com/video/BV1o34y1s7H7">古见第二季的 ED 动画</a>。可以说与第一季是近似手绘的神 OP 并肩的存在了。</em></td>
+</tr>
+</tbody>
+</table>
+<p>  总之，期待一手后面的修学旅行剧情，感觉这动画就制作来说随时随地都会带给我惊喜。</p>
+<h2 id="相合之物">《相合之物》</h2>
+<p>  这动画第一集怎么说呢？对我来说其实蛮微妙的。<br />
+  原作在我心目中是比肩《天真与闪电/甜蜜稻妻》的温馨日常向亲子漫画，当然还有我喜闻乐道的淡淡的恋爱元素：前女友 vs. 天降 JK，这都是什么丸户史明、冈妈之类的胃药批发作者才会用的设定啊wwwwww</p>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><img src="/images/springa_1.png" width="40%"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><em>男主经典木头男设定，左数第二个是天降 JK，右数第三个是前女友。其实这作品前期甚至还有丧心病狂的养女股的，只不过作者终究还是想要坚持温馨路线，所以中途股市就崩盘了，甚至现在养女都和男主没啥互动戏份了。</em></td>
+</tr>
+</tbody>
+</table>
+<p>  可惜的是，虽然我还是一个不看字幕听不懂讲啥的萌萌人，但真心习惯不了动画那奇怪的关西腔（动画的舞台是在京都），所以我第一集没看完就弃了。外加动画没让我感觉很来电，等后面找机会再补吧。</p>
+<h2 id="间谍过家家">《间谍过家家》</h2>
+<p>  最后是期待已久的《间谍过家家》第一集，意料之中的高质量，忠实还原原作的一集，几乎找不到什么明显的缺点。<br />
+  但要说好看的话，我觉得这动画的编剧和 86 动画的编剧一样还是太保守了。第一话太忠于原作，同时为了合理分集还塞入了前期大量的剧情，导致第一集剧情就和流水帐一样表现略平淡。原作黄昏撕脸转身可以说是这一集的小高潮，但是画面定格特写太短；回忆杀和独白使用太简单、尾声太长（原作这一话只到父女回家）等诸多因素冲淡了这第一个名场景。个人认为这里真应该大胆地对原作的内容进行调整，以保证动画这种载体下的最佳观感。希望后几集的名场景“手雷拉环求婚”能好一些。<br />
+  另外，真的不是我特意去玩声优梗，黄昏一开口我直接喷了出来，尤其是前面论述“特工不能结婚”的台词，这就是大老师转世吧喂！</p>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><img src="/images/springa_2.jpeg" width="60%"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><em>这动画由霸权社和 CW 共同负责，但其实我个人其实看见这种多公司联合制作的作品就心情复杂，单集质量不稳定，剧本风格不统一，运气差还可能因为两个公司制作团队配合不好导致剧情暴走，没错，我说的就是“国家队”。</em></td>
+</tr>
+</tbody>
+</table>
+<p>  总之，继续看瓜神颜艺就对了。<br />
+  哦，差点忘说了，还有主题曲，该说我老了吗，还是说对流行不感冒吗？老实说我欣赏不来这动画的 OP 和 ED ，都觉得挺一般的。</p>
+<h2 id="尾声">尾声</h2>
+<p>  这季度目前我就差不多看了这些，之后应该还有《夏日重现》和《机动奥特曼》，以及这个月才出的《魔法少女伊莉雅：无名的少女》剧场版的 BD，运气好有时间的话，这些动画的评论及后续的评论应该会以汇总的形式更新，运气好的话。但就博文来说，我个人其实想在自己主办的 86 动画鉴赏会 <em>（所以到底是谁说的自己没时间的啊喂！）</em>之后写一篇 86 动画的评论，好歹也是我去年看到的最棒的轻小说改编动画。或者以到手的路人女主画册来填一篇路人女主系列尾声二的坑了 <em>（怎么还是路人女主啊，真就不带换的是吧，取关取关了）</em>，嗯看情况吧。</p>
 ]]></content>
       <categories>
         <category>杂谈</category>
-        <category>生活</category>
+        <category>acg</category>
       </categories>
       <tags>
-        <tag>poem</tag>
+        <tag>anime</tag>
       </tags>
   </entry>
   <entry>
@@ -1778,6 +1853,53 @@ R姐版伊莉雅 <em>（R姐，你又在头铁怼光炮）</em><br />
       <tags>
         <tag>hexo</tag>
         <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>夜路</title>
+    <url>/2021/05/17/yorumiti_poem_s/</url>
+    <content><![CDATA[<h1 id="夜路">夜路</h1>
+<p>夜是幽暗的，</p>
+<p>它自始自终是那样，</p>
+<p>令人迷茫而不明方向；</p>
+<a id="more"></a>
+<p>家是美好的，</p>
+<p>它理所应该在前方，</p>
+<p>令人向往而憧憬着安详。</p>
+<p> </p>
+<p>我跟随着人流，</p>
+<p>快步走在路上，</p>
+<p>走在属于自己的，</p>
+<p>独一无二的家的路上。</p>
+<p> </p>
+<p>夜终究阻挡了前进的方向，</p>
+<p>彷徨！</p>
+<p>无处寻访，</p>
+<p>因为大家不了解各自家的方向。</p>
+<p>流浪，</p>
+<p>“是时候搬去一个明亮的地方”</p>
+<p>有人道出了最合适的感想。</p>
+<p> </p>
+<p>我聆听着，</p>
+<p>失望于指不了路的思想，</p>
+<p>感慨这自然而然的现状。</p>
+<p>但我知道，</p>
+<p>我是能回家的，</p>
+<p>因为，</p>
+<p>灯还亮着，</p>
+<p>路在脚下，</p>
+<p>而钥匙在身上。</p>
+<p> </p>
+<blockquote>
+<p>辛丑年5月16日，忆白天琐事走夜路有感，徘徊思索无果，只叹一声“希望博士申请答辩顺利通过”，遂寻道回家。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>poem</tag>
       </tags>
   </entry>
   <entry>
@@ -1914,6 +2036,152 @@ Variables must be defined exactly once but can be declared many times. To use th
       <categories>
         <category>学习</category>
         <category>语言</category>
+      </categories>
+      <tags>
+        <tag>study notes</tag>
+        <tag>c++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Cplus2 Linux Development Course Note</title>
+    <url>/2022/10/24/cplus_ncprog_z/</url>
+    <content><![CDATA[<p>来自牛客 C++ 项目.</p>
+<a id="more"></a>
+<h1 id="ch2.-多进程开发">Ch2. 多进程开发</h1>
+<h2 id="进程概述">2.1 进程概述</h2>
+<ul>
+<li>程序是包含一系列信息的文件, 这些信息描述了如何在运行时创建一个进程.</li>
+<li>进程是正在运行的程序的实例, 是一个具有一定独立功能的程序关于某个数据集合的一次运行活动, 是操作系统动态执行的基本单元. 在传统的操作系统中, 进程既是基本的分配单元, 也是基本的执行单元.</li>
+<li>进程是内核定义的抽象实体, 并为该实体分配用以执行程序的各项系统资源. 从内核角度看, 进程由<strong>用户内存空间</strong>和<strong>一系列内核数据结构</strong>组成.</li>
+<li>单道程序, 多道程序, 时间片, Linux 进程调度算法.</li>
+<li>并行: 指在同一时刻，有多条指令在多个处理器上同时执行. 并发: 指在同一时刻只能有一条指令执行, 但多个进程指令被快速地轮换执行, 使得宏观上具有多个进程同时执行的效果.</li>
+<li>内核会为每个进程分配一个进程控制块 (Processing Control Block, PCB), 维护进程相关的信息. Linux 下的 PCB 是 <code>task_struct</code> 结构体, 可在 <code>/usr/src/linux-headers-xxx/include/linux/sched.h</code> 文件中查询相关定义. 其成员包括不限于: 进程 id, 进程状态, 进程切换时需要保存和恢复的 CPU 寄存器, 描述虚拟地址空间的信息, 描述控制终端的信息, 当前工作目录, umask 掩码, 文件描述符表, 和信号相关的信息, 用户 id 与组 id, 会话和进程组, 进程可用资源上限 (<code>ulimit -a</code>) 等.</li>
+</ul>
+<h2 id="进程状态转换">2.2 进程状态转换</h2>
+<ul>
+<li>三态模型. <strong>就绪</strong>: 进程具备运行条件, 等待系统分配处理器以便运行; <strong>运行</strong>: 进程占有处理器正在运行; <strong>阻塞</strong>: wait 或 sleep, 进程不具备运行条件, 正在等待某个事件的完成. 五态模型. <strong>新建</strong>: 进程刚被创建时的状态, 尚未进入就绪队列; <strong>就绪</strong>; <strong>运行</strong>; <strong>阻塞</strong>; <strong>终止</strong>: 正常结束或异常终止, 或被操作系统或其他进程终止. 终止态进程不再执行, 待其他进程完成了对其的信息抽取后, 操作系统将删除该进程.</li>
+<li>查看进程: | <code>ps aux / ajx</code> | | --------------------------------------------- | | <code>a</code>: 显示终端上的所有进程, 包括其他用户的进程 | | <code>u</code>: 详细信息 | | <code>x</code>: 没有控制终端的进程 | | <code>j</code>: 与作业控制相关的信息 | <code>tty</code>: 终端信息; <code>STAT</code>: 状态信息; <code>PPID</code>, <code>PID</code>, <code>PGID</code>: 父进程, 进程, 进程组 id. ## 2.3 进程创建</li>
+</ul>
+<h1 id="chapter-1.-getting-started">Chapter 1. Getting Started</h1>
+<ul>
+<li><p>The operating system runs a C++ program by calling <code>main</code>.</p></li>
+<li><p>On most systems, the value returned from main is a status indicator. A return value of <code>0</code> indicates suceess. A nonzero return has a meaning that is defined by the system. Ordinarily a nonzero return indicates what kind of error occurred.</p></li>
+<li><p>A type defines both the contents of a data element and the operations that are possible on those data.</p></li>
+<li><p>The value returned from <code>main</code> is accessed in a system-dependent manner. On both UNIX and Windows systems, after executing the program, you must issue an appropriate <code>echo</code> command.<br />
+On UNIX systems, we obtain the status by writing <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ echo $?</span><br></pre></td></tr></table></figure> To see the status on a Windows system, we write <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ echo %ERRORLEVEL%</span><br></pre></td></tr></table></figure></p></li>
+<li><p>The output operator <code>&lt;&lt;</code> takes two operands: the left-hand operand must be an <code>ostream</code> object; the right-hand operand is a vaule to print. The result of the output operator is its left-hand operand. The input operator <code>&gt;&gt;</code> behaves analogously to the output operator.</p></li>
+<li><p>The manipulator <code>endl</code> has the effect of ending the current line and flushing the buffer associated with that device. Flushing buffer ensures that all the output the program has generated so far is actually written to the output stream, rather than sitting in memory waiting to be written. By default, reading <code>cin</code> flushes <code>cout</code>; <code>cout</code> is also flushed when the program ends normally; writes to <code>cerr</code> are not buffered, usually used for error messages or other output that is not part of the normal logic of the program.<br />
+<em>Programmers often add print statements during debugging. Such statements should always flush the stream. Otherwise, if the program crashes, output my be left in the buffer, leading to incorrect inferences about where the program crashed.</em></p></li>
+<li><p>When a comment pair does span multiple lines (surely, the best way is to use single-line comments cause comment pairs do not nest), it is often a good idea to indicate visually that the inner lines are part of a multiple comment (e.g. begin each line with an asterisk).</p></li>
+<li><p>The best way to comment a block of code is to insert single-line comments at the beginning of each line in the section we want to ignore since that code might contain nested comment pairs but comment pairs do not nest.</p></li>
+<li><p>The variable defined in init-statement of <code>for</code>'s header exists only inside the <code>for</code>; it is not possible to use the variable after the loop terminates.</p></li>
+<li><p>When we use an <code>istream</code> as a condition, <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (<span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; value)</span><br></pre></td></tr></table></figure> the effect is to test the state of the stream. If the stream is valid—that is, if the stream hasn't encountered an error—then the test succeeds.<br />
+<em>An <code>istream</code> becomes invalid when we hit end-of-file (e.g. ctrl+z on Win or ctrl+d on UNIX) or encounter an invalid input, such as reading a value that is not an integer.</em></p></li>
+<li><p>Most operating systems support file redirection (to avoid tediously repeated typing), which lets us associate a named file with the standard input and the standard output: <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ exefile &lt;infile &gt;outfile</span><br></pre></td></tr></table></figure> This command will read input from a file named <code>infile</code> and write its output to a file named <code>outfile</code> in the current directory.</p></li>
+</ul>
+<h1 id="chapter-2.-variables-and-basic-types">Chapter 2. Variables and Basic Types</h1>
+<ul>
+<li><p>C++ is a statically typed language; type checking is done at compile time.</p></li>
+<li><p>To give meaning to memory at a given address, we must know the type of the value stored there. The type determines how many bits are used and how to interpret those bits.</p></li>
+<li><p>Which of the two character representations <code>signed char</code> and <code>unsigned char</code> is equivalent to <code>char</code> depends on the compiler. So computations using <code>char</code> are especially problematic because <code>char</code> is <code>signed</code> on some machines and <code>unsigned</code> on others. If you need a tiny integer, explicitly specify either <code>signed char</code> or <code>unsigned char</code>.<br />
+<em>Do not use plain <code>char</code> or <code>bool</code> in arithmetic expressions. Use them only to hold characters or truth values.</em></p></li>
+<li><p>If we assign an out-of-range value to an object of unsigned type, the result is the remainder of the value modulo the number of values the target type can hold. If we assign an out-of-range value to an object of signed type, the result is undefined. Expressions that mix signed and unsigned values can yield suprising results when the signed value is negative since signed values are automatically converted to unsigned in an arithmetic expression.</p></li>
+<li><p>Programs usually should avoid implementation-defined behavior. Such programs are said to be nonportable. When program is moved to another machine, code that relied on implementation-defined behavior may fail.<br />
+<em>Tracking down these sorts of problems in previously working programs is, mildly put, unpleasant.</em></p></li>
+<li><p>The type of a string literal is array of constant <code>char</code>s. The compiler appends a null character (<code>'\0'</code>) to every string literal. Thus, the actual size of a string literal is one more that its apparent size.</p></li>
+<li><p>Two string literals that appear adjacent to one another and that are seperated only by spaces, tabs or newlines are concatenated into a single literal.<br />
+<em>We use this form of literal when we need to write a literal that would otherwise be too large to fit comfortably on a single line.</em></p></li>
+<li><p>Initialization is not assignment. Initialization happens when a variable is given a value when it is created. Assignment obliterates an object's current value and replaces that value with a new one.</p></li>
+<li><p>When used with variables of built-in type, the list initialization has one important property: The compiler will not let us initialize variables of built-in type if the initializer might lead to the loss of information: <figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="keyword">long</span> <span class="keyword">double</span> ld = <span class="number">3.1415926536</span>;</span><br><span class="line"><span class="keyword">int</span> a&#123;ld&#125;, b = &#123;ld&#125;; <span class="comment">// error: narrowing conversion required</span></span><br><span class="line">int c(ld), d = ld; // ok: but value will be truncated</span><br></pre></td></tr></table></figure></p></li>
+<li><p>The value of an object of built-in type that is not explicitly initialized depends on where it is defined. Variables defined outside any function body are initialized to zero. With one exception, variables of built-in type defined inside a function are uninitialized. The value of an uninitialized variable of built-in type is undefined. (<strong>NCC</strong>)</p></li>
+<li><p>DEFINITION <span class="math inline">\(\subseteq\)</span> DECLARATION.<br />
+To support seperate compilation, C++ distinguishes between declarations and definitions. A declaration makes a name known to the program. A file that wants to use a name defined elsewhere includes a declaration for that name.<br />
+Variables must be defined exactly once but can be declared many times. To use the same variable in multiple files, we must define that variable in one—and only one—file. Other files that use that variable must declare—but not define—that variable. It is an error to provide an initializer on an <code>extern</code> inside a function.</p></li>
+<li><p>Local object with a same as the global object will hide the global one. Use scope operator <code>::</code> to override the default scoping rules. When the scope operator has an empty left-hand side, it is a request to fetch the name on the right-hand side from the global scope.</p></li>
+<li><p>Ordinarily, when we initialize a variable, the value of the initializer is copied into the object we are creating. When we define a reference, instead of copying the initializer's value, we bind the reference to its initializer. References must be initialized and cannot be rebound to refer to other different objects.<br />
+<em>A reference is not an object. Instead, it is just another name for an already existing object. So we may not define a reference to a reference. Since references do not have addresses, we may not define a reference or pointer to a reference.</em></p></li>
+<li><p><code>nullptr</code> is a literal that has a special type that can be converted to any other pointer type. If the pointer is 0, then the condition is <code>false</code>. Any nonzero pointer evaluates as <code>true</code>. Using an invalid pointer as a condition or in a comparison is undefined.</p></li>
+<li><p>A <code>void*</code> pointer holds an address, but the type of the object at that address is unknown. We cannot use a <code>void*</code> to operate on the object it addresses—we don't know that object's type. Generally, we use a <code>void*</code> pointer to deal with memory as memory, rather than using the pointer to access the object stored in that memory.</p></li>
+<li><p>In the code <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">1024</span>, *p = &amp;i, &amp;r = i;</span><br></pre></td></tr></table></figure> the <code>int</code> is called base type, <code>*</code> and <code>&amp;</code> are type modifiers.</p></li>
+<li><p>It can be easier to understand complicated pointer or reference declarations if you read them from right to left. <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> *p;</span><br><span class="line"><span class="keyword">int</span> *&amp;r = p; <span class="comment">// r is a reference to the pointer p</span></span><br><span class="line"><span class="keyword">int</span>* ip, &amp;r = ip; <span class="comment">// invalid bind</span></span><br></pre></td></tr></table></figure></p></li>
+<li><p><code>const</code> variables are defined as local to the file. When we define a <code>const</code> with the same name in multiple files, it is as if we had written definitions for seperate variables in each file. When we have a <code>const</code> that we want to share across multiple files but whose initializer is not a constant expression, we need to use <code>extern</code> on both its definition and declaration(s).</p></li>
+<li><p>We can initialize a reference to <code>const</code> from any expression that can be converted to the type of the reference. In particular, we can bind a reference to <code>const</code> to a non<code>const</code> object, a literal, or a more general expression. <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">42</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp;r1 = i;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp;r2 = <span class="number">42</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp;r3 = r1 * <span class="number">2</span>;</span><br></pre></td></tr></table></figure> but here we cannot use <code>r1</code> to change <code>i</code>. When we use <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">double</span> dval = <span class="number">3.14</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp;ri = dval;</span><br></pre></td></tr></table></figure> the compiler transforms this into something like <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> temp = dval;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp;ri = temp;</span><br></pre></td></tr></table></figure> Since binding a reference to a temporary is almost surely not what the programmer intended and the language makes it illegal, we cannot use a nonconst reference in the above examples.</p></li>
+<li><p>We use the term top-level <code>const</code> to indicate that the pointer itself is a <code>const</code>. When a pointer can point to a <code>const</code> object, we refer to that <code>const</code> as a low-level <code>const</code>. The distinction between top-level and low-level matters when we copy an object: top-level <code>const</code>s are ignored at that time. On the other hand, low-level <code>const</code> is never ignored. When we copy an object, both objects must have the same low-level <code>const</code> qualification or there must be a conversion between the types of the two objects.<br />
+<em><code>const</code> in reference types is always low-level.</em></p></li>
+<li><p>When define a pointer in a <code>constexpr</code> declaration, the <code>constexpr</code> specifier applies to the pointer, not the type to which the pointer points, which means that the <code>constexpr</code> imposes a top-level <code>const</code> on the objects it defines.</p></li>
+<li><p>Attension, <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> *pstring;</span><br><span class="line"><span class="keyword">const</span> pstring *cstr = <span class="number">0</span>; <span class="comment">// cstr is a constant pointer to char, not a pointer to `const` `char`, since the type of pstring is &quot;pointer to `char`&quot;, which means that the base type of declaration is a pointer type</span></span><br></pre></td></tr></table></figure></p></li>
+<li><p>As with any other type specifier, we can define multiple variables using <code>auto</code>. Because a declaration can involve only a single base type, the initializers for all the variables in the declaration must have types that are consistent with each other.</p></li>
+<li><p><code>auto</code> ordinarily ignores top-level <code>const</code>s. As usual in initializations, low-level <code>const</code>s, such as when an initializer is a pointer to <code>const</code>, are kept. If we want the deduced type to have top-level <code>const</code>, we must say so explicitly. <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> ci = <span class="number">42</span>;</span><br><span class="line"><span class="keyword">auto</span> a = ci; <span class="comment">// a is an int</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">auto</span> b = ci; <span class="comment">// b has type const int</span></span><br><span class="line"><span class="keyword">auto</span> &amp;c = ci; <span class="comment">// c is a const int&amp;</span></span><br><span class="line"><span class="keyword">auto</span> &amp;d = <span class="number">42</span>; <span class="comment">// error: cannot bind a plain reference to a literal</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">auto</span> &amp;e = <span class="number">42</span>; <span class="comment">// ok</span></span><br></pre></td></tr></table></figure> From above we can see that when we ask for a reference to an <code>auto</code>-deduced type, top-level <code>const</code>s in the initializer are not ignored.</p></li>
+<li><p>When the expression to which we apply <code>decltype</code> is a variable, <code>decltype</code> returns the type of that variable, including top-level <code>const</code> and references. And <code>decltype</code> returns a reference type for expressions that yield objects that can stand on the left-hand side of the assignment. <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> ci = <span class="number">0</span>, &amp;cj = ci;</span><br><span class="line"><span class="keyword">decltype</span>(ci) a = <span class="number">0</span>; <span class="comment">// a has type const int</span></span><br><span class="line"><span class="keyword">decltype</span>(cj) b; <span class="comment">// error: b is a reference and must be initialized</span></span><br><span class="line"><span class="keyword">int</span> i = <span class="number">42</span>, *p = &amp;i, &amp;r = i;</span><br><span class="line"><span class="keyword">decltype</span>(r + <span class="number">0</span>) c; <span class="comment">// ok: addition yields an int; c is an (uninitialized) int</span></span><br><span class="line"><span class="keyword">decltype</span>(*p) d; <span class="comment">// error: d is int&amp; and must be initialized</span></span><br></pre></td></tr></table></figure> If we use <code>decltype(r)</code>, we will get a reference type. Another important difference between <code>decltype</code> and <code>auto</code> is that the deduction done by <code>decltype</code> depends on the form of its given expression. <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">decltype</span>((i)) e; <span class="comment">// error: e is int&amp;</span></span><br><span class="line"><span class="keyword">decltype</span>(i) f; <span class="comment">// ok: f is an int</span></span><br></pre></td></tr></table></figure></p></li>
+</ul>
+<h1 id="chapter-3.-strings-vectors-and-arrays">Chapter 3. Strings, Vectors, and Arrays</h1>
+<ul>
+<li><p>Code inside headers ordinarily should not use <code>using</code> declarations. The reason is that the contents of a header are copied into the including program's text. If a header has a <code>using</code> declaration, then every program that includes that header gets that same <code>using</code> declaration. As a result, a program that didn't intend to use the specified library name might encounter unexpected name conflicts. Use the C++ versions of C library headers.</p></li>
+<li><p>Like the input operator, <code>getline</code> returns its <code>istream</code> argument. The newline that causes <code>getline</code> to return is discarded; the newline is not stored in the <code>string</code>.</p></li>
+<li><p>String literals are not standard library <code>string</code>s. The <code>string</code> library lets us convert both character literals and character string literals to <code>string</code>s. E.g. when we mix <code>string</code>s and string or character literals, at least one operand to each <code>+</code> operator must be of <code>string</code> type.</p></li>
+<li><p>When we use curly braces, we're saying that, if possible, we want to list initialize the object. That is, if there is a way to use the values inside the curly braces as a list of element initializers, the class will do so. Only if it is not possible to list initialize the object will the other ways to initialize the object be considered.</p></li>
+<li><p>Since <code>vector</code>s grow efficiently, it is often unnecessary—and can result in poorer performance—to define a <code>vector</code> of a specific size.<br />
+<em>The exception to this rule is if all the elements actually need the same value. If differing element values are needed, it is usually more efficient to define an empty <code>vector</code> and add elements as the values we need become known at run time.</em></p></li>
+<li><p>The body of a range <code>for</code> must not change the size of the sequence over which it is iterating. (<strong>NCC</strong>)</p></li>
+<li><p>A valid iterator either denotes an element or denotes a position one past the last element in a container. All other iterator values are invalid. If container is empty, <code>begin</code> returns the same iterator as the one returned by <code>end</code>-they are both off-the-end iterators.</p></li>
+<li><p>Any operation, such as <code>push_back</code>, that changes the size of a <code>vector</code> potentially invalidates all iterators into that <code>vector</code>. It is important to realize that loops that use iterators should not add elements to the container to which the iterators refer.</p></li>
+<li><p>Iterators are equal if they denote the same element or if they are both off-the-end iterators for the same container. Otherwise, they are unequal. Subtracting two iterators yields the number that when added to the right-hand iterator yields the left-hand iterator. The iterators must denote elements in, or one past the end of, the same container.<br />
+<em>In subtracting the result type is a signed integral type named <code>difference_type</code>.</em></p></li>
+<li><p>In most expressions, when we use an object of array type, we are really using a pointer to the first element in that array.</p></li>
+<li><p>Unlike subscripts for <code>vector</code> and <code>string</code>, the index of the built-in subscript operator is not an <code>unsigned</code> type.</p></li>
+</ul>
+<h1 id="chapter-4.-expressions">Chapter 4. Expressions</h1>
+<ul>
+<li><p>Roughly speaking, when we use an object as an rvalue, we use the object's value (its contents). When we use an object as an lvalue, we use the object's identity (its location in memory). We can use an lvalue when an rvalue is requried, but we cannot use an rvalue when an lvalue (i.e., a location) is required (with one exception that will be covered later).</p></li>
+<li><p><code>sizeof</code> does not evaluate its operand, so dereferencing an invalid pointer as the operand to <code>sizeof</code> is safe because the pointer is not actually used.</p></li>
+</ul>
+<h1 id="chapter-5.-statements">Chapter 5. Statements</h1>
+<ul>
+<li>Throwing an exception terminates the current function and transfers control to a handler that will know how to handle this error. When a <code>catch</code> is selected to handle an exception, the associated block is executed.</li>
+</ul>
+<h1 id="chapter-6.-functions">Chapter 6. Functions</h1>
+<ul>
+<li><p>Parameter initialization works the same way as variable in initialization.</p></li>
+<li><p>Using reference parameters could avoid copying objects of large class types or large containers. (Moreover, some class type cannot be copied.) Reference parameters that are not changed inside a function should be references to <code>const</code>.</p></li>
+<li><p>When you use the arguments in <code>argv</code>, remember that the optional arguments begin in <code>argv[1]</code>, <code>arg[0]</code> contains the program's name (or empty string), not user input.</p></li>
+<li><p>Never return a reference or pointer to a local object. Reference returns are LVALUES.</p></li>
+<li><p>The form of a function that returns a pointer to an array is <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">Type (*function(parameter_list))[dimension]</span><br></pre></td></tr></table></figure></p></li>
+<li><p>Overloaded functions must differ in the number or the type(s) of their parameters. It is an error for two functions to differ only in terms of their return types. A parameter that has a top-level <code>const</code> is indistinguishable from one without a top-level <code>const</code>. On the other hand, we can overload based on whether the parameter is a reference (or pointer) to the <code>const</code> or non<code>const</code> version of a given type; such <code>const</code>s are low-level. <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">Record <span class="title">lookup</span><span class="params">(Phone)</span></span>;</span><br><span class="line"><span class="function">Record <span class="title">lookup</span><span class="params">(<span class="keyword">const</span> Phone)</span></span>; <span class="comment">// redeclares</span></span><br><span class="line"></span><br><span class="line"><span class="function">Record <span class="title">lookup</span><span class="params">(Phone*)</span></span>;</span><br><span class="line"><span class="function">Record <span class="title">lookup</span><span class="params">(Phone* <span class="keyword">const</span>)</span></span>; <span class="comment">// also redeclares</span></span><br><span class="line"></span><br><span class="line"><span class="function">Record <span class="title">lookup</span><span class="params">(Account&amp;)</span></span>;</span><br><span class="line"><span class="function">Record <span class="title">lookup</span><span class="params">(<span class="keyword">const</span> Account&amp;)</span></span>; <span class="comment">// new function that takes a const reference</span></span><br><span class="line"></span><br><span class="line"><span class="function">Record <span class="title">lookup</span><span class="params">(Account*)</span></span>;</span><br><span class="line"><span class="function">Record <span class="title">lookup</span><span class="params">(<span class="keyword">const</span> Account*)</span></span>; <span class="comment">// new function, takes a pointer to const</span></span><br></pre></td></tr></table></figure></p></li>
+<li><p>If a parameter has a default argument, all the parameters that follow it must also have default arguments. To override the default for the last parameter, we must also supply arguments for the first several parameters (if exist). So we may design the ordering of parameters so that those least likely to use a default value appear first and those most likely to use a default appear last.</p></li>
+<li><p>Names used as default arguments are resolved in the scope of the function declaration.</p></li>
+<li><p>The <code>inline</code> mechanism is meant to optimize small, straight-line functions that are called frequnetly. The specification is only a request to the compiler. The compiler may choose to ignore this request.</p></li>
+</ul>
+<h1 id="chapter-7.-classes">Chapter 7. Classes</h1>
+<ul>
+<li><p>Member functions access the object on which they were called through an extra, implicit parameter named <code>this</code>. When we call a member function, <code>this</code> is initialized with the address of the object on which the function was invoked. Any direct use of a member of the class is assumed to be an implicit reference through <code>this</code>. (<code>this</code> is a <code>const</code> pointer.)</p></li>
+<li><p>Although <code>this</code> is implicit, it follows the normal initialization rules, which means that (by default) we cannot bind <code>this</code> to a <code>const</code> object. This means that we cannot call an ordinary member function on a <code>const</code> object. A <code>const</code> following the parameter list (i.e., <code>const</code> member function) indicates that <code>this</code> is a pointer to <code>const</code>. <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Sales_data</span> &#123;</span></span><br><span class="line">  <span class="function"><span class="built_in">std</span>::<span class="built_in">string</span> <span class="title">isbn</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> bookNo; &#125;</span><br><span class="line">  <span class="function">Sales_data&amp; <span class="title">combine</span><span class="params">(<span class="keyword">const</span> Sales_data&amp;)</span></span>;</span><br><span class="line">  <span class="function"><span class="keyword">double</span> <span class="title">avg_price</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">string</span> bookNo;</span><br><span class="line">  <span class="keyword">unsigned</span> units_sold = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">double</span> revenue = <span class="number">0.0</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Sales_data total;</span><br><span class="line">total.isbn();</span><br><span class="line">Sales_data::isbn(&amp;total);</span><br><span class="line"><span class="function"><span class="built_in">std</span>::<span class="built_in">string</span> <span class="title">Sales_data::isbn</span><span class="params">(<span class="keyword">const</span> Sales_data *<span class="keyword">const</span> <span class="keyword">this</span>)</span> </span>&#123; <span class="keyword">return</span> <span class="keyword">this</span>-&gt;bookNo; &#125;</span><br></pre></td></tr></table></figure></p></li>
+<li><p>Unlike other member functions, constructors may not be declared as <code>const</code>. When we create a <code>const</code> object of a class type, the object does not assume its &quot;<code>const</code>ness&quot; until after the constructor completes the object's initialization.</p></li>
+<li><p>Classes that have members of built-in or compound type usually should rely on the synthesized default constructor only if all such members have in-class initializers. If we define any constructors, the class will not have a default constructor unless we define that constructor ourselves.</p></li>
+<li><p><code>= default</code> defines the default constructor. We are defining this constructor only because we want to provide other constructors as well as the default constructor. We want this constructor to do exactly the same work as the synthesized version we had been using.</p></li>
+<li><p>We can define a class type using either keyword, <code>struct</code> or <code>class</code>. The only difference between them is the default access level. If we use the <code>struct</code> keyword, the members defined before the first access specifier are <code>public</code>; if we use <code>class</code>, then the members are <code>private</code>.<br />
+<em>As a matter of programming style, when we define a class intending for all of its members to be <code>public</code>, we use <code>struct</code>. If we intend to have <code>private</code> members, then we use <code>class</code>.</em></p></li>
+<li><p>Friend declarations may appear only inside a class definition. Friends are not members of the class and are not affected by the access control of the section in which they are declared.</p></li>
+<li><p>Unlike ordinary members, members that define types must appear before they are used.</p></li>
+<li><p>It sometimes (but not very often) happens that a class has a data member that we want to be able to modify, even inside a <code>const</code> member function. We indicate such members by including the <code>mutable</code> keyword in their declaration. The basis for this rule is that if a class requires control to initialize an object in one case, then the class is likely to require control in all cases.</p></li>
+<li><p>When we provide an in-class initializer, we must do so following an <code>=</code> sign or inside braces. (See <a href="https://stackoverflow.com/questions/24836526/why-c11-in-class-initializer-cannot-use-parentheses">this post</a>.)</p></li>
+<li><p>A class can also make another class its friend or it can declare specific member functions of another (previously defined) class as friends. It is important to understand that friendship is not transitive.</p></li>
+<li><p>A class must declare as a friend each function in a set of overloaded functions that it wishes to make a friend.</p></li>
+<li>Class definitions are processed in two phases:
+<ul>
+<li>First, the member declarations are compiled.</li>
+<li>Function bodies are compiled only after the entire class has been seen.</li>
+</ul>
+<p>Member function definitions are processed after the compiler processes all of the declarations in the class.</p></li>
+</ul>
+<h1 id="chapter-8.-the-io-library">Chapter 8. The IO Library</h1>
+<h1 id="chapter-9.-sequential-containers">Chapter 9. Sequential Containers</h1>
+<h1 id="chapter-10.-generic-algorithms">Chapter 10. Generic Algorithms</h1>
+<h1 id="chapter-11.-associative-containers">Chapter 11. Associative Containers</h1>
+<h1 id="chapter-12.-dynamic-memory">Chapter 12. Dynamic Memory</h1>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>项目</category>
       </categories>
       <tags>
         <tag>study notes</tag>
