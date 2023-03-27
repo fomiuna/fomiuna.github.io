@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-03-12T08:38:25.090Z</updated>
+  <updated>2023-03-27T08:39:57.939Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>《铃芽之旅》小说和电影感想汇总</title>
+    <link href="http://example.com/2023/03/27/suzume_comment_s/"/>
+    <id>http://example.com/2023/03/27/suzume_comment_s/</id>
+    <published>2023-03-27T08:30:00.000Z</published>
+    <updated>2023-03-27T08:39:57.939Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;由于《铃芽之旅》的小说和电影是我在出差途中抽时间看完的，为了图方便惯例先后写成了两则说说放在了 QQ 空间里。现在回顾一下小说和电影的两则说说，觉得加在一块完成度其实还挺高，基本把这作品的优缺点全提了一遍。所以这里将两则说说汇总完善一下，久违地发一篇 acg 的评论博文吧。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="杂谈" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="acg" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/acg/"/>
+    
+    
+    <category term="anime" scheme="http://example.com/tags/anime/"/>
+    
+    <category term="novel" scheme="http://example.com/tags/novel/"/>
+    
+  </entry>
+  
+  <entry>
     <title>随笔诗四则汇总</title>
     <link href="http://example.com/2023/03/12/autumntospring2023_poem_s/"/>
     <id>http://example.com/2023/03/12/autumntospring2023_poem_s/</id>
     <published>2023-03-12T08:00:00.000Z</published>
-    <updated>2023-03-12T08:38:25.090Z</updated>
+    <updated>2023-03-27T08:28:19.462Z</updated>
     
     
     <summary type="html">&lt;p&gt;因为科研许久没有更新博客，于是把愚夜观近半年来写的诗进行整理做成汇总，简单地记录一下。&lt;/p&gt;</summary>
@@ -452,31 +476,6 @@
     
     
     <category term="lightnovel" scheme="http://example.com/tags/lightnovel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>雪影</title>
-    <link href="http://example.com/2021/01/09/snowshadow_poem_s/"/>
-    <id>http://example.com/2021/01/09/snowshadow_poem_s/</id>
-    <published>2021-01-09T08:00:00.000Z</published>
-    <updated>2021-01-15T14:36:10.000Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;雪影1&quot;&gt;雪影&lt;a href=&quot;#fn1&quot; class=&quot;footnote-ref&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;p&gt;梦初醒，&lt;/p&gt;
-&lt;p&gt;你敲打着窗楹，&lt;/p&gt;
-&lt;p&gt;告知着仅存于今日的光景。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="杂谈" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="生活" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-    <category term="poem" scheme="http://example.com/tags/poem/"/>
     
   </entry>
   
